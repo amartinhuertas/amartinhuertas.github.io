@@ -1,6 +1,6 @@
 ---
 layout: redirected
 sitemap: false
-permalink: https://amartinhuertas.github.io/art042 
+permalink: https://amartinhuertas.github.io/art042
 redirect_to: https://arxiv.org/abs/1907.03709
 ---
