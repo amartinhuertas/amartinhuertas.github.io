@@ -43,7 +43,9 @@ Add here global page variables to use throughout your website.
 @def rl = "RL"  <!--Research Line-->
 @def rls = "RLs"  <!--Research Lines-->
 @def tbm = "TBM"  <!--Test Blanket Module-->
+@def tbms = "TBMs"  <!--Test Blanket Module-->
 @def bb = "BB"  <!--Breeding Blanket-->
+@def bbs = "BBs"  <!--Breeding Blankets-->
 @def mhd = "MHD"  <!--Magneto Hydrodynamics-->
 @def uji = "UJI"  <!--Jaime I University-->
 @def dp = "DP"  <!--Discovery Project-->
