@@ -650,4 +650,31 @@ franklin-toc {
 }
 }
 
+.author__avatar {
+  display: table-cell;
+  vertical-align: top;
+  width: 36px;
+  height: 36px;
+}
+
+@media (min-width: 64em) {
+  .author__avatar {
+    display: block;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.author__avatar img {
+  max-width: 110px;
+  border-radius: 60%;
+}
+
+@media (min-width: 64em) {
+  .author__avatar img {
+    padding: 5px;
+    border: 3px solid #f2f3f3;
+  }
+}
+
 
