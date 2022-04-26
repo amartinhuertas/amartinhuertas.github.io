@@ -657,6 +657,12 @@ franklin-toc {
   height: 36px;
 }
 
+@media (max-width: 64em) {
+  /* Toggle menu off */
+  .author__avatar {
+    display: none;
+  }
+
 @media (min-width: 64em) {
   .author__avatar {
     display: block;
