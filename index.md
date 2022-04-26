@@ -1,0 +1,105 @@
+@def title = "Franklin Example"
+@def tags = ["syntax", "code"]
+<!--@@![](/assets/figures/NSWE_48x48_1_trapezoidal_dt_480_tau_dtdiv2.gif) @@ -->
+
+
+# Research Profile Summary
+
+I have specialized in high performance computational mathematics, within the broad field of {{cse}}, with a particular focus on the numerical solution of {{pdes}}. 
+As a researcher within this field, I have acquired expertise in the development of 
+advanced {{fe}} discretization schemes and solution methods for the 
+{{hpc}} modeling of large-scale problems of scientific and engineering relevance, 
+while putting special emphasis on scientific software design innovations as a key output of my research. 
+My contributions so far to this field span: 
+
+
+1. The design and mathematical analysis of new, application-tailored FE discretizations and solution methods, or innovative algorithmic adaptations of state-of-the-art ones towards different goals. 
+1. The efficient parallel implementation of these in the form of HPC software packages provided to the general CSE community. 
+1. The application of the advances of 1. and 2. for the realistic computer simulation of real-world challenges in the sciences and engineering, in collaboration with application-problem specialists, and/or .private sector companies.
+
+As output of my research, among others, I have co-authored 24 research articles published in highly ranked peer-reviewed JCR journals (23 Q1-ranked),
+1 article published in a refereed collection, and 6 articles published as 
+refereed book chapters (see below for further reference).
+
+
+## My 10 selected research achievements
+
+1. I have developed a novel bulk-asynchronous, fully-distributed, communicator-aware, inter-level overlapped, and recursive algorithmic adaptation of MultiLevel {{bddc}} preconditioners that efficiently scales up to the 458K cores of the IBM BG/Q supercomputer installed in JSC, Germany, in the solution of linear elliptic {{pde}} problems (e.g., Poisson or Elasticity) with dozens of billions of unknowns. Thanks to these outstanding results (unprecedented in the literature for domain decomposition techniques), `FEMPAR` (see item below) has been qualified for High-Q club status <!--[^1]-->\citep{brommel_juqueen_2015}, a distinction that the Juelich Supercomputing Center (Germany) awards to the most scalable EU codes. This work was published in a series of two papers at  SIAM Journal of Scientific Computing \citep{badia_highly_2014,badia_multilevel_2016}.
+1. I have addressed in a rigorous way the development of algorithms and data structures for parallel adaptive {{fe}} analysis on tree-based meshes endowed with {{sfc}}. The literature clearly failed to explain when and why the parallel algorithms and data structures required to support generic conforming {{fe}} discretizations atop tree-based adaptive meshes are correct. To solve this issue,  I have inferred results based on mathematical propositions and proofs, yielding the (correctness of the) parallel algorithms in the framework. I wrote the {{mpi}}-parallel implementation of these algorithms, which is is available at `FEMPAR`. A strong scaling study of this implementation when applied to Poisson and Maxwell problems reveals  remarkable scalability up to 32.2K CPU cores and 482.2M {{dofs}} on the Marenostrum IV supercomputer.  Besides,  a comparison of `FEMPAR` performance  with that of the state-of-the art `deal.II` software, reveals at least competitive performance, and at most factor 2-3 improvements on a massively parallel supercomputer. This work has been recently published at SIAM Journal on Scientific Computing \citep{Badia2019a}.
+1. I have contributed to balancing domain decomposition solvers for large-scale {{pdes}} in the form of new numerical algorithmic inventions and/or adaptation of existing ones towards different goals. In particular: (a) In a paper published at the *International Journal of Numerical methods in Engineering* \citep{badia_enhanced_2013}, I have rehabilitated the Balancing Neumann-Neumann preconditioner as an efficient preconditioning strategy for large-scale fluid and solid mechanics simulations. (b) In a paper published at the *Journal of Scientific Computing* \citep{Badia2018pb}, I have developed a new variant of {{bddc}} for multi-material problems. The new variant, grounded on a material-based aggregation technique, does not require expensive eigenvalue solvers like the mainstream ones based on adaptive selection of constraints, and it has been shown to be 8x times faster (with a problem with half billion {{dofs}} on 8.2K cores), while consuming significantly less memory resources, compared against a state-of-the-art, highly efficient MPI implementation of an adaptive-coarse-space {{bddc}} preconditioner implemented in the PETSc software package from ANL.}(c) In a paper published at *Parallel Computing* \citep{badia_scalability_2015}, I have developed an overlapped coarse/fine-grid message-passing implementation of inexact {{bddc}} solvers that is able to  boost their scalability on petascale computers. (d) In a paper published at *Applied Mathematical Letters* \citep{Badia2019}, I have developed an enhanced variant of the original {{bddc}} preconditioner} that is able to eliminate the condition number matrix dependence on the ratio among the subdomain and mesh resolutions.
+1. I have developed a new embedded {{fe}} formulation for elliptic {{pdes}}, the so-called, {{agg}} method \citep{badia_aggregated_2017}, which is able to solve the conditioning and stability issues of embedded {{fe}} methods due to the so-called small cut cell problem using cell agglomeration techniques. The new formulation enjoys the following unique properties, compared to other solutions available in the literature: (1) it allows one to leverage existing parallel algebraic multigrid solvers for solving the underlying systems of linear algebraic equations at large scales; (2) it does not modify the underlying physical problem via stabilization parameters; (3) it is applicable to both continuous and discontinuous Galerkin formulations. The new method \citep{badia_aggregated_2017} was published at *Computer Methods in Applied Mechanics and Engineering*. Recently, I have extended the method to incompressible flow problems (i.e., the Stokes equations), while being able to demonstrate that it is possible to build mixed aggregated {{fe}} pairs (plus face stabilization) in order to enjoy (1)-(3) for such kind of problems. This latter work was published at SIAM Journal on Scientific Computing \citep{badia_stokes_2018}. 
+1. I have developed a novel tool for the simulation of the non-linear eddy current, AC loss large-scale modelling of {{hts}} tapes and bulks. The hallmark of this tool, compared to any other currently available in the {{hts}} modelling community, is: (1) its ability to combine arbitrary-order Edge {{fes}} for the Maxwell Equations with {{amr}} on octree-based meshes while exploiting message-passing parallelism in all stages of the simulation pipeline \citep{Olm2019}, and (2) a novel 2-level {{bddc}} preconditioner that I have developed for the linearized discrete Maxwell Equations with heterogeneous materials able to scale up to dozens of thousands for computational cores \citep{Badia2019maxwell}. The numerical tool has been validated experimentally against the so-called Hall probe mapping experiment and it is already providing insightful understanding of the electromagnetic behavior, under different design parameters (e.g., size and shape), of the {{hts}} tapes manufactured by the company OXOLUTIA S.L. All these results have been published in a paper \citep{Olm2019} at *Computer Physics Communications*, and the new 2-level BDDC preconditioner, at the *Finite Elements in Analysis and Design* journal \citep{Badia2019maxwell}.
+1. I have developed a pair of new stabilized, variational multiscale {{fe}} discretization schemes for the thermally-coupled incompressible inductionless {{mhd}} system of {{pde}} equations. These new FE schemes are accompanied with new efficient, algorithmically scalable preconditioners tailored for the resulting discrete operators based on a recursive use of block incomplete LU factorization. These preconditioners have been shown to keep the condition number of the multi-physics systems of equations bounded by a constant independent of the mesh resolution and number of processors. The combination of all the novel algorithms developed within this research line has enabled large-scale realistic {{bb}} simulations in nuclear fusion reactors up to scales and (high) Hartmann numbers unprecedented in the computational fusion community. In particular, on a simulation with a 100 million unstructured tetrahedral mesh on 4096 CPU cores of the MN-III supercomputer (at BSC-CNS), with a time step size as large as 0.025 secs, I was able to provide insightful simulation results to the {{mhd}} simulation of a dual-coolant liquid metal blanket designed by the Spanish {{bb}} Technology Programme TECNOFUS. This work was published at the Journal of Computational Physics~\citep{Badia2019a}.
+1. I have recently addressed the development the message-passing variants of the algorithms involved in all stages of the {{agg}} method (e.g., construction of cell aggregates, set up of ill-posed {{dof}} constraints, resolution of constraints during parallel {{fe}} assembly, etc.) Up to the fact that the processors might require to retrieve from remote processors the roots of those cell aggregates which are split among processors, this work has proven the {{agg}} method to be a method very amenable to distributed-memory parallelization. In particular, it can be implemented using standard tools in parallel {{fe}} libraries, such as ghost cells nearest neighbour exchanges.  I have implemented these algorithms in `FEMPAR` using {{mpi}} for inter-processor communications. Their high appeal at large scales has been demonstrated with a comprehensive weak scaling test up to 16K cores and up to nearly 300M DOFs and a billion cells in the Marenostrum-IV supercomputer using the Poisson equation on complex 3D domains as model problem. To the best of my knowledge, this is the first time that embedded methods are successfully applied to such large scales. This work has been recently published at a JCR Q1-ranked journal in the field (see reference \citep{Verdugo2019} for more details).
+1. During a period of 10 years (2012-2021), {I have provided to a group of 10 researchers (on average) access to 36 Million core-hours on different world-class supercomputing facilities} (HELIOS, HPC-FF, JUROPA, JUQUEEN, HERMIT, CURIE, MARENOSTRUM II-IV, MINOTAURO, FERMI, HLRN-III, GADI). {  I have achieved this by preparing winning project access proposals}: 28x 4-month Spanish Supercomputing Network (RES) project proposals, 3x 6-month EU-PRACE preparatory access project proposals, 1x EU-PRACE TIER-0 1-year project proposal, 2x 1-year German Gauss Centre of Supercomputing project proposals, and 1x 1-year Australian NCMAS project proposal. <!--%During my senior researcher stage, first at {{cimne}}, and lately at Monash University, Australia, I have played several R & D management roles, while funding the work of other researchers. Within the FETHPC-H2020 *ExaQute* project (spanning 2018-2021), { I am the leader of Working Package ''WP3 - Space-time parallelization''}.  %This has allowed me to fund and supervise a 2-year post-doc on robust and scalable adaptive unfitted {{fe}} methods for non-linear solid mechanics problems}. I also prepared a winning project proposal for the *''Personal Técnico de Apoyo (PTA) 2019''* call in order to co-fund the position at UPC of a scientific software engineer  during a 3-year period. Recently, %{ my project  proposal on space-time adaptive unfitted {{fe}} methods has been funded by the Australian  National Computational Merit Allocation Scheme, 2021 call}. I have the role of co-PI in this project. Besides, in the *ERC PoC project FEXFEM*, and the *FP-EU7 FORTISSIMO* project on large-scale modelling of {{hts}} devices, { I acted as Delegated Chief Investigator and led the corresponding research project teams within my institution towards achieving the project goals}. On the other hand, -->
+1. I am co-founder, main software architect and project coordinator of `FEMPAR`, an open-source, {{hpc}}, hybrid MPI+OpenMP parallel, scientific software package for the numerical modelling of problems governed by {{pdes}} on {{hpc}} platforms (from multi-core based clusters, to high-end petascale supercomputers). `FEMPAR` has been successfully used in 40x JCR Q1-ranked research papers on different topics and application areas: simulation of turbulent flows and stabilized {{fe}} methods , MHD, monotonic {{fes}}, unfitted {{fes}} and embedded boundary methods, {{amr}}, AM and {{hts}} simulations, and scientific software engineering. It has also been used for the highly efficient implementation of DD solvers and block preconditioning techniques. Its users/developers span different research groups on national and international-level institutions, including UPC, CIMNE, ICMAB-CSIC, CIEMAT, ICTJA-CSIC, Czech Academy of Sciences (Czech Republic), Sandia National Labs (EEUU), North Carolina State University (USA), Duy Tan University (Vietnam),  Monash University (Australia), and l’Ecole Politechnique (Paris). Besides, it has been  a crucial tool for the successful execution of several high-quality EU-funded projects, namely, 1x ERC starting grant, 2x ERC PoC projects, 1x EU-FP7 project, and 3x H2020 projects. I have presented the software engineering inventions which lay the foundations of `FEMPAR` in a series of 4x papers \citep{Badia2020fempar,Olm2019b,badia_fempar_2017,badia_implementation_2013} including a major 76-page manuscript that was published at the *Archives of Computational Methods in Engineering* \citep{badia_fempar_2017} (ranked 5/106 in the area of Computer Science, Interdisciplinary applications. Source: 2018 JCR edition).
+1. In \citep{BadiaMartin2021a}, I have addressed the challenge of bridging unfitted {{fe}} methods and adaptive mesh refinement at large scales. To this end, I have developed (and implemented) a parallel message-passing adaptive method that combines the {{agg}} with parallel {{amr}} on octree-based meshes. Mathematical analysis and numerical experiments demonstrate its optimal mesh adaptation capability, robustness to cut location and parallel efficiency, on classical Poisson $hp$-adaptivity benchmarks.  This work opens the path to functional and geometrical error-driven dynamic mesh adaptation with {{agg}} in large-scale realistic scenarios. Likewise, it can offer guidance for bridging other scalable unfitted methods and parallel {{amr}}. Besides, in \citep{badianonlinear2021}, with my post-doc, I have extended this method to large-scale nonlinear problems in solid mechanics.  These two algorithms, together with other modelling and numerical discretization inventions, lay the foundations of an accurate computational model for the simulation of metal {{am}} processes. Given a set of material and printing process parameters, the outcome with relevant industrial interest is the capability to predict potential printing defects, such as excess or lack of powder fusion. This sort of insightful information is crucial for application problem experimentalists, as, e.g., those at the Monash Centre for {{am}}, with whom I collaborate. The advances so far in this regard have been published in two Q1-ranked JCR research journals~\citep{Neiva2020,Neiva2019a}.
+<!-- 
+-->
+
+## References
+@@bibrefs
+
+\biblabel{brommel_juqueen_2015}{1}
+1. Brömmel, B. J. N. Wylie, and W. Frings. JUQUEEN Extreme Scaling Workshop 2015. Technical Report FZJ-2015-01645, FZJ-JSC-IB-2015-01, Jülich Supercomputing Center, 2015.
+<!--
+[^1] Brömmel, B. J. N. Wylie, and W. Frings. JUQUEEN Extreme Scaling Workshop 2015. Technical Report FZJ-2015-01645, FZJ-JSC-IB-2015-01, Jülich Supercomputing Center, 2015.
+-->
+\biblabel{badia_highly_2014}{2}
+2. S. Badia, A. **F. Martin**, and J. Principe. A Highly Scalable Parallel Implementation of Balancing Domain Decomposition by Constraints. *SIAM Journal on Scientific Computing*, 36(2):C190–C218, 2014. \doi{10.1137/130931989}.
+
+\biblabel{badia_multilevel_2016}{3}
+3. S. Badia, **A. F. Martín** and J. Principe. Multilevel Balancing Domain Decomposition at Extreme Scales. *SIAM Journal on Scientific Computing*, 38(1):C22-C52, 2016. \doi{10.1137/15M1013511}.
+
+\biblabel{Badia2019a}{4}
+4. S. Badia, **A. F. Martín**, E. Neiva, and F. Verdugo. A Generic Finite Element Framework on Parallel Tree-Based Adaptive Meshes. **SIAM Journal on Scientific Computing**, 42(6):C436–C468, 2020. \doi{10.1137/20M1328786}.
+
+\biblabel{badia_enhanced_2013}{5}
+5. S. Badia, **A. F. Martín**, and J. Principe. Enhanced balancing Neumann-Neumann preconditioning in computational fluid and solid mechanics. *International Journal for Numerical Methods in Engineering*, 96(4):203–230, 2013. \doi{10.1002/nme.4541}.
+
+\biblabel{Badia2018pb}{6}
+6. S. Badia, **A. F. Martín**, and H. Nguyen. Physics-Based Balancing Domain Decomposition by Constraints for Multi-Material Problems. *Journal of Scientific Computing*, 79(2):718–747, 2019. \doi{10.1007/s10915-018-0870-z}.
+
+\biblabel{badia_scalability_2015}{7}
+7. S. Badia, **A. F. Martín**, and J. Principe. On the scalability of inexact balancing domain decomposition by constraints with overlapped coarse/fine corrections. *Parallel Computing*, 50:1–24, 2015. \doi{10.1016/j.parco.2015.09.004}.
+
+\biblabel{Badia2019}{8}
+8. S. Badia, **A. F. Martín**, and H. Nguyen. Balancing domain decomposition by constraints associated with subobjects. *Applied Mathematics Letters*, 87:93–100, 2019. \doi{10.1016/J.AML.2018.07.033}.
+
+\biblabel{badia_aggregated_2017}{9}
+9. S. Badia, F. Verdugo, and **A. F. Martín**. The aggregated unfitted finite element method for elliptic problems. *Computer Methods in Applied Mechanics and Engineering*, 336:533–553, 2018. \doi{10.1016/j.cma.2018.03.022}.
+
+\biblabel{badia_stokes_2018}{10}
+10. S. Badia, **A. F. Martín** and F. Verdugo. Mixed Aggregated Finite Element Methods for the Unfitted Discretization of the Stokes Problem. *SIAM Journal on Scientific Computing*, 40(6):B1541–B1576, 2018. \doi{10.1137/18M1185624}.
+
+\biblabel{Olm2019}{11}
+11. M. Olm, S. Badia, and **A. F. Martín**. Simulation of High Temperature Superconductors and experimental validation. *Computer Physics Communications*, 237:154–167, 2019. \doi{10.1016/J.CPC.2018.11.021}.
+
+\biblabel{Badia2019maxwell}{12}
+12. S. Badia, **A. F. Martín**, and M. Olm. Scalable solvers for complex electromagnetics problems. *Finite Elements in Analysis and Design*, 161:16–31, 2019. \doi{10.1016/J.FINEL.2019.04.003}.
+
+\biblabel{Verdugo2019}{13}
+13. F. Verdugo, **A. F. Martín**, and S. Badia. Distributed-memory parallelization of the aggregated unfitted finite element method. Computer Methods in Applied Mechanics and Engineering, 357:112583, 2019. \doi{10.1016/j.cma.2019.112583}.
+
+\biblabel{Badia2020fempar}{14}
+14. S. Badia and **A. F. Martín**. A tutorial-driven introduction to the parallel finite element library FEMPAR v1.0.0. *Computer Physics Communications*, 248:107059, 2020. \doi{10.1016/j.cpc.2019.107059}
+
+\biblabel{Olm2019b}{15}
+15. M. Olm, S. Badia, and **A. F. Martín**. On a general implementation of h- and p-adaptive curl-conforming finite elements. *Advances in Engineering Software*, 132:74–91, 2019. \doi{10.1016/J.ADVENGSOFT.2019.03.006}.
+
+\biblabel{badia_fempar_2017}{16}
+16. S. Badia, **A. F. Martín** and J. Principe. FEMPAR: An Object-Oriented Parallel Finite Element Framework. *Archives of Computational Methods in Engineering*, 25(2):195-271, 2018. \doi{10.1007/s11831-017-9244-1}.
+
+\biblabel{badia_implementation_2013}{17}
+17. S. Badia, **A. F. Martín**, and J. Principe. Implementation and scalability analysis of balancing domain decomposition methods. *Archives of Computational Methods in Engineering*, 20(3):239–262, 2013. \doi{10.1007/s11831-013-9086-4}.
+
+\biblabel{Neiva2020}{18}
+18. E. Neiva, M. Chiumenti, M. Cervera, E. Salsi, G. Piscopo, S. Badia, **A. F. Martín**, Z. Chen, C. Lee, and C. Davies. Numerical modelling of heat transfer and experimental validation in powder-bed fusion with the virtual domain approximation. *Finite Elements in Analysis and Design*, 168, 2020. \doi{10.1016/j.finel.2019.103343}
+
+\biblabel{Neiva2019a}{19}
+19. E. Neiva, S. Badia, **A. F. Martín**, and M. Chiumenti. A scalable parallel finite element framework for growing geometries. Application to metal additive manufacturing. *International Journal for Numerical Methods in Engineering*, \doi{10.1002/nme.6085}.
+
+@@
+<!-->
+\tableofcontents <!-- you can use \toc as well -->
+-->

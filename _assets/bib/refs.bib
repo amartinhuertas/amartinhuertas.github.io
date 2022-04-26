@@ -1,0 +1,1292 @@
+
+@article{badia_block_2014,
+abstract = {The thermally coupled incompressible inductionless magnetohydrodynamics (MHD) problem models the flow of an electrically charged fluid under the influence of an external electromagnetic field with thermal coupling. This system of partial differential equations is strongly coupled and highly nonlinear for real cases of interest. Therefore, fully implicit time integration schemes are very desirable in order to capture the different physical scales of the problem at hand. However, solving the multiphysics linear systems of equations resulting from such algorithms is a very challenging task which requires efficient and scalable preconditioners. In this work, a new family of recursive block LU preconditioners is designed and tested for solving the thermally coupled inductionless MHD equations. These preconditioners are obtained after splitting the fully coupled matrix into one-physics problems for every variable (velocity, pressure, current density, electric potential and temperature) that can be optimally solved, e.g., using preconditioned domain decomposition algorithms. The main idea is to arrange the original matrix into an (arbitrary) 2 × 2 block matrix, and consider an LU preconditioner obtained by approximating the corresponding Schur complement. For every one of the diagonal blocks in the LU preconditioner, if it involves more than one type of unknowns, we proceed the same way in a recursive fashion. This approach is stated in an abstract way, and can be straightforwardly applied to other multiphysics problems. Further, we precisely explain a flexible and general software design for the code implementation of this type of preconditioners. {\textcopyright} 2014 Elsevier Inc.},
+author = {Badia, Santiago and Mart{\'{i}}n, Alberto F. and Planas, Ramon},
+doi = {10.1016/j.jcp.2014.06.028},
+file = {:home/fverdugo/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Badia, Mart{\'{i}}n, Planas - 2014 - Block recursive LU preconditioners for the thermally coupled incompressible inductionless MHD problem.pdf:pdf},
+issn = {00219991},
+journal = {Journal of Computational Physics},
+keywords = {Block preconditioning,Inductionless magnetohydrodynamics,Q1,Stabilized finite element methods},
+mendeley-tags = {Q1},
+pages = {562--591},
+title = {{Block recursive LU preconditioners for the thermally coupled incompressible inductionless MHD problem}},
+url = {http://linkinghub.elsevier.com/retrieve/pii/S0021999114004355},
+volume = {274},
+year = {2014}
+}
+@article{badia_fempar_2017,
+abstract = {FEMPAR is an open source object oriented Fortran200X scientific software library for the high-performance scalable simulation of complex multiphysics problems governed by partial differential equations at large scales, by exploiting state-of-the-art supercomputing resources. It is a highly modularized, flexible, and extensible library, that provides a set of modules that can be combined to carry out the different steps of the simulation pipeline. FEMPAR includes a rich set of algorithms for the discretization step, namely (arbitrary-order) grad, div, and curl-conforming finite element methods, discontinuous Galerkin methods, B-splines, and unfitted finite element techniques on cut cells, combined with {\$}h{\$}-adaptivity. The linear solver module relies on state-of-the-art bulk-asynchronous implementations of multilevel domain decomposition solvers for the different discretization alternatives and block-preconditioning techniques for multiphysics problems. FEMPAR is a framework that provides users with out-of-the-box state-of-the-art discretization techniques and highly scalable solvers for the simulation of complex applications, hiding the dramatic complexity of the underlying algorithms. But it is also a framework for researchers that want to experience with new algorithms and solvers, by providing a highly extensible framework. In this work, the first one in a series of articles about FEMPAR, we provide a detailed introduction to the software abstractions used in the discretization module and the related geometrical module. We also provide some ingredients about the assembly of linear systems arising from finite element discretizations, but the software design of complex scalable multilevel solvers is postponed to a subsequent work.},
+archivePrefix = {arXiv},
+arxivId = {1708.01773},
+author = {Badia, Santiago and Mart{\'{i}}n, Alberto F. and Principe, Javier},
+doi = {10.1007/s11831-017-9244-1},
+eprint = {1708.01773},
+file = {:home/fverdugo/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Badia, Mart{\'{i}}n, Principe - 2018 - FEMPAR An Object-Oriented Parallel Finite Element Framework.pdf:pdf},
+issn = {18861784},
+journal = {Archives of Computational Methods in Engineering},
+keywords = {Q1},
+mendeley-tags = {Q1},
+number = {2},
+pages = {195--271},
+shorttitle = {FEMPAR},
+title = {{FEMPAR: An Object-Oriented Parallel Finite Element Framework}},
+volume = {25},
+year = {2018}
+}
+@article{badia_multilevel_2016,
+abstract = {In this paper we present a fully distributed, communicator-aware, recursive, and interlevel-overlapped message-passing implementation of the multilevel balancing domain decomposition by constraints (MLBDDC) preconditioner. The implementation highly relies on subcommunicators in order to achieve the desired effect of coarse-grain overlapping of computation and communication, and communication and communication among levels in the hierarchy (namely, interlevel overlapping). Essentially, the main communicator is split into as many nonoverlapping subsets of message-passing interface (MPI) tasks (i.e., MPI subcommunicators) as levels in the hierarchy. Provided that specialized resources (cores and memory) are devoted to each level, a careful rescheduling and mapping of all the computations and communications in the algorithm lets a high degree of overlapping be exploited among levels. All subroutines and associated data structures are expressed recursively, and therefore MLBDDC preconditioners with an arbitrary number of levels can be built while re-using significant and recurrent parts of the codes. This approach leads to excellent weak scalability results as soon as level-1 tasks can fully overlap coarser-levels duties. We provide a model to indicate how to choose the number of levels and coarsening ratios between consecutive levels and determine qualitatively the scalability limits for a given choice. We have carried out a comprehensive weak scalability analysis of the proposed implementation for the three-dimensional Laplacian and linear elasticity problems on structured and unstructured meshes. Excellent weak scalability results have been obtained up to 458,752 IBM BG/Q cores and 1.8 million MPI being, being the first time that exact domain decomposition preconditioners (only based on sparse direct solvers) reach these scales.},
+author = {Badia, Santiago and Mart{\'{i}}n, Alberto F. and Principe, Javier},
+doi = {10.1137/15M1013511},
+file = {:home/fverdugo/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Badia, Mart{\'{i}}n, Principe - 2016 - Multilevel Balancing Domain Decomposition at Extreme Scales.pdf:pdf},
+journal = {SIAM Journal on Scientific Computing},
+keywords = {Domain decomposition,Finite elements,High-performance computing,Parallel computing,Perdominant preconditioning,Q1,Scientific software},
+mendeley-tags = {Q1},
+number = {1},
+pages = {C22----C52},
+title = {{Multilevel Balancing Domain Decomposition at Extreme Scales}},
+volume = {38},
+year = {2016}
+}
+@article{Badia2018a,
+abstract = {In this work, we consider unfitted finite element methods for the numerical approximation of the Stokes problem. It is well-known that this kind of methods lead to arbitrarily ill-conditioned systems. In order to solve this issue, we consider the recently proposed aggregated finite element method, originally motivated for coercive problems. However, the well-posedness of the Stokes problem is far more subtle and relies on a discrete inf-sup condition. We consider mixed finite element methods that satisfy the discrete version of the inf-sup condition for body-fitted meshes, and analyze how the discrete inf-sup is affected when considering the unfitted case. We propose different aggregated mixed finite element spaces combined with simple stabilization terms, which can include pressure jumps and/or cell residuals, to fix the potential deficiencies of the aggregated inf-sup. We carry out a complete numerical analysis, which includes stability, optimal a priori error estimates, and condition number bounds that are not affected by the small cut cell problem. For the sake of conciseness, we have restricted the analysis to hexahedral meshes and discontinuous pressure spaces. A thorough numerical experimentation bears out the numerical analysis. The aggregated mixed finite element method is ultimately applied to two problems with non-trivial geometries.},
+archivePrefix = {arXiv},
+arxivId = {1805.01727},
+author = {Badia, Santiago and Mart{\'{i}}n, Alberto F. and Verdugo, Francesc},
+doi = {10.1137/18M1185624},
+eprint = {1805.01727},
+file = {:home/fverdugo/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Badia, Mart{\'{i}}n, Verdugo - 2018 - Mixed aggregated finite element methods for the unfitted discretization of the Stokes problem.pdf:pdf},
+journal = {SIAM Journal on Scientific Computing},
+keywords = {Q1},
+mendeley-tags = {Q1},
+number = {6},
+pages = {B1541--B1576},
+title = {{Mixed aggregated finite element methods for the unfitted discretization of the Stokes problem}},
+url = {http://arxiv.org/abs/1805.01727},
+volume = {40},
+year = {2018}
+}
+@article{Badia2018,
+abstract = {Unfitted finite element techniques are valuable tools in different applications where the generation of body-fitted meshes is difficult. However, these techniques are prone to severe ill conditioning problems that obstruct the efficient use of iterative Krylov methods and, in consequence, hindersthe practical usage of unfitted methods for realistic large scale applications. In this work, we present a technique that addresses such conditioning problems by constructing enhanced finite element spaces based on a cell aggregation technique. The presented method, called aggregated unfitted finite element method, is easy to implement, and can be used, in contrast to previous works, in Galerkin approximations of coercive problems with conforming Lagrangian finite element spaces. The mathematical analysis of the method states that the condition number of the resulting linear system matrix scales as in standard finite elements for body-fitted meshes, without being affected by small cut cells, and that the method leads to the optimal finite element convergence order. These theoretical results are confirmed with 2D and 3D numerical experiments.},
+archivePrefix = {arXiv},
+arxivId = {1709.09122},
+author = {Badia, Santiago and Verdugo, Francesc and Mart{\'{i}}n, Alberto F.},
+doi = {10.1016/j.cma.2018.03.022},
+eprint = {1709.09122},
+file = {:home/fverdugo/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Badia, Verdugo, Mart{\'{i}}n - 2018 - The aggregated unfitted finite element method for elliptic problems.pdf:pdf},
+issn = {00457825},
+journal = {Computer Methods in Applied Mechanics and Engineering},
+keywords = {Embedded boundary methods,Ill-conditioning,Q1,Unfitted finite elements},
+mendeley-tags = {Q1},
+pages = {533--553},
+title = {{The aggregated unfitted finite element method for elliptic problems}},
+url = {https://linkinghub.elsevier.com/retrieve/pii/S0045782518301476},
+volume = {336},
+year = {2018}
+}
+@inproceedings{Baker2011,
+abstract = {Algebraic multigrid (AMG) solvers have proven to be extremely efficient on distributed-memory architectures. However, when executed on modern multicore cluster architectures, we face new challenges that can significantly harm AMG's performance. We discuss our experiences on such an architecture and present a set of techniques that help users to overcome the associated problems, including thread and process pinning and correct memory associations. We have implemented most of the techniques in a MultiCore SUPport library (MCSup), which helps to map OpenMP applications to multicore machines. We present results using both an MPI-only and a hybrid MPI/OpenMP model.},
+author = {Baker, Allison H and Schulz, Martin and Yang, Ulrike M},
+booktitle = {Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)},
+doi = {10.1007/978-3-642-19328-6_12},
+file = {:home/fverdugo/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Baker, Schulz, Yang - 2011 - On the performance of an algebraic multigrid solver on multicore clusters.pdf:pdf},
+isbn = {9783642193279},
+issn = {03029743},
+pages = {102--115},
+title = {{On the performance of an algebraic multigrid solver on multicore clusters}},
+url = {https://computation.llnl.gov/projects/hypre-scalable-linear-solvers-multigrid-methods/Baker-2011-VECPAR.pdf},
+volume = {6449 LNCS},
+year = {2011}
+}
+@techreport{petsc-user-ref,
+annote = {http://www.mcs.anl.gov/petsc},
+author = {Balay, Satish and Abhyankar, Shrirang and Adams, Mark{\~{}}F. and Brown, Jed and Brune, Peter and Buschelman, Kris and Dalcin, Lisandro and Dener, Alp and Eijkhout, Victor and Gropp, William{\~{}}D. and Kaushik, Dinesh and Knepley, Matthew{\~{}}G. and May, Dave{\~{}}A. and McInnes, Lois Curfman and Mills, Richard Tran and Munson, Todd and Rupp, Karl and Sanan, Patrick and Smith, Barry{\~{}}F. and Zampini, Stefano and Zhang, Hong and Zhang, Hong},
+howpublished = {http://www.mcs.anl.gov/petsc},
+institution = {Argonne National Laboratory},
+number = {ANL-95/11 - Revision 3.10},
+title = {{PETSc Users Manual}},
+url = {http://www.mcs.anl.gov/petsc},
+year = {2018}
+}
+@techreport{brommel_juqueen_2015,
+abstract = {In conjunction with this year's JUQUEEN Porting and Tuning Workshop, which is part of the PRACE Advanced Training Centres curriculum, JSC continued its series of BlueGene Extreme Scaling Workshops. Seven application teams were invited to stay for two days and work on the scalability of their codes, with dedicated access to the entire JUQUEEN system for a period of 30 hours. Most of the teams' codes had thematic overlap with JSC Simulation Laboratories or were part of an ongoing collaboration with one of the SimLabs. The code teams came from the fields of climate science (ICON from DKRZ, and MPAS-A from KIT and NCAR), engineering (FEMPAR from UPC, and ex$\backslash${\_}nl/FE{\{}$\backslash$textasciicircum{\}}2 from Uni Cologne and TU Freiberg), fluid dynamics (psOpen and SHOCK both from RWTH Aachen), and neuroscience (CoreNeuron from the EPFL Blue Brain Project) and were supported by JSC SimLabs and Cross-sectional teams, with IBM and JUQUEEN technical support. Within the first 24 hours of dedicated access to the entire 28 racks, all seven teams had adapted their codes and datasets to exploit the massive parallelism and restricted node memory for successful executions using all 458,752 cores. Most of them also demonstrated excellent strong or weak scalability, qualifying all but one for the High-Q Club. A total of 370 'large' jobs were executed using 12 of the 15 million core-hours of compute time allocated for the workshop. Detailed results for each code, provided by the application teams themselves, is introduced by analysis comparing them to the other 16 High-Q Club codes. Br{\"{o}}mmel, Dirk; Frings, Wolfgang; Wylie, Brian J. N.},
+author = {Br{\"{o}}mmel, Dirk and Wylie, Brian J N and Frings, Wolfgang},
+institution = {J{\"{u}}lich Supercomputing Center},
+number = {FZJ-2015-01645, FZJ-JSC-IB-2015-01},
+title = {{JUQUEEN Extreme Scaling Workshop 2015}},
+url = {http://juser.fz-juelich.de/record/188191},
+year = {2015}
+}
+@article{burman_cutfem:_2015,
+author = {Burman, Erik and Claus, Susanne and Hansbo, P and Larson, M G and Massing, Andr{\'{e}}},
+doi = {10.1002/nme.4823},
+file = {:home/fverdugo/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Burman et al. - 2015 - CutFEM Discretizing Geometry and Partial Differential Equations.pdf:pdf},
+journal = {International Journal for Numerical Methods in Engineering},
+keywords = {Extended finite element method,Finite element methods,Galerkin,Stability,level sets,meshfree methods,unfitted methods},
+number = {7},
+pages = {472--501},
+title = {{CutFEM: Discretizing Geometry and Partial Differential Equations}},
+volume = {104},
+year = {2015}
+}
+@article{DePrenter2017,
+abstract = {The (Isogeometric) Finite Cell Method–in which a domain is immersed in a structured background mesh–suffers from conditioning problems when cells with small volume fractions occur. In this contribution, we establish a rigorous scaling relation between the condition number of (I)FCM system matrices and the smallest cell volume fraction. Ill-conditioning stems either from basis functions being small on cells with small volume fractions, or from basis functions being nearly linearly dependent on such cells. Based on these two sources of ill-conditioning, an algebraic preconditioning technique is developed, which is referred to as Symmetric Incomplete Permuted Inverse Cholesky (SIPIC). A detailed numerical investigation of the effectivity of the SIPIC preconditioner in improving (I)FCM condition numbers and in improving the convergence speed and accuracy of iterative solvers is presented for the Poisson problem and for two- and three-dimensional problems in linear elasticity, in which Nitche's method is applied in either the normal or tangential direction. The accuracy of the preconditioned iterative solver enables mesh convergence studies of the finite cell method.},
+archivePrefix = {arXiv},
+arxivId = {1601.05129},
+author = {de Prenter, F. and Verhoosel, C. V. and van Zwieten, G. J. and van Brummelen, E. H.},
+doi = {10.1016/j.cma.2016.07.006},
+eprint = {1601.05129},
+issn = {00457825},
+journal = {Computer Methods in Applied Mechanics and Engineering},
+keywords = {Condition number,Finite Cell Method,Immersed/fictitious domain methods,Isogeometric Analysis,Iterative solvers,Preconditioning},
+pages = {297--327},
+publisher = {North-Holland},
+title = {{Condition number analysis and preconditioning of the finite cell method}},
+url = {https://www.sciencedirect.com/science/article/pii/S0045782516307277},
+volume = {316},
+year = {2017}
+}
+@article{Elman2008,
+abstract = {In recent years, considerable effort has been placed on developing efficient and robust solution algorithms for the incompressible Navier-Stokes equations based on preconditioned Krylov methods. These include physics-based methods, such as SIMPLE, and purely algebraic preconditioners based on the approximation of the Schur complement. All these techniques can be represented as approximate block factorization (ABF) type preconditioners. The goal is to decompose the application of the preconditioner into simplified sub-systems in which scalable multi-level type solvers can be applied. In this paper we develop a taxonomy of these ideas based on an adaptation of a generalized approximate factorization of the Navier-Stokes system first presented in [A. Quarteroni, F. Saleri, A. Veneziani, Factorization methods for the numerical approximation of Navier-Stokes equations, Computational Methods in Applied Mechanical Engineering 188 (2000) 505-526]. This taxonomy illuminates the similarities and differences among these preconditioners and the central role played by efficient approximation of certain Schur complement operators. We then present a parallel computational study that examines the performance of these methods and compares them to an additive Schwarz domain decomposition (DD) algorithm. Results are presented for two and three-dimensional steady state problems for enclosed domains and inflow/outflow systems on both structured and unstructured meshes. The numerical experiments are performed using MPSalsa, a stabilized finite element code. {\textcopyright} 2007 Elsevier Inc. All rights reserved.},
+author = {Elman, Howard and Howle, V. E. and Shadid, John and Shuttleworth, Robert and Tuminaro, Ray},
+doi = {10.1016/j.jcp.2007.09.026},
+isbn = {0021-9991},
+issn = {00219991},
+journal = {Journal of Computational Physics},
+keywords = {Incompressible flow,Iterative methods,Navier-Stokes},
+number = {3},
+pages = {1790--1808},
+publisher = {Academic Press},
+title = {{A taxonomy and comparison of parallel block multi-level preconditioners for the incompressible Navier-Stokes equations}},
+url = {https://www.sciencedirect.com/science/article/pii/S0021999107004330},
+volume = {227},
+year = {2008}
+}
+@article{Heroux2005,
+abstract = {The Trilinos Project is an effort to facilitate the design, development, integration and ongoing support of mathematical software libraries within an object-oriented framework for the solution of large-scale, complex multi-physics engineering and scienti c problems. Trilinos addresses two fundamental issues of developing software for these problems: (i) Providing a streamlined process and set of tools for development of new algorithmic implementations and (ii) promoting interoperability of independently developed software. par Trilinos uses a two-level software structure designed around collections of packages. A Trilinos package is an integral unit usually developed by a small team of experts in a particular algorithms area such as algebraic preconditioners, nonlinear solvers, etc. Packages exist underneath the Trilinos top level, which provides a common look-and-feel, including configuration, documentation, licensing, and bug-tracking. par Here we present the overall Trilinos design, describing our use of abstract interfaces and default concrete implementations. We discuss the services that Trilinos provides to a prospective package and how these services are used by various packages. We also illustrate how packages can be combined to rapidly develop new algorithms. Finally, we discuss how Trilinos facilitates highquality software engineering practices that are increasingly required from simulation software.},
+author = {Heroux, Michael A. and Phipps, Eric T. and Salinger, Andrew G. and Thornquist, Heidi K. and Tuminaro, Ray S. and Willenbring, James M. and Williams, Alan and Stanley, Kendall S. and Bartlett, Roscoe A. and Howle, Vicki E. and Hoekstra, Robert J. and Hu, Jonathan J. and Kolda, Tamara G. and Lehoucq, Richard B. and Long, Kevin R. and Pawlowski, Roger P.},
+doi = {10.1145/1089014.1089021},
+isbn = {0098-3500},
+issn = {00983500},
+journal = {ACM Transactions on Mathematical Software},
+keywords = {Software Quality Engineering,Software framework,interfaces},
+number = {3},
+pages = {397--423},
+pmid = {2258803},
+publisher = {ACM},
+title = {{An overview of the Trilinos project}},
+url = {http://portal.acm.org/citation.cfm?doid=1089014.1089021},
+volume = {31},
+year = {2005}
+}
+@article{Kohler2017,
+abstract = {Cardiac 4D PC-MRI acquisitions gained increasing clinical interest in recent years. They allow to non-invasively obtain extensive information about patient-specific hemodynamics and thus have a great potential to improve the diagnosis of cardiovascular diseases. A dataset contains time-resolved, three-dimensional blood flow directions and strengths, facilitating comprehensive qualitative and quantitative data analysis. The quantification of measures such as stroke volumes helps to assess the cardiac function and monitor disease progression. Qualitative analysis allows to investigate abnormal flow characteristics, such as vortices, that are correlated to different pathologies. Processing the data comprises complex image processing methods as well as flow analysis and visualization. In this work, we mainly focus on the aorta. We provide an overview from data measurement and preprocessing to current visualization and quantification methods so that other researchers can quickly catch up with the topic and take on new challenges to further investigate the potential of 4D PC-MRI.},
+author = {K{\"{o}}hler, Benjamin and Born, Silvia and van Pelt, Roy F.P. and Hennemuth, Anja and Preim, Uta and Preim, Bernhard},
+doi = {10.1111/cgf.12803},
+file = {:home/fverdugo/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/K{\"{o}}hler et al. - 2017 - A Survey of Cardiac 4D PC-MRI Data Processing.pdf:pdf},
+isbn = {978-3-905674-82-8},
+issn = {14678659},
+journal = {Computer Graphics Forum},
+keywords = {4D PC-MRI,I.4.9 [Computing Methodologies]: Image Processing,aorta,cardiovascular diseases,data processing,survey},
+number = {6},
+pages = {5--35},
+title = {{A Survey of Cardiac 4D PC-MRI Data Processing}},
+volume = {36},
+year = {2017}
+}
+@article{menk_robust_2011,
+abstract = {The extended finite element method enhances the approximation properties of the finite element space by using additional enrichment functions. But the resulting stiffness matrices can become ill-conditioned. In that case iterative solvers need a large number of iterations to obtain an acceptable solution. In this paper a procedure is described to obtain stiffness matrices whose condition number is close to the one of the finite element matrices without any enrichments. A domain decomposition is employed and the algorithm is very well suited for parallel computations. The method was tested in numerical experiments to show its effectiveness. The experiments have been conducted for structures containing cracks and material interfaces. We show that the corresponding enrichments can result in arbitrarily ill-conditioned matrices. The method proposed here, however, provides well-conditioned matrices and can be applied to any sort of enrichment. The complexity of this approach and its relation to the domain decomposition is discussed. Computation times have been measured for a structure containing multiple cracks. For this structure the computation times could be decreased by a factor of 2. Copyright {\textcopyright} 2010 John Wiley {\&} Sons, Ltd.},
+author = {Menk, Alexander and Bordas, St{\'{e}}phane P A},
+doi = {10.1002/nme.3032},
+issn = {1097-0207},
+journal = {International Journal for Numerical Methods in Engineering},
+keywords = {Condition number,X-FEM,cracks,domain decomposition,iterative solvers,material interfaces,preconditioner},
+number = {13},
+pages = {1609--1632},
+title = {{A robust preconditioning technique for the extended finite element method}},
+volume = {85},
+year = {2011}
+}
+@book{saad_iterative_2003,
+author = {Saad, Yousef},
+edition = {2},
+file = {:home/fverdugo/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Saad - 2003 - Iterative Methods for Sparse Linear Systems, Second Edition.pdf:pdf},
+isbn = {0-89871-534-2},
+publisher = {Society for Industrial and Applied Mathematics},
+title = {{Iterative Methods for Sparse Linear Systems, Second Edition}},
+year = {2003}
+}
+@article{Schillinger2015,
+abstract = {The finite cell method is an embedded domain method, which combines the fictitious domain approach with higher-order finite elements, adaptive integration, and weak enforcement of unfitted essential boundary conditions. Its core idea is to use a simple unfitted structured mesh of higher-order basis functions for the approximation of the solution fields, while the geometry is captured by means of adaptive quadrature points. This eliminates the need for boundary conforming meshes that require time-consuming and error-prone mesh generation procedures, and opens the door for a seamless integration of very complex geometric models into finite element analysis. At the same time, the finite cell method achieves full accuracy, i.e. optimal rates of convergence, when the mesh is refined, and exponential rates of convergence, when the polynomial degree is increased. Due to the flexibility of the quadrature based geometry approximation, the finite cell method can operate with almost any geometric model, ranging from boundary representations in computer aided geometric design to voxel representations obtained from medical imaging technologies. In this review article, we first provide a concise introduction to the basics of the finite cell method. We then summarize recent developments of the technology, with particular emphasis on the research topics in which we have been actively involved. These include the finite cell method with B-spline and NURBS basis functions, the treatment of geometric nonlinearities for large deformation analysis, the weak enforcement of boundary and coupling conditions, and local refinement schemes. We illustrate the capabilities and advantages of the finite cell method with several challenging examples, e.g. the image-based analysis of foam-like structures, the patient-specific analysis of a human femur bone, the analysis of volumetric structures based on CAD boundary representations, and the isogeometric treatment of trimmed NURBS surfaces. We conclude our review by briefly discussing some key aspects for the efficient implementation of the finite cell method.},
+author = {Schillinger, Dominik and Ruess, Martin},
+doi = {10.1007/s11831-014-9115-y},
+isbn = {1134-3060},
+issn = {18861784},
+journal = {Archives of Computational Methods in Engineering},
+number = {3},
+pages = {391--455},
+publisher = {Springer Netherlands},
+title = {{The Finite Cell Method: A Review in the Context of Higher-Order Structural Analysis of CAD and Image-Based Geometric Models}},
+volume = {22},
+year = {2015}
+}
+@book{Toselli2005,
+abstract = {The purpose of this text is to offer a comprehensive and self-contained presentation of some of the most successful and popular domain decomposition preconditioners for finite and spectral element approximations of partial differential equations. Strong emphasis is placed on both algorithmic and mathematical aspects. Some important methods such FETI and balancing Neumann- Neumann methods and algorithms for spectral element methods, not treated previously in any monograph, are covered in detail. Winner of the 2005 Award for Excellence in Professional and Scholarly Publishing - Mathematics/Statistics - of the Association of American Publishers},
+address = {Berlin, Heidelberg},
+author = {Toselli, Andrea and Widlund, Olof B.},
+doi = {10.1007/b137868},
+isbn = {978-3-540-20696-5},
+issn = {0179-3632},
+publisher = {Springer Berlin Heidelberg},
+series = {Springer Series in Computational Mathematics},
+title = {{Domain Decomposition Methods — Algorithms and Theory}},
+url = {http://link.springer.com/10.1007/b137868},
+volume = {34},
+year = {2005}
+}
+@article{Verdugo2019,
+abstract = {The aggregated unfitted finite element method (AgFEM) is a methodology recently introduced in order to address conditioning and stability problems associated with embedded, unfitted, or extended finite element methods. The method is based on removal of basis functions associated with badly cut cells by introducing carefully designed constraints, which results in well-posed systems of linear algebraic equations, while preserving the optimal approximation order of the underlying finite element spaces. The specific goal of this work is to present the implementation and performance of the method on distributed-memory platforms aiming at the efficient solution of large-scale problems. In particular, we show that, by considering AgFEM, the resulting systems of linear algebraic equations can be effectively solved using standard algebraic multigrid preconditioners. This is in contrast with previous works that consider highly customized preconditioners in order to allow one the usage of iterative solvers in combination with unfitted techniques. Another novelty with respect to the methods available in the literature is the problem sizes that can be handled with the proposed approach. While most of previous references discussing linear solvers for unfitted methods are based on serial non-scalable algorithms, we propose a parallel distributed-memory method able to efficiently solve problems at large scales. This is demonstrated by means of a weak scaling test defined on complex 3D domains up to 300M degrees of freedom and one billion cells on 16K CPU cores in the Marenostrum-IV platform. The parallel implementation of the AgFEM method is available in the large-scale finite element package FEMPAR.},
+archivePrefix = {arXiv},
+arxivId = {1902.01168},
+author = {Verdugo, Francesc and Mart{\'{i}}n, Alberto F. and Badia, Santiago},
+doi = {10.1016/j.cma.2019.112583},
+eprint = {1902.01168},
+issn = {00457825},
+journal = {Computer Methods in Applied Mechanics and Engineering},
+keywords = {Algebraic multigrid,High performance scientific computing,Unfitted finite element methods},
+pages = {112583},
+title = {{Distributed-memory parallelization of the aggregated unfitted finite element method}},
+url = {https://linkinghub.elsevier.com/retrieve/pii/S0045782519304542},
+volume = {357},
+year = {2019}
+}
+@book{Briggs2000,
+abstract = {Twelve years have passed since the publication of the first edition of A Multigrid Tutorial. During those years, the field of multigrid and multilevel methods has expanded at a tremendous rate, reflecting progress in the development and analysis of algorithms and in the evolution of computing environments. Because of these changes, the first edition of the book has become increasingly outdated and the need for a new edition has become quite apparent. With the overwhelming growth in the subject, an area in which I have never done serious research, I felt remarkably unqualified to attempt a new edition. Realizing that I needed some help, I recruited two experts to assist with the project. Steve McCormick (Department of Applied Mathematics, University of Colorado at Boulder) is one of the original researchers in the field of multigrid methods and the real instigator of the first edition. There could be no better collaborator on the subject. Van Emden Henson (Center for Applied Scientific Computing, Lawrence Livermore National Laboratory) has specialized in applications of multigrid methods, with a particular emphasis on algebraic multigrid methods. Our collaboration on a previous SIAM monograph made him an obvious choice as a co-author. With the team in place, we began deliberating on the content of the new edition. It was agreed that the first edition should remain largely intact with little more than some necessary updating. Our aim was to add a roughly equal amount of new material that reflects important core developments in the field. A topic that probably should have been in the first edition comprises Chapter 6: FAS (Full Approximation Scheme), which is used for nonlinear problems. Chapter 7 is a collection of methods for four special situations that arise frequently in solving boundary value problems: Neumann boundary conditions, anisotropic problems, variable-mesh problems, and variable-coefficient problems. One of the chief motivations for writing a second edition was the recent surge of interest in algebraic multigrid methods, which is the subject of Chapter 8. In Chapter 9, we attempt to explain the complex subject of adaptive grid methods, as it appears in the FAC (Fast Adaptive Composite) Grid Method. Finally, in Chapter 10, we depart from the predominantly finite difference approach of the book and show how finite element formulations arise. This chapter provides a natural closing because it ties a knot in the thread of variational principles that runs through much of the book.},
+archivePrefix = {arXiv},
+arxivId = {arXiv:1011.1669v3},
+author = {Briggs, William L. and Henson, Van Emden and McCormick, Steve F.},
+doi = {10.1137/1.9780898719505},
+eprint = {arXiv:1011.1669v3},
+isbn = {978-0-89871-462-3},
+issn = {0169-2070},
+pmid = {18301595},
+publisher = {Society for Industrial and Applied Mathematics},
+title = {{A Multigrid Tutorial, Second Edition}},
+url = {http://epubs.siam.org/doi/book/10.1137/1.9780898719505},
+year = {2000}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@article{Verdugo2019b,
+author = {Verdugo, Francesc and Mart{\'{i}}n, Alberto F. and Badia, Santiago},
+doi = {10.1016/j.cma.2019.112583},
+issn = {00457825},
+journal = {Computer Methods in Applied Mechanics and Engineering},
+pages = {112583},
+title = {{Distributed-memory parallelization of the aggregated unfitted finite element method}},
+url = {https://linkinghub.elsevier.com/retrieve/pii/S0045782519304542},
+volume = {357},
+year = {2019}
+}
+
+@article{Neiva2019a,
+author = {Neiva, Eric and Badia, Santiago and Mart{\'{i}}n, Alberto F. and Chiumenti, Michele},
+doi = {10.1002/nme.6085},
+issn = {0029-5981},
+journal = {International Journal for Numerical Methods in Engineering},
+mendeley-groups = {Members{\_}libraries/SB},
+number = {11},
+pages = {1098--1125},
+title = {{A scalable parallel finite element framework for growing geometries. Application to metal additive manufacturing}},
+url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/nme.6085},
+volume = {119},
+year = {2019}
+}
+
+@article{Badia2019-fempar,
+author = {Badia, Santiago and Mart{\'{i}}n, Alberto F.},
+doi = {10.1016/j.cpc.2019.107059},
+issn = {00104655},
+journal = {Computer Physics Communications},
+mendeley-groups = {Members{\_}libraries/SB},
+pages = {107059},
+title = {{A tutorial-driven introduction to the parallel finite element library FEMPAR v1.0.0}},
+url = {https://linkinghub.elsevier.com/retrieve/pii/S0010465519303832},
+year = {2020}
+}
+
+@article{badia_aggregated_2017,
+abstract = {Unfitted finite element techniques are valuable tools in different applications where the generation of body-fitted meshes is difficult. However, these techniques are prone to severe ill conditioning problems that obstruct the efficient use of iterative Krylov methods and, in consequence, hindersthe practical usage of unfitted methods for realistic large scale applications. In this work, we present a technique that addresses such conditioning problems by constructing enhanced finite element spaces based on a cell aggregation technique. The presented method, called aggregated unfitted finite element method, is easy to implement, and can be used, in contrast to previous works, in Galerkin approximations of coercive problems with conforming Lagrangian finite element spaces. The mathematical analysis of the method states that the condition number of the resulting linear system matrix scales as in standard finite elements for body-fitted meshes, without being affected by small cut cells, and that the method leads to the optimal finite element convergence order. These theoretical results are confirmed with 2D and 3D numerical experiments.},
+archivePrefix = {arXiv},
+arxivId = {1709.09122},
+author = {Badia, Santiago and Verdugo, Francesc and Mart{\'{i}}n, Alberto F.},
+doi = {10.1016/j.cma.2018.03.022},
+eprint = {1709.09122},
+file = {:home/santiago/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Badia, Verdugo, Mart{\'{i}}n - 2018 - The aggregated unfitted finite element method for elliptic problems(2).pdf:pdf},
+issn = {00457825},
+journal = {Computer Methods in Applied Mechanics and Engineering},
+keywords = {Embedded boundary methods,Ill-conditioning,Q1,Unfitted finite elements},
+mendeley-tags = {Q1},
+pages = {533--553},
+title = {{The aggregated unfitted finite element method for elliptic problems}},
+url = {https://linkinghub.elsevier.com/retrieve/pii/S0045782518301476},
+volume = {336},
+year = {2018}
+}
+
+@article{badia_stokes_2018,
+abstract = {In this work, we consider unfitted finite element methods for the numerical approximation of the Stokes problem. It is well-known that these kinds of methods lead to arbitrarily ill-conditioned sys...},
+author = {Badia, Santiago and Martin, Alberto F. and Verdugo, Francesc},
+doi = {10.1137/18M1185624},
+issn = {1064-8275},
+journal = {SIAM Journal on Scientific Computing},
+keywords = {65N12,65N15,65N30,Stokes,conditioning,embedded boundary,inf-sup,unfitted finite elements},
+number = {6},
+pages = {B1541--B1576},
+publisher = {Society for Industrial and Applied Mathematics},
+
+title = {{Mixed Aggregated Finite Element Methods for the Unfitted Discretization of the Stokes Problem}},
+url = {https://epubs.siam.org/doi/10.1137/18M1185624},
+volume = {40},
+year = {2018}
+}
+
+
+@article{burman_cutfem_2015,
+    author = {Burman, Erik and Claus, Susanne and Hansbo, P and Larson, M G and Massing, Andr{\'{e}}},
+    doi = {10.1002/nme.4823},
+    journal = {International Journal for Numerical Methods in Engineering},
+    number = {7},
+    pages = {472--501},
+    title = {{CutFEM: Discretizing Geometry and Partial Differential Equations}},
+    volume = {104},
+    year = {2015}
+}
+
+
+
+@misc{petsc-web-page,
+    author = {Balay, Satish and Abhyankar, Shrirang and Adams, Mark F. and 
+    Brown, Jed and Brune, Peter and Buschelman, Kris and Dalcin, Lisandro and 
+    Dener, Alp and Eijkhout, Victor and Gropp, William D. and Kaushik, 
+    Dinesh and Knepley, Matthew G. and May, Dave A. and McInnes, Lois 
+    Curfman and Mills, Richard Tran and Munson, Todd and Rupp, Karl and Sanan, 
+    Patrick and Smith, Barry F. and Zampini, Stefano and Zhang, Hong and 
+    Zhang, Hong},
+    howpublished = {\url{http://www.mcs.anl.gov/petsc}},
+    title = {{PETSc Web page}},
+    url = {http://www.mcs.anl.gov/petsc},
+    year = {2019}
+}
+
+@article{heroux_overview_2005,
+    author = {Heroux, Michael A and Bartlett, Roscoe A and Howle, Vicki E and Hoekstra, Robert J and Hu, Jonathan J and Kolda, Tamara G and Lehoucq, Richard B and Long, Kevin R and Pawlowski, Roger P and Phipps, Eric T and Salinger, Andrew G and Thornquist, Heidi K and Tuminaro, Ray S and Willenbring, James M and Williams, Alan and Stanley, Kendall S},
+    doi = {10.1145/1089014.1089021},
+    journal = {ACM Trans. Math. Softw.},
+    number = {3},
+    pages = {397--423},
+    title = {{An Overview of the Trilinos Project}},
+    url = {http://doi.acm.org/10.1145/1089014.1089021},
+    volume = {31},
+    year = {2005}
+}
+
+@article{burstedde_p4est_2011,
+abstract = {We present scalable algorithms for parallel adaptive mesh refinement and coarsening (AMR), partitioning, and 2:1 balancing on computational domains composed of multiple connected two-dimensional quadtrees or three-dimensional octrees, referred to as a forest of octrees. By dis- tributing the union of octants from all octrees in parallel, we combine the high scalability proven previously for adaptive single-octree algorithms with the geometric flexibility that can be achieved by arbitrarily connected hexahedral macromeshes, in which each macroelement is the root of an adapted octree. A key concept of our approach is an encoding scheme of the interoctree connectivity that permits arbitrary relative orientations between octrees. Based on this encoding we develop interoctree transformations of octants. These form the basis for high-level parallel octree algorithms, which are designed to interact with an application code such as a numerical solver for partial differ- ential equations. We have implemented and tested these algorithms in the p4est software library. We demonstrate the parallel scalability of p4est on its own and in combination with two geophysics codes. Using p4est we generate and adapt multioctree meshes with up to 5.13 × 1011 octants on as many as 220,320 CPU cores and execute the 2:1 balance algorithm in less than 10 seconds per million octants per process.},
+author = {Burstedde, Carsten and Wilcox, Lucas C. and Ghattas, Omar},
+doi = {10.1137/100791634},
+file = {::;::},
+isbn = {10648275},
+journal = {SIAM Journal on Scientific Computing},
+keywords = {10,100791634,1137,65D18,65Y05,65d18,65m50,65y05,68W10,68w10,Morton code,ams subject classifications,doi,forest of octrees,large-scale scientific computing,morton code,parallel adaptive mesh refinement,rithms,scalable algo-,scalable algo-rithms},
+number = {3},
+pages = {1103--1133},
+pmid = {67712640},
+shorttitle = {p4est},
+title = {{p4est: Scalable Algorithms for Parallel Adaptive Mesh Refinement on Forests of Octrees}},
+volume = {33},
+year = {2011}
+}
+
+@article{Holke2018,
+abstract = {In this thesis, we develop, discuss and implement algorithms for scalable parallel tree-based adaptive mesh refinement (AMR) using space-filling curves (SFCs). We create an AMR framework that works independently of the used element type, such as for example lines, triangles, tetrahedra, quadrilaterals, hexahedra, and prisms. Along with a detailed mathematical discussion, this requires the implementation as a numerical software and its validation, as well as scalability tests on current supercomputers. For triangular and tetrahedral elements (simplices) with red-refinement (1:4 in 2D, 1:8 in 3D), we develop a new SFC index, the tetrahedral Morton index (TM-index). Its construction is similar to the Morton index for quadrilaterals/hexahedra, as it is also based on bitwise interleaving the coordinates of a certain vertex of the simplex, the anchor node.},
+archivePrefix = {arXiv},
+arxivId = {1803.04970},
+author = {Holke, Johannes},
+eprint = {1803.04970},
+file = {:home/amartin/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Holke - 2018 - Scalable Algorithms for Parallel Tree-based Adaptive Mesh Refinement with General Element Types.pdf:pdf},
+title = {{Scalable Algorithms for Parallel Tree-based Adaptive Mesh Refinement with General Element Types}},
+url = {http://arxiv.org/abs/1803.04970},
+year = {2018}
+}
+
+@article{Isaac2014,
+abstract = {The forest-of-octrees approach to parallel adaptive mesh refinement and coarsening (AMR) has recently been demonstrated in the context of a number of large-scale PDE-based applications. Although linear octrees, which store only leaf octants, have an underlying tree structure by definition, it is not often exploited in previously published mesh-related algorithms. This is because the branches are not explicitly stored, and because the topological relationships in meshes, such as the adjacency between cells, introduce dependencies that do not respect the octree hierarchy. In this work we combine hierarchical and topological relationships between octree branches to design efficient recursive algorithms. We present three important algorithms with recursive implementations. The first is a parallel search for leaves matching any of a set of multiple search criteria. The second is a ghost layer construction algorithm that handles arbitrarily refined octrees that are not covered by previous algorithms, which require a 2:1 condition between neighboring leaves. The third is a universal mesh topology iterator. This iterator visits every cell in a domain partition, as well as every interface (face, edge and corner) between these cells. The iterator calculates the local topological information for every interface that it visits, taking into account the nonconforming interfaces that increase the complexity of describing the local topology. To demonstrate the utility of the topology iterator, we use it to compute the numbering and encoding of higher-order $C^0$ nodal basis functions. We analyze the complexity of the new recursive algorithms theoretically, and assess their performance, both in terms of single-processor efficiency and in terms of parallel scalability, demonstrating good weak and strong scaling up to 458k cores of the JUQUEEN supercomputer.},
+archivePrefix = {arXiv},
+arxivId = {1406.0089},
+author = {Isaac, Tobin and Burstedde, Carsten and Wilcox, Lucas C. and Ghattas, Omar},
+doi = {10.1137/140970963},
+eprint = {1406.0089},
+file = {:home/amartin/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Isaac et al. - 2014 - Recursive Algorithms for Distributed Forests of Octrees.pdf:pdf},
+isbn = {2011009212002},
+issn = {10957200},
+keywords = {10,1137,140970963,65d18,65m50,65y05,68w10,ams subject classifications,doi,forest of octrees,large-scale scientific computing,morton code,parallel adaptive mesh refinement,recursive algo-,rithms},
+number = {5},
+journal = {SIAM Journal on Scientific Computing},
+title = {{Recursive Algorithms for Distributed Forests of Octrees}},
+url = {http://arxiv.org/abs/1406.0089%0Ahttp://dx.doi.org/10.1137/140970963},
+volume = {37},
+year = {2014}
+}
+
+@article{Badia2020,
+abstract = {In this work, we present an adaptive unfitted finite element scheme that combines the aggregated finite element method with parallel adaptive mesh refinement. We introduce a novel scalable distributed-memory implementation of the resulting scheme on locally-adapted Cartesian forest-of-trees meshes. We propose a two-step algorithm to construct the finite element space at hand that carefully mixes aggregation constraints of problematic degrees of freedom, which get rid of the small cut cell problem, and standard hanging degree of freedom constraints, which ensure trace continuity on non-conforming meshes. Following this approach, we derive a finite element space that can be expressed as the original one plus well-defined linear constraints. Moreover, it requires minimum parallelization effort, using standard functionality available in existing large-scale finite element codes. Numerical experiments demonstrate its optimal mesh adaptation capability, robustness to cut location and parallel efficiency, on classical Poisson $hp$-adaptivity benchmarks. Our work opens the path to functional and geometrical error-driven dynamic mesh adaptation with the aggregated finite element method in large-scale realistic scenarios. Likewise, it can offer guidance for bridging other scalable unfitted methods and parallel adaptive mesh refinement.},
+archivePrefix = {arXiv},
+arxivId = {2006.05373},
+author = {Badia, Santiago and Mart{\'{i}}n, Alberto F. and Neiva, Eric and Verdugo, Francesc},
+eprint = {2006.05373},
+file = {::},
+title = {{The aggregated unfitted finite element method on parallel tree-based adaptive meshes}},
+url = {http://arxiv.org/abs/2006.05373},
+year = {2020}
+}
+
+@article{Badia2020a,
+abstract = {Gridap is a new Finite Element (FE) framework, exclusively written in the Julia programming language, for the numerical simulation of a wide range of mathematical models governed by partial differential equations (PDEs). The library provides a feature-rich set of discretization techniques, including continuous and discontinuous FE methods with Lagrangian, Raviart-Thomas, or N{\'{e}}d{\'{e}}lec interpolations, and supports a wide range of problem types including linear, nonlinear, single-field, and multi-field PDEs (see (Badia, Mart{\'{i}}n, & Principe, 2018, Section 3) for a detailed presentation of the mathematical abstractions behind the implementation of these FE methods). Gridap is designed to help application experts to easily simulate real-world problems, to help researchers improve productivity when developing new FE-related techniques, and also for its usage in numerical PDE courses. The main motivation behind Gridap is to find an improved balance between computational performance, user-experience, and work-flow productivity when working with FE libraries. Previous FE frameworks, e.g., FEniCS (Alnaes et al., 2015) or Deal.II (Bangerth, Hartmann, & Kanschat, 2007) usually provides a high-level user front-end to facilitate the use of the library and a computational back-end to achieve performance. The user front-end is usually programmable in an interpreted language like Python, whereas the computational back-end is usually coded in a compiled language like C/C++ or Fortran. Users can benefit from the high-level front-end (i.e., for rapid prototyping) and simultaneously enjoy the performance of the compiled back-end. This approach reaches a compromise between performance and productivity when the back-end provides all the functionality required by the user. However, it does not satisfactorily address the needs of researchers on numerical methods willing to extend the library with new techniques or features. These extensions usually need to be done at the level of the computational back-end for performance reasons.},
+author = {Badia, Santiago and Verdugo, Francesc},
+doi = {10.21105/joss.02520},
+file = {::},
+journal = {Journal of Open Source Software},
+number = {52},
+pages = {2520},
+publisher = {The Open Journal},
+title = {{Gridap: An extensible Finite Element toolbox in Julia}},
+url = {https://joss.theoj.org/papers/10.21105/joss.02520},
+volume = {5},
+year = {2020}
+}
+
+@article{Neiva2020,
+abstract = {Among metal additive manufacturing technologies, powder-bed fusion features very thin layers and rapid solidification rates, leading to long build jobs and a highly localized process. Many efforts are being devoted to accelerate simulation times for practical industrial applications. The new approach suggested here, the virtual domain approximation, is a physics-based rationale for spatial reduction of the domain in the thermal finite-element analysis at the part scale. Computational experiments address, among others, validation against a large physical experiment of 17.5 [cm3] of deposited volume in 647 layers. For fast and automatic parameter estimation at such level of complexity, a high-performance computing framework is employed. It couples FEMPAR-AM, a specialized parallel finite-element software, with Dakota, for the parametric exploration. Compared to previous state-of-the-art, this formulation provides higher accuracy at the same computational cost. This sets the path to a fully virtualized model, considering an upwards-moving domain covering the last printed layers.},
+archivePrefix = {arXiv},
+arxivId = {1811.12372},
+author = {Neiva, Eric and Chiumenti, Michele and Cervera, Miguel and Salsi, Emilio and Piscopo, Gabriele and Badia, Santiago and Mart{\'{i}}n, Alberto F. and Chen, Zhuoer and Lee, Caroline and Davies, Christopher},
+doi = {10.1016/j.finel.2019.103343},
+eprint = {1811.12372},
+file = {::},
+issn = {0168874X},
+journal = {Finite Elements in Analysis and Design},
+keywords = {Additive manufacturing (AM),Finite elements (FE),High performance computing (HPC),Powder-bed fusion (PBF),Selective laser melting (SLM),Thermal analysis},
+publisher = {Elsevier B.V.},
+title = {{Numerical modelling of heat transfer and experimental validation in powder-bed fusion with the virtual domain approximation}},
+volume = {168},
+year = {2020}
+}
+
+@article{Badia2019a,
+abstract = {In this work we formally derive and prove the correctness of the algorithms and data structures in a parallel, distributed-memory, generic finite element framework that supports $h$-adaptivity on c...},
+author = {Badia, Santiago and Mart{\'{i}}n, Alberto F. and Neiva, Eric and Verdugo, Francesc},
+doi = {10.1137/20M1328786},
+issn = {1064-8275},
+journal = {SIAM Journal on Scientific Computing},
+keywords = {65M50,65N30,65Y05,65Y20,adaptive mesh refinement,finite elements,forest of trees,parallel algorithms,partial differential equations,scientific software},
+mendeley-groups = {Members_libraries,Members_libraries/AM,Members_libraries/SB},
+number = {6},
+pages = {C436--C468},
+publisher = {Society for Industrial and Applied Mathematics},
+title = {{A Generic Finite Element Framework on Parallel Tree-Based Adaptive Meshes}},
+url = {https://epubs.siam.org/doi/10.1137/20M1328786},
+volume = {42},
+year = {2020}
+}
+
+
+@article{Rheinboldt1980,
+author = {Rheinboldt, Werner C. and Mesztenyi, Charles K.},
+doi = {10.1145/355887.355891},
+issn = {15577295},
+journal = {ACM Transactions on Mathematical Software (TOMS)},
+number = {2},
+pages = {166--187},
+title = {{On a Data Structure for Adaptive Finite Element Mesh Refinements}},
+url = {http://dl.acm.org/doi/10.1145/355887.355891},
+volume = {6},
+year = {1980}
+}
+
+@article{Shephard1984,
+abstract = {A procedure is presented for the application of linear multipoint constraints. The procedure employs the transformation approach for constraint application which reduces the number of equations to be solved by the number of constraints. However, the matrix operations implied by the approach are avoided by the proper construction of the constraint equations. A specific procedure for carrying out the constraint application process as part of the assembly of the global stiffness matrix is given. Copyright {\textcopyright} 1984 John Wiley {\&} Sons, Ltd},
+author = {Shephard, Mark S.},
+doi = {10.1002/nme.1620201112},
+issn = {10970207},
+journal = {International Journal for Numerical Methods in Engineering},
+number = {11},
+pages = {2107--2112},
+publisher = {John Wiley {\&} Sons, Ltd},
+title = {{Linear multipoint constraints applied via transformation as part of a direct stiffness assembly process}},
+url = {http://doi.wiley.com/10.1002/nme.1620201112},
+volume = {20},
+year = {1984}
+}
+
+@article{badia2020robust,
+      title={A robust and scalable unfitted adaptive finite element framework for nonlinear solid mechanics}, 
+      author={Santiago Badia and Manuel Caicedo and Alberto F. Martín and Javier Principe},
+      year={2020},
+      eprint={2012.00280},
+      archivePrefix={arXiv},
+      primaryClass={math.NA},
+      url = {https://arxiv.org/abs/2012.00280},
+      journal = {Arxiv preprints - 2012.00280},
+}
+\
+@book{Cottrell2009,
+abstract = {"This is the most beautiful scientific book that I have ever seen. (I am excluding popular science books from this statement; this book matches some of them in its beauty.) The authors, editors and publishers should be congratulated for giving so much attention not just to the content but also to the way the book looks. It is extremely inviting to read." (Iacm Expressions, 1 October 2010). ISOGEOMETRIC ANALYSIS -- Contents -- Preface -- 1 From CAD and FEA to Isogeometric Analysis: An Historical Perspective -- 1.1 Introduction -- 1.1.1 The need for isogeometric analysis -- 1.1.2 Computational geometry -- 1.2 The evolution of FEA basis functions -- 1.3 The evolution of CAD representations -- 1.4 Things you need to get used to in order to understand NURBS-based isogeometric analysis -- Notes -- 2 NURBS as a Pre-analysis Tool: Geometric Design and Mesh Generation -- 2.1 B-splines -- 2.1.1 Knot vectors -- 2.1.2 Basis functions -- 2.1.3 B-spline geometries -- 2.1.4 Refinement -- 2.2 Non-Uniform Rational B-Splines -- 2.2.1 The geometric point of view -- 2.2.2 The algebraic point of view -- 2.3 Multiple patches -- 2.4 Generating a NURBS mesh: a tutorial -- 2.4.1 Preliminary considerations -- 2.4.2 Selection of polynomial orders -- 2.4.3 Selection of knot vectors -- 2.4.4 Selection of control points -- 2.5 Notation -- Appendix 2.A: Data for the bent pipe -- Notes -- 3 NURBS as a Basis for Analysis: Linear Problems -- 3.1 The isoparametric concept -- 3.1.1 Defining functions on the domain -- 3.2 Boundary value problems (BVPs) -- 3.3 Numerical methods -- 3.3.1 Galerkin -- 3.3.2 Collocation -- 3.3.3 Least-squares -- 3.3.4 Meshless methods -- 3.4 Boundary conditions -- 3.4.1 Dirichlet boundary conditions -- 3.4.2 Neumann boundary conditions -- 3.4.3 Robin boundary conditions -- 3.5 Multiple patches revisited -- 3.5.1 Local refinement -- 3.5.2 Arbitrary topologies -- 3.6 Comparing isogeometric analysis with classical finite element analysis -- 3.6.1 Code architecture -- 3.6.2 Similarities and differences -- Appendix 3.A: Shape function routine -- Appendix 3.B: Error estimates -- Notes -- 4 Linear Elasticity -- 4.1 Formulating the equations of elastostatics -- 4.1.1 Strong form -- 4.1.2 Weak form -- 4.1.3 Galerkin's method -- 4.1.4 Assembly. 4.2 Infinite plate with circular hole under constant in-plane tension -- 4.3 Thin-walled structures modeled as solids -- 4.3.1 Thin cylindrical shell with fixed ends subjected to constant internal pressure -- 4.3.2 The shell obstacle course -- 4.3.3 Hyperboloidal shell -- 4.3.4 Hemispherical shell with a stiffener -- Appendix 4.A: Geometrical data for the hemispherical shell -- Appendix 4.B: Geometrical data for a cylindrical pipe -- Appendix 4.C: Element assembly routine -- Notes -- 5 Vibrations andWave Propagation -- 5.1 Longitudinal vibrations of an elastic rod -- 5.1.1 Formulating the problem -- 5.1.2 Results: NURBS vs. FEA -- 5.1.3 Analytically computing the discrete spectrum -- 5.1.4 Lumped mass approaches -- 5.2 Rotation-free analysis of the transverse vibrations of a Bernoulli-Euler beam -- 5.3 Transverse vibrations of an elastic membrane -- 5.3.1 Linear and nonlinear parameterizations revisited -- 5.3.2 Formulation and results -- 5.4 Rotation-free analysis of the transverse vibrations of a Poisson-Kirchhoff plate -- 5.5 Vibrations of a clamped thin circular plate using three-dimensional solid elements ¯B -- 5.5.1 Formulating the problem -- 5.5.2 Results -- 5.6 The NASA aluminum testbed cylinder -- 5.7 Wave propagation -- 5.7.1 Dispersion analysis -- 5.7.2 Duality principle -- Appendix 5.A: Kolmogorov n-widths -- Notes -- 6 Time-Dependent Problems -- 6.1 Elastodynamics -- 6.2 Semi-discrete methods -- 6.2.1 Matrix formulation -- 6.2.2 Viscous damping -- 6.2.3 Predictor/multicorrector Newmark algorithms -- 6.3 Space-time finite elements -- 7 Nonlinear Isogeometric Analysis -- 7.1 The Newton-Raphson method -- 7.2 Isogeometric analysis of nonlinear differential equations -- 7.2.1 Nonlinear heat conduction -- 7.2.2 Applying the Newton-Raphson method -- 7.2.3 Nonlinear finite element 
+analysis. 11.1 The Cahn-Hilliard equation -- 11.1.1 The strong form -- 11.1.2 The dimensionless strong form -- 11.1.3 The weak form -- 11.2 Numerical results -- 11.2.1 A two-dimensional example -- 11.2.2 A three-dimensional example -- 11.3 The continuous/discontinuous Galerkin (CDG) method -- Note -- 12 Some Additional Geometry -- 12.1 The polar form of polynomials -- 12.1.1 B´ezier curves and the de Casteljau algorithm -- 12.1.2 Continuity of piecewise curves -- 12.2 The polar form of B-splines -- 12.2.1 Knot vectors and control points -- 12.2.2 Knot insertion and the de Boor algorithm -- 12.2.3 B´ezier decomposition and function subdivision -- Note -- 13 State-of-the-Art and Future Directions -- 13.1 State-of-the-art -- 13.2 Future directions -- Appendix A: Connectivity Arrays -- A.1 The INC Array -- A.2 The IEN array -- A.3 The ID array -- A.3.1 The scalar case -- A.3.2 The vector case -- A.4 The LM array -- Note -- References -- Index. 7.3 Nonlinear time integration: The generalized-$\alpha$ method -- Note -- 8 Nearly Incompressible Solids -- 8.1 formulation for linear elasticity using NURBS -- 8.1.1 An intuitive look at mesh locking -- 8.1.2 Strain projection and the method -- 8.1.3 , the projection operator, and NURBS -- 8.1.4 Infinite plate with circular hole under in-plane tension -- 8.2 formulation for nonlinear elasticity -- 8.2.1 Constitutive equations -- 8.2.2 Pinched torus -- Notes -- 9 Fluids -- 9.1 Dispersion analysis -- 9.1.1 Pure advection: the first-order wave equation -- 9.1.2 Pure diffusion: the heat equation -- 9.2 The variational multiscale (VMS) method -- 9.2.1 Numerical example: linear advection-diffusion -- 9.2.2 The Green's operator -- 9.2.3 A multiscale decomposition -- 9.2.4 The variational multiscale formulation -- 9.2.5 Reconciling Galerkin's method with VMS -- 9.3 Advection-diffusion equation -- 9.3.1 Formulating the problem -- 9.3.2 The streamline upwind/Petrov-Galerkin (SUPG) method -- 9.3.3 Numerical example: advection-diffusion in two dimensions, revisited -- 9.4 Turbulence -- 9.4.1 Incompressible Navier-Stokes equations -- 9.4.2 Multiscale residual-based formulation of the incompressible Navier-Stokes equations employing the advective form -- 9.4.3 Turbulent channel flow -- Notes -- 10 Fluid-Structure Interaction and Fluids on Moving Domains -- 10.1 The arbitrary Lagrangian-Eulerian (ALE) formulation -- 10.2 Inflation of a balloon -- 10.3 Flow in a patient-specific abdominal aorta with aneurysm -- 10.3.1 Construction of the arterial cross-section -- 10.3.2 Numerical results -- 10.4 Rotating components -- 10.4.1 Coupling of the rotating and stationary domains -- 10.4.2 Numerical example: two propellers spinning in opposite directions -- Appendix 10.A: A geometrical template for arterial blood flow modeling -- 11 Higher-order Partial Differential Equations.},
+author = {Cottrell, J. Austin. and Hughes, Thomas J. R. and Bazilevs, Yuri.},
+doi = {10.1002/9780470749081.ch7},
+pages = {335},
+publisher = {Wiley},
+title = {{Isogeometric analysis: toward integration of CAD and FEA}},
+year = {2009}
+}
+
+@article{chevalier_pt-scotch:_2008,
+  series =      {Parallel Matrix Algorithms and Applications},
+  title =       {{PT-Scotch:} A tool for efficient parallel graph
+                  ordering},
+  volume =      34,
+  issn =        {0167-8191},
+  shorttitle =  {{PT-Scotch}},
+  url =
+                  {http://www.sciencedirect.com/science/article/pii/S0167819107001342},
+  doi =                 {10.1016/j.parco.2007.12.001},
+  abstract =    {The parallel ordering of large graphs is a difficult
+                  problem, because on the one hand minimum degree
+                  algorithms do not parallelize well, and on the other
+                  hand the obtainment of high quality orderings with
+                  the nested dissection algorithm requires efficient
+                  graph bipartitioning heuristics, the best sequential
+                  implementations of which are also hard to
+                  parallelize. This paper presents a set of
+                  algorithms, implemented in the {PT-Scotch} software
+                  package, which allows one to order large graphs in
+                  parallel, yielding orderings the quality of which is
+                  only slightly worse than the one of state-of-the-art
+                  sequential algorithms. Our implementation uses the
+                  classical nested dissection approach but relies on
+                  several novel features to solve the parallel graph
+                  bipartitioning problem. Thanks to these
+                  improvements, {PT-Scotch} produces consistently
+                  better orderings than {ParMeTiS} on large numbers of
+                  processors.},
+  number =      {6--8},
+  urldate =     {2014-05-15},
+  journal =     {Parallel Computing},
+  author =      {Chevalier, C. and Pellegrini, F.},
+  year =        2008,
+  keywords =    {Distributed-memory computer, Multi-threading,
+                  Parallel graph ordering, Parallel nested dissection},
+  pages =       {318--331},
+}
+
+@article{Badia2019maxwell,
+abstract = {In this work, we present scalable balancing domain decomposition by constraints methods for linear systems arising from arbitrary order edge finite element discretizations of multi-material and heterogeneous 3D problems. In order to enforce the continuity across subdomains of the method, we use a partition of the interface objects (edges and faces) into sub-objects determined by the variation of the physical coefficients of the problem. For multi-material problems, a constant coefficient condition is enough to define this sub-partition of the objects. For arbitrarily heterogeneous problems, a relaxed version of the method is defined, where we only require that the maximal contrast of the physical coefficient in each object is smaller than a predefined threshold. Besides, the addition of perturbation terms to the preconditioner is empirically shown to be effective in order to deal with the case where the two coefficients of the model problem jump simultaneously across the interface. The new method, in contrast to existing approaches for problems in curl-conforming spaces does not require spectral information whilst providing robustness with regard to coefficient jumps and heterogeneous materials. A detailed set of numerical experiments, which includes the application of the preconditioner to 3D realistic cases, shows excellent weak scalability properties of the implementation of the proposed algorithms.},
+author = {Badia, Santiago and Mart{\'{i}}n, Alberto F. and Olm, Marc},
+doi = {10.1016/J.FINEL.2019.04.003},
+issn = {0168-874X},
+journal = {Finite Elements in Analysis and Design},
+mendeley-groups = {ALIBS/art039},
+pages = {16--31},
+publisher = {Elsevier},
+title = {{Scalable solvers for complex electromagnetics problems}},
+url = {https://www.sciencedirect.com/science/article/pii/S0168874X19300496},
+volume = {161},
+year = {2019}
+}
+
+@article{Olm2019,
+abstract = {In this work, we present a parallel, fully-distributed finite element numerical framework to simulate the low-frequency electromagnetic behaviour of superconducting devices, which efficiently exploits high performance computing platforms. We select the so-called H-formulation, which uses the magnetic field as a state variable. N{\'{e}}d{\'{e}}lec elements (of arbitrary order) are required for an accurate approximation of the H-formulation for modelling electromagnetic fields along interfaces between regions with high contrast medium properties. An h-adaptive mesh refinement technique customized for N{\'{e}}d{\'{e}}lec elements leads to a structured fine mesh in areas of interest whereas a smart coarsening is obtained in other regions. The composition of a tailored, robust, parallel nonlinear solver completes the exposition of the developed tools to tackle the problem. First, a comparison against experimental data is performed to show the availability of the finite element approximation to model the physical phenomena. Then, a selected state-of-the-art 3D benchmark is reproduced, focusing on the parallel performance of the algorithms.},
+author = {Olm, Marc and Badia, Santiago and Mart{\'{i}}n, Alberto F.},
+doi = {10.1016/J.CPC.2018.11.021},
+issn = {0010-4655},
+journal = {Computer Physics Communications},
+mendeley-groups = {ALIBS/art039},
+pages = {154--167},
+publisher = {North-Holland},
+title = {{Simulation of High Temperature Superconductors and experimental validation}},
+url = {https://www.sciencedirect.com/science/article/pii/S0010465518304132},
+volume = {237},
+year = {2019}
+}
+
+@article{Badia2018pb,
+abstract = {In this work, we present a new variant of the balancing domain decomposition by constraints preconditioner that is robust for multi-material problems. We start with a well-balanced subdomain partition, and based on an aggregation of elements according to their physical coefficients, we end up with a finer physics-based (PB) subdomain partition. Next, we define corners, edges, and faces for this PB partition, and select some of them to enforce subdomain continuity (primal faces/edges/corners). When the physical coefficient in each PB subdomain is constant and the set of selected primal faces/edges/corners satisfy a mild condition on the existence of acceptable paths, we can show both theoretically and numerically that the condition number does not depend on the contrast of the coefficient across subdomains. An extensive set of numerical experiments for 2D and 3D for the Poisson and linear elasticity problems is provided to support our findings. In particular, we show robustness and weak scalability of the new preconditioner variant up to 8232 cores when applied to 3D multi-material problems with the contrast of the physical coefficient up to 10 8 and more than half a billion degrees of freedom. For the scalability analysis, we have exploited a highly scalable advanced inter-level overlapped implementation of the preconditioner that deals very efficiently with the coarse problem computation. The proposed preconditioner is compared against a state-of-the-art implementation of an adaptive BDDC method in PETSc for thermal and mechanical multi-material problems.},
+author = {Badia, Santiago and Mart{\'{i}}n, Alberto F. and Nguyen, Hieu},
+doi = {10.1007/s10915-018-0870-z},
+issn = {08857474},
+journal = {Journal of Scientific Computing},
+keywords = {Adaptive coarse space,BDDC,Multi-material problem,Parallel preconditioner,Parallel solver},
+number = {2},
+pages = {718--747},
+publisher = {Springer US},
+title = {{Physics-Based Balancing Domain Decomposition by Constraints for Multi-Material Problems}},
+url = {http://link.springer.com/10.1007/s10915-018-0870-z},
+volume = {79},
+year = {2019}
+}
+@article{Badia.etal.ACME.2013,
+abstract = {In this paper we present a detailed description of a high-performance distributed memory implementation of balancing domain decomposition preconditioning techniques. This coverage provides a pool of implementation hints and considerations that can be very useful for scientists that are willing to tackle large-scale distributed-memory machines using these methods. On the other hand, the paper includes a comprehensive performance and scalability study of the resulting codes when they are applied for the solution of the Poisson problem on a large-scale multicore-based distributed-memory machine with up to 4096 cores. Well-known theoretical results guarantee the optimality (algorithmic scalability) of these preconditioning techniques for weak scaling scenarios, as they are able to keep the condition number of the preconditioned operator bounded by a constant with xed load per core and increasing number of cores. The experimental study presented in the paper complements this mathematical analysis and answers how far can these methods go in the number of cores and the scale of the problem to still be within reasonable ranges of eciency on current distributed-memory machines. Besides, for those scenarios where poor scalability is expected, the study precisely identi es, quanti es and justi es which are the main sources of inefficiency.},
+author = {Badia, Santiago and Mart{\'{i}}n, Alberto F and Principe, Javier},
+doi = {10.1007/s11831-013-9086-4},
+file = {::},
+journal = {Archives of Computational Methods in Engineering},
+keywords = {Q1},
+mendeley-tags = {Q1},
+number = {3},
+pages = {239--262},
+title = {{Implementation and scalability analysis of balancing domain decomposition methods}},
+volume = {20},
+year = {2013}
+}
+
+@article{Badia2020fempar,
+abstract = {This work is a user guide to the FEMPAR scientific software library. FEMPAR is an open-source object-oriented framework for the simulation of partial differential equations (PDEs) using finite element methods on distributed-memory platforms. It provides a rich set of tools for numerical discretization and built-in scalable solvers for the resulting linear systems of equations. An application expert that wants to simulate a PDE-governed problem has to extend the framework with a description of the weak form of the PDE at hand (and additional perturbation terms for non-conforming approximations). We show how to use the library by going through three different tutorials. The first tutorial simulates a linear PDE (Poisson equation) in a serial environment for a structured mesh using both continuous and discontinuous Galerkin finite element methods. The second tutorial extends it with adaptive mesh refinement on octree meshes. The third tutorial is a distributed-memory version of the previous one that combines a scalable octree handler and a scalable domain decomposition solver. The exposition is restricted to linear PDEs and simple geometries to keep it concise. The interested user can dive into more tutorials available in the FEMPAR public repository to learn about further capabilities of the library, e.g., nonlinear PDEs and nonlinear solvers, time integration, multi-field PDEs, block preconditioning, or unstructured mesh handling. Program summary: Program Title: FEMPAR Program Files \doi{ http://dx.doi.org/10.17632/dtx487wp57.1 Licensing provisions: GNU General Public License 3 Programming language: MPI, Fortran2003/2008 (Object-Oriented Programming features) Nature of problem: Computational simulation of a broad range of large-scale application problems governed by Partial Differential Equations Solution method: Arbitrary-order grad-, curl-, and div-conforming finite elements on n-cube and n-simplex meshes. Continuous and Discontinuous Galerkin FEM. Adaptive Mesh Refinement and Coarsening via forests-of-octrees. Diagonally Implicit Runge–Kutta time integrators. Newton–Raphson linearization. Block preconditioning for multiphysics applications. Multilevel Balancing Domain Decomposition by Constraints preconditioning. Krylov subspace iterative solvers. Sparse direct solvers. Additional comments: Program Github repository https://github.com/fempar/fempar Program website http://www.fempar.org},
+author = {Badia, Santiago and Mart{\'{i}}n, Alberto F.},
+doi = {10.1016/j.cpc.2019.107059},
+issn = {00104655},
+journal = {Computer Physics Communications},
+keywords = {Finite elements,Mathematical software,Object-Oriented Programming,Partial Differential Equations},
+pages = {107059},
+publisher = {Elsevier B.V.},
+title = {{A tutorial-driven introduction to the parallel finite element library FEMPAR v1.0.0}},
+volume = {248},
+year = {2020}
+}
+
+@article{Olm2019b,
+abstract = {Edge (or N{\'{e}}d{\'{e}}lec) finite elements are theoretically sound and widely used by the computational electromagnetics community. However, its implementation, especially for high order methods, is not trivial, since it involves many technicalities that are not properly described in the literature. To fill this gap, we provide a comprehensive description of a general implementation of edge elements of first kind within the scientific software project FEMPAR . We cover into detail how to implement arbitrary order (i.e., p-adaptive) elements on hexahedral and tetrahedral meshes. First, we set the three classical ingredients of the finite element definition by Ciarlet, both in the reference and the physical space: cell topologies, polynomial spaces and moments. With these ingredients, shape functions are automatically implemented by defining a judiciously chosen polynomial pre-basis that spans the local finite element space combined with a change of basis to automatically obtain a canonical basis with respect to the moments at hand. Next, we discuss global finite element spaces putting emphasis on the construction of global shape functions through oriented meshes, appropriate geometrical mappings, and equivalence classes of moments, in order to preserve the inter-element continuity of tangential components of the magnetic field. Finally, we extend the proposed methodology to generate global curl-conforming spaces on non-conforming hierarchically refined (i.e., h-adaptive) meshes with arbitrary order finite elements. Numerical results include experimental convergence rates to test the proposed implementation.},
+author = {Olm, Marc and Badia, Santiago and Mart{\'{i}}n, Alberto F.},
+doi = {10.1016/J.ADVENGSOFT.2019.03.006},
+issn = {0965-9978},
+journal = {Advances in Engineering Software},
+mendeley-groups = {Members_libraries/SB/published,Members_libraries/SB,Members_libraries},
+pages = {74--91},
+publisher = {Elsevier},
+title = {{On a general implementation of h- and p-adaptive curl-conforming finite elements}},
+url = {https://www-sciencedirect-com.ezproxy.lib.monash.edu.au/science/article/pii/S096599781831113X},
+volume = {132},
+year = {2019}
+}
+
+
+XXXXXXXXXXXXXXX
+
+
+@article{badia_scalability_2015,
+	title = {On the scalability of inexact balancing domain decomposition by constraints with overlapped coarse/fine corrections},
+	volume = {50},
+	issn = {01678191},
+	url = {http://linkinghub.elsevier.com/retrieve/pii/S0167819115001180},
+	doi = {10.1016/j.parco.2015.09.004},
+	language = {en},
+	urldate = {2017-01-23},
+	journal = {Parallel Computing},
+	author = {Santiago Badia and Alberto F. Martin and Javier Principe},
+	year = {2015},
+	pages = {1--24}
+}
+
+
+@article{badia_highly_2014,
+	title = {A {Highly} {Scalable} {Parallel} {Implementation} of {Balancing} {Domain} {Decomposition} by {Constraints}},
+	volume = {36},
+	issn = {1064-8275, 1095-7197},
+	url = {http://epubs.siam.org/doi/abs/10.1137/130931989},
+	doi = {10.1137/130931989},
+	language = {en},
+	number = {2},
+	urldate = {2017-01-23},
+	journal = {SIAM Journal on Scientific Computing},
+	author = {Santiago Badia and Alberto F. Martin and Javier Principe},
+	year = {2014},
+	pages = {C190--C218}
+}
+
+@article{aliaga_assessing_2014,
+	title = {Assessing the impact of the {CPU} power-saving modes on the task-parallel solution of sparse linear systems},
+	volume = {17},
+	issn = {1386-7857, 1573-7543},
+	url = {http://link.springer.com/10.1007/s10586-014-0402-z},
+	doi = {10.1007/s10586-014-0402-z},
+	language = {en},
+	number = {4},
+	urldate = {2017-01-23},
+	journal = {Cluster Computing},
+	author = {Jose I. Aliaga and  Maria Barreda and Manuel F. Dolz and Alberto F. Martin and Rafael Mayo and Enrique S. Quintana-Ortí},
+	year = {2014},
+	pages = {1335--1348}
+}
+
+@article{badia_enhanced_2013,
+	title = {Enhanced balancing {Neumann}-{Neumann} preconditioning in computational fluid and solid mechanics},
+	issn = {00295981},
+	url = {http://doi.wiley.com/10.1002/nme.4541},
+	doi = {10.1002/nme.4541},
+	language = {en},
+	urldate = {2017-01-23},
+	journal = {International Journal for Numerical Methods in Engineering},
+	author = {Santiago Badia and Alberto F. Martin and Javier Principe},
+	year = {2013},
+	pages = {203--230},
+        volume = {96},
+        number = {4},
+}
+
+@article{aliaga_exploiting_2011,
+	title = {Exploiting thread-level parallelism in the iterative solution of sparse linear systems},
+	volume = {37},
+	issn = {01678191},
+	url = {http://linkinghub.elsevier.com/retrieve/pii/S0167819110001432},
+	doi = {10.1016/j.parco.2010.11.002},
+	language = {en},
+	number = {3},
+	urldate = {2017-01-23},
+	journal = {Parallel Computing},
+	author = {Jose I. Aliaga and Matthias Bollhoefer and Alberto F. Martin and Enrique S. Quintana-Ortí},
+	year = {2011},
+	pages = {183--202}
+}
+
+@article{badia_implementation_2013,
+	title = {Implementation and {Scalability} {Analysis} of {Balancing} {Domain} {Decomposition} {Methods}},
+	volume = {20},
+	issn = {1134-3060, 1886-1784},
+	url = {http://link.springer.com/10.1007/s11831-013-9086-4},
+	doi = {10.1007/s11831-013-9086-4},
+	language = {en},
+	number = {3},
+	urldate = {2017-01-23},
+	journal = {Archives of Computational Methods in Engineering},
+	author = {Santiago Badia and Alberto F. Martin and Javier Principe},
+	year = {2013},
+	pages = {239--262},
+}
+
+@article{martin_leveraging_2014,
+	title = {Leveraging task-parallelism in message-passing dense matrix factorizations using {SMPSs}},
+	volume = {40},
+	issn = {01678191},
+	number = {5-6},
+	journal = {Parallel Computing},
+	author = {Alberto F. Martin and Ruyman Reyes and Rosa M. Badia and Enrique S. Quintana-Ortí},
+	year = {2014},
+	pages = {113--128},
+}
+
+@article{AliBMQ10,
+  author    = {Jose I. Aliaga and  Matthias Bollhoefer and Alberto F. Martin and Enrique S. Quintana-Ortí},
+  title     = {{P}arallelization of {M}ultilevel {ILU} {P}reconditioners on {D}istributed-{M}emory {M}ultiprocessors},
+  year      = {2012},
+  pages     = {162-172},
+  volume    = {7133},
+  journal   = {{L}ecture {N}otes in {C}omputer {S}cience},
+  publisher = {Springer},
+}
+
+
+@incollection{AliBMQ10c,
+  author = {Matthias Bollhoefer and Jose I. Aliaga and  Alberto F. Martin and Enrique S. Quintana-Ortí},
+  booktitle = {Encyclopedia of Parallel Computing},
+  editor = {Padua, David A.},
+  ee = {http://dx.doi.org/10.1007/978-0-387-09766-4_513},
+  interhash = {4448798ff50bb695ab376d2f71d85a24},
+  intrahash = {9c18f47dfbf33bb1d6450289f03d6b7c},
+  isbn = {978-0-387-09765-7},
+  keywords = {dblp},
+  pages = {917-926},
+  publisher = {Springer},
+  timestamp = {2012-01-11T00:00:00.000+0100},
+  title = {{ILUPACK.}},
+  url = {http://dblp.uni-trier.de/db/reference/parallel/parallel2011.html#BollhoferAMQ11},
+  year = 2011
+}
+
+
+@techreport{brommel_juqueen_2015,
+  title =	 {{FEMPAR}: {S}caling {M}ulti-{L}evel {D}omain {D}ecomposition up to the full {JUQUEEN} supercomputer (contributed chapter)},
+  url =		 {http://juser.fz-juelich.de/record/188191},
+  abstract =	 {In conjunction with this year's JUQUEEN Porting and
+                  Tuning Workshop, which is part of the PRACE Advanced
+                  Training Centres curriculum, JSC continued its
+                  series of BlueGene Extreme Scaling Workshops. Seven
+                  application teams were invited to stay for two days
+                  and work on the scalability of their codes, with
+                  dedicated access to the entire JUQUEEN system for a
+                  period of 30 hours. Most of the teams' codes had
+                  thematic overlap with JSC Simulation Laboratories or
+                  were part of an ongoing collaboration with one of
+                  the SimLabs. The code teams came from the fields of
+                  climate science (ICON from DKRZ, and MPAS-A from KIT
+                  and NCAR), engineering (FEMPAR from UPC, and
+                  ex\_nl/FE{\textasciicircum}2 from Uni Cologne and TU
+                  Freiberg), fluid dynamics (psOpen and SHOCK both
+                  from RWTH Aachen), and neuroscience (CoreNeuron from
+                  the EPFL Blue Brain Project) and were supported by
+                  JSC SimLabs and Cross-sectional teams, with IBM and
+                  JUQUEEN technical support. Within the first 24 hours
+                  of dedicated access to the entire 28 racks, all
+                  seven teams had adapted their codes and datasets to
+                  exploit the massive parallelism and restricted node
+                  memory for successful executions using all 458,752
+                  cores. Most of them also demonstrated excellent
+                  strong or weak scalability, qualifying all but one
+                  for the High-Q Club. A total of 370 'large' jobs
+                  were executed using 12 of the 15 million core-hours
+                  of compute time allocated for the workshop. Detailed
+                  results for each code, provided by the application
+                  teams themselves, is introduced by analysis
+                  comparing them to the other 16 High-Q Club
+                  codes. Brömmel, Dirk; Frings, Wolfgang; Wylie, Brian
+                  J. N.},
+  number =	 {FZJ-2015-01645},
+  urldate =	 {2016-01-14},
+  institution =	 {Juelich Supercomputing Center},
+  author =	 {Alberto F. Martin and Santiago Badia and Javier Principe},
+  year =	 2015,
+  file =         {Snapshot:/home/sbadia/.mozilla/firefox/38g6z3d4.default/zotero/storage/DRF7TK39/188191.html:text/html}
+}
+
+@ARTICLE{BadLMMMQR12,
+  author =	 {Rosa M. Badia and Jesus Labarta and Vladimir Marjanovic and Alberto F. Martin and Rafael Mayo and Enrique S. Quintana-Ortí and Ruyman Reyes},
+  title =	 {Symmetric Rank-k Update on Clusters of Multicore Processors with SMPSs},
+  journal =	 {Advances in Parallel Computing},
+  volume  =      {22},
+  pages   =      {657-664},
+  year =	 2012
+}
+
+@ARTICLE{AliBMQ08a,
+  author =	 {Jose I. Aliaga and  Matthias Bollhoefer and Alberto F. Martin and Enrique S. Quintana-Ortí},
+  title =	 {{D}esign, {T}uning and {E}valuation of {P}arallel {M}ultilevel {ILU} {P}reconditioners},
+  journal =	 {{L}ecture {N}otes in {C}omputer {S}cience},
+  volume  =      {2008},
+  pages   =      {5336},
+  year =	 {314-327}
+}
+
+@ARTICLE{AliDMMQ12,
+  author =	 {Jose I. Aliaga and Manuel F. Dolz and Alberto F. Martin and Rafael Mayo and Enrique S. Quintana-Ortí},
+  title =	 {{L}everaring {T}ask-{P}arallelism in {E}nergy-{E}fficient {ILU} {P}reconditioners},
+  journal =	 {{L}ecture {N}otes in {C}omputer {S}cience},
+  volume  =      {7453},
+  pages   =      {55-63},
+  year =	 {2012}
+}
+
+@ARTICLE{AliBMQ07,
+  author =	 {Jose I. Aliaga and  Matthias Bollhöfer and Alberto F. Martin and Enrique S. Quintana-Ortí},
+  title =	 {Parallelization of {M}ultilevel {P}reconditioners {C}onstructed from {I}nverse-{B}ased {ILU}s on {S}hared-{M}emory {M}ultiprocessors},
+  journal =	 {{A}dvances in {P}arallel {C}omputing},
+  volume  =      {15},
+  pages   =      {287--294},
+  year =	 {2008}
+}
+
+@ARTICLE{AliBMQ09,
+  author =	 {Jose I. Aliaga and  Matthias Bollhoefer and Alberto F. Martin and Enrique S. Quintana-Ortí},
+  title =	 {{E}valuation of {P}arallel {S}parse {M}atrix {P}artitioning {S}oftware for {P}arallel {M}ultilevel {ILU} {P}reconditioning on 
+                  {S}hared-{M}emory {M}ultiprocessors},
+  journal =	 {{A}dvances in {P}arallel {C}omputing},
+  volume  =      {19},
+  pages   =      {125--132},
+  year =	 {2009}
+}
+
+
+@article{colomes_assessment_2015,
+	title = {Assessment of variational multiscale models for the large eddy simulation of turbulent incompressible flows},
+	volume = {285},
+	issn = {0045-7825},
+	url = {http://www.sciencedirect.com/science/article/pii/S0045782514004113},
+	doi = {10.1016/j.cma.2014.10.041},
+	abstract = {In this work we study the performance of some variational multiscale models (VMS) in the large eddy simulation (LES) of turbulent flows. We consider VMS models obtained by different subgrid scale approximations which include either static or dynamic subscales, linear or nonlinear multiscale splitting, and different choices of the subscale space. After a brief review of these models, we discuss some implementation aspects particularly relevant to the simulation of turbulent flows, namely the use of a skew symmetric form of the convective term and the computation of projections when orthogonal subscales are used. We analyze the energy conservation (and numerical dissipation) of the alternative VMS formulations, which is numerically evaluated. In the numerical study, we have considered three well known problems: the decay of homogeneous isotropic turbulence, the Taylor–Green vortex problem and the turbulent flow in a channel. We compare the results obtained using different VMS models, paying special attention to the effect of using orthogonal subscale spaces. The VMS results are also compared against classical LES scheme based on filtering and the dynamic Smagorinsky closure. Altogether, our results show the tremendous potential of VMS for the numerical simulation of turbulence. Further, we study the sensitivity of VMS to the algorithmic constants and analyze the behavior in the small time step limit. We have also carried out a computational cost comparison of the different formulations. Out of these experiments, we can state that the numerical results obtained with the different VMS formulations (as far as they converge) are quite similar. However, some choices are prone to instabilities and the results obtained in terms of computational cost are certainly different. The dynamic orthogonal subscales model turns out to be best in terms of efficiency and robustness.},
+	urldate = {2015-01-12},
+	journal = {Computer Methods in Applied Mechanics and Engineering},
+	author = {Colomés, Oriol and Badia, Santiago and Codina, Ramon and Principe, Javier},
+	year = {2015},
+	keywords = {large eddy simulation, stabilization, Turbulence, Variational multiscale},
+	pages = {32--63},
+	file = {ScienceDirect Full Text PDF:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/TGD5QNH5/Colomés et al. - 2015 - Assessment of variational multiscale models for th.pdf:application/pdf;ScienceDirect Snapshot:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/MNKD2FNG/S0045782514004113.html:text/html}
+}
+
+@article{colomes_segregated_2016,
+	title = {Segregated {Runge}–{Kutta} methods for the incompressible {Navier}–{Stokes} equations},
+	volume = {105},
+	issn = {1097-0207},
+	url = {http://onlinelibrary.wiley.com/doi/10.1002/nme.4987/abstract},
+	doi = {10.1002/nme.4987},
+	abstract = {In this work, we propose Runge–Kutta time integration schemes for the incompressible Navier–Stokes equations with two salient properties. First, velocity and pressure computations are segregated at the time integration level, without the need to perform additional fractional step techniques that spoil high orders of accuracy. Second, the proposed methods keep the same order of accuracy for both velocities and pressures. The segregated Runge–Kutta methods are motivated as an implicit–explicit Runge–Kutta time integration of the projected Navier–Stokes system onto the discrete divergence-free space, and its re-statement in a velocity–pressure setting using a discrete pressure Poisson equation. We have analysed the preservation of the discrete divergence constraint for segregated Runge–Kutta methods and their relation (in their fully explicit version) with existing half-explicit methods. We have performed a detailed numerical experimentation for a wide set of schemes (from first to third order), including implicit and IMEX integration of viscous and convective terms, for incompressible laminar and turbulent flows. Further, segregated Runge–Kutta schemes with adaptive time stepping are proposed. Copyright © 2015 John Wiley \& Sons, Ltd.},
+	language = {en},
+	number = {5},
+	urldate = {2016-01-13},
+	journal = {International Journal for Numerical Methods in Engineering},
+	author = {Colomés, Oriol and Badia, Santiago},
+	year = {2016},
+	keywords = {Adaptive time stepping, High-order, incompressible Navier–Stokes, pressure-segregation, Runge–Kutta, time integration},
+	pages = {372--400},
+	file = {Full Text PDF:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/BFKFBMGK/Colomés and Badia - 2016 - Segregated Runge–Kutta methods for the incompressi.pdf:application/pdf;Snapshot:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/UHB8WXXQ/abstract.html:text/html}
+}
+
+@article{colomes_mixed_2016,
+	title = {Mixed finite element methods with convection stabilization for the large eddy simulation of incompressible turbulent flows},
+	volume = {304},
+	issn = {0045-7825},
+	url = {http://www.sciencedirect.com/science/article/pii/S0045782516300561},
+	doi = {10.1016/j.cma.2016.02.026},
+	abstract = {The variational multiscale method thought as an implicit large eddy simulation model for turbulent flows has been shown to be an alternative to the widely used physical-based models. This method is traditionally combined with equal-order velocity–pressure pairs, since it provides pressure stabilization. In this work, we consider a different approach, based on inf–sup stable elements and convection-only stabilization. In order to do so, we consider a symmetric projection stabilization of the convective term using an orthogonal subscale decomposition. The accuracy and efficiency of this method compared with residual-based algebraic subgrid scales and orthogonal subscales methods for equal-order interpolation is assessed in this paper. Moreover, when inf–sup stable elements are used, the grad–div stabilization term has been shown to be essential to guarantee accurate solutions. Hence, a study of the influence of such term in the large eddy simulation of turbulent incompressible flows is also performed. Furthermore, a recursive block preconditioning strategy has been considered for the resolution of the problem with an implicit treatment of the projection terms. Two different benchmark tests have been solved: the Taylor–Green Vortex flow with R e = 1600 , and the Turbulent Channel Flow at R e τ = 395 and R e τ = 590 .},
+	urldate = {2016-03-16},
+	journal = {Computer Methods in Applied Mechanics and Engineering},
+	author = {Colomés, Oriol and Badia, Santiago and Principe, Javier},
+	year = {2016},
+	keywords = {Block recursive preconditioning, Grad–div stabilization, large eddy simulation, Turbulence, Variational multiscale},
+	pages = {294--318},
+	file = {ScienceDirect Full Text PDF:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/TQWDFVAM/Colomés et al. - 2016 - Mixed finite element methods with convection stabi.pdf:application/pdf;ScienceDirect Snapshot:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/M25BHBPD/S0045782516300561.html:text/html}
+}
+
+@article{colomes_segregated_2017,
+	title = {Segregated {Runge}–{Kutta} time integration of convection-stabilized mixed finite element schemes for wall-unresolved {LES} of incompressible flows},
+	volume = {313},
+	issn = {0045-7825},
+	url = {http://www.sciencedirect.com/science/article/pii/S0045782516312555},
+	doi = {10.1016/j.cma.2016.09.040},
+	abstract = {In this work, we develop a high-performance numerical framework for the large eddy simulation (LES) of incompressible flows. The spatial discretization of the nonlinear system is carried out using mixed finite element (FE) schemes supplemented with symmetric projection stabilization of the convective term and a penalty term for the divergence constraint. These additional terms introduced at the discrete level have been proved to act as implicit LES models. In order to perform meaningful wall-unresolved simulations, we consider a weak imposition of the boundary conditions using a Nitsche’s-type scheme, where the tangential component penalty term is designed to act as a wall law. Next, segregated Runge–Kutta (SRK) schemes (recently proposed by the authors for laminar flow problems) are applied to the LES simulation of turbulent flows. By the introduction of a penalty term on the trace of the acceleration, these methods exhibit excellent stability properties for both implicit and explicit treatment of the convective terms. SRK schemes are excellent for large-scale simulations, since they reduce the computational cost of the linear system solves by splitting velocity and pressure computations at the time integration level, leading to two uncoupled systems. The pressure system is a Darcy-type problem that can easily be preconditioned using a traditional block-preconditioning scheme that only requires a Poisson solver. At the end, only coercive systems have to be solved, which can be effectively preconditioned by multilevel domain decomposition schemes, which are both optimal and scalable. The framework is applied to the Taylor–Green and turbulent channel flow benchmarks in order to prove the accuracy of the convection-stabilized mixed FEs as LES models and SRK time integrators. The scalability of the preconditioning techniques (in space only) has also been proven for one step of the SRK scheme for the Taylor–Green flow using uniform meshes. Moreover, a turbulent flow around a NACA profile is solved to show the applicability of the proposed algorithms for a realistic problem.},
+	urldate = {2017-01-10},
+	journal = {Computer Methods in Applied Mechanics and Engineering},
+	author = {Colomés, Oriol and Badia, Santiago},
+	year = {2017},
+	keywords = {large eddy simulation, Runge–Kutta, Turbulence, Variational multiscale, Wall models},
+	pages = {189--215},
+	file = {ScienceDirect Full Text PDF:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/QM3NZ876/Colomés and Badia - 2017 - Segregated Runge–Kutta time integration of convect.pdf:application/pdf;ScienceDirect Snapshot:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/TVNT347W/S0045782516312555.html:text/html}
+}
+
+@article{badia_unconditionally_2013,
+	title = {On an unconditionally convergent stabilized finite element approximation of resistive magnetohydrodynamics},
+	volume = {234},
+	issn = {0021-9991},
+	url = {http://www.sciencedirect.com/science/article/pii/S0021999112005761},
+	doi = {10.1016/j.jcp.2012.09.031},
+	abstract = {In this work, we propose a new stabilized finite element formulation for the approximation of the resistive magnetohydrodynamics equations. The novelty of this formulation is the fact that it always converges to the physical solution, even for singular ones. A detailed set of numerical experiments have been performed in order to validate our approach.},
+	number = {0},
+	urldate = {2012-11-26},
+	journal = {Journal of Computational Physics},
+	author = {Badia, Santiago and Codina, Ramon and Planas, Ramon},
+	year = {2013},
+	keywords = {Finite elements, Magnetohydrodynamics, Singular solutions, Stabilized finite element methods},
+	pages = {399--416}
+}
+
+@article{badia_unconditionally_2013-1,
+	title = {Unconditionally stable operator splitting algorithms for the incompressible magnetohydrodynamics system discretized by a stabilized finite element formulation based on projections},
+	volume = {93},
+	copyright = {Copyright © 2012 John Wiley \& Sons, Ltd.},
+	issn = {1097-0207},
+	url = {http://onlinelibrary.wiley.com/doi/10.1002/nme.4392/abstract},
+	doi = {10.1002/nme.4392},
+	abstract = {In this article, we propose different splitting procedures for the transient incompressible magnetohydrodynamics (MHD) system that are unconditionally stable. We consider two levels of splitting, on one side we perform the segregation of the fluid pressure and magnetic pseudo-pressure from the vectorial fields computation. At the second level, the fluid velocity and induction fields are also decoupled. This way, we transform a fully coupled indefinite multi-physics system into a set of smaller definite ones, clearly reducing the CPU cost. With regard to the finite element approximation, we stick to an unconditionally convergent stabilized finite element formulation because it introduces convection stabilization, allows to circumvent inf-sup conditions (clearly simplifying implementation issues), and is able to capture non-smooth solutions of the magnetic subproblem. However, residual-based finite element formulations are not suitable for segregation, because they lose the skew-symmetry of the off-diagonal blocks. Therefore, in this work, we have proposed a novel term-by-term stabilization of the MHD system based on projections that is still unconditionally convergent. Copyright © 2012 John Wiley \& Sons, Ltd.},
+	language = {en},
+	number = {3},
+	urldate = {2013-07-09},
+	journal = {International Journal for Numerical Methods in Engineering},
+	author = {Badia, Santiago and Planas, Ramon and Gutiérrez-Santacreu, Juan Vicente},
+	year = {2013},
+	keywords = {Fractional step methods, incompressible magnetohydrodynamics, operator splitting algorithms, Stabilized finite element methods, symmetric projection stabilization},
+	pages = {302--328},
+	file = {Full Text PDF:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/4SDG2S4X/Badia et al. - 2013 - Unconditionally stable operator splitting algorith.pdf:application/pdf;Snapshot:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/2HDD4UIE/abstract.html:text/html}
+}
+
+@article{planas_approximation_2011,
+	title = {Approximation of the inductionless {MHD} problem using a stabilized finite element method},
+	volume = {230},
+	issn = {0021-9991},
+	url = {http://www.sciencedirect.com/science/article/pii/S0021999111000088},
+	doi = {10.1016/j.jcp.2010.12.046},
+	abstract = {In this work, we present a stabilized formulation to solve the inductionless magnetohydrodynamic (MHD) problem using the finite element (FE) method. The MHD problem couples the Navier–Stokes equations and a Darcy-type system for the electric potential via Lorentz’s force in the momentum equation of the Navier–Stokes equations and the currents generated by the moving fluid in Ohm’s law. The key feature of the FE formulation resides in the design of the stabilization terms, which serve several purposes. First, the formulation is suitable for convection dominated flows. Second, there is no need to use interpolation spaces constrained to a compatibility condition in both sub-problems and therefore, equal-order interpolation spaces can be used for all the unknowns. Finally, this formulation leads to a coupled linear system; this monolithic approach is effective, since the coupling can be dealt by effective preconditioning and iterative solvers that allows to deal with high Hartmann numbers.},
+	number = {8},
+	urldate = {2012-02-10},
+	journal = {Journal of Computational Physics},
+	author = {Planas, Ramon and Badia, Santiago and Codina, Ramon},
+	year = {2011},
+	keywords = {HCLL test blanket module, Inductionless MHD, Monolithic scheme, Primal–dual formulation, Stabilized finite element formulation, Variational multiscale method},
+	pages = {2977--2996}
+}
+
+@article{smolentsev_approach_2015,
+	title = {An approach to verification and validation of {MHD} codes for fusion applications},
+	volume = {100},
+	issn = {09203796},
+	url = {http://linkinghub.elsevier.com/retrieve/pii/S0920379614003263},
+	doi = {10.1016/j.fusengdes.2014.04.049},
+	language = {en},
+	urldate = {2015-10-22},
+	journal = {Fusion Engineering and Design},
+	author = {Smolentsev, S. and Badia, S. and Bhattacharyay, R. and Bühler, L. and Chen, L. and Huang, Q. and Jin, H.-G. and Krasnov, D. and Lee, D.-W. and de les Valls, E. Mas and Mistrangelo, C. and Munipalli, R. and Ni, M.-J. and Pashkevich, D. and Patel, A. and Pulugundla, G. and Satyamurthy, P. and Snegirev, A. and Sviridov, V. and Swain, P. and Zhou, T. and Zikanov, O.},
+	year = {2015},
+	pages = {65--72},
+	file = {1-s2.0-S0920379614003263-main.pdf:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/SSP235CH/1-s2.0-S0920379614003263-main.pdf:application/pdf}
+}
+
+@article{badia_analysis_2015,
+	title = {Analysis of an {Unconditionally} {Convergent} {Stabilized} {Finite} {Element} {Formulation} for {Incompressible} {Magnetohydrodynamics}},
+	volume = {22},
+	issn = {1134-3060, 1886-1784},
+	url = {http://link.springer.com/10.1007/s11831-014-9129-5},
+	doi = {10.1007/s11831-014-9129-5},
+	language = {en},
+	number = {4},
+	urldate = {2015-10-22},
+	journal = {Archives of Computational Methods in Engineering},
+	author = {Badia, Santiago and Codina, Ramon and Planas, Ramon},
+	year = {2015},
+	pages = {621--636},
+	file = {art%3A10.1007%2Fs11831-014-9129-5.pdf:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/V56PVIH3/art%3A10.1007%2Fs11831-014-9129-5.pdf:application/pdf}
+}
+
+@article{badia_discrete_2015,
+	title = {On discrete maximum principles for discontinuous {Galerkin} methods},
+	volume = {286},
+	issn = {0045-7825},
+	url = {http://www.sciencedirect.com/science/article/pii/S004578251400485X},
+	doi = {10.1016/j.cma.2014.12.006},
+	abstract = {The aim of this work is to propose a monotonicity-preserving method for discontinuous Galerkin (dG) approximations of convection–diffusion problems. To do so, a novel definition of discrete maximum principle (DMP) is proposed using the discrete variational setting of the problem, and we show that the fulfilment of this DMP implies that the minimum/maximum (depending on the sign of the forcing term) is on the boundary for multidimensional problems. Then, an artificial viscosity (AV) technique is designed for convection-dominant problems that satisfies the above mentioned DMP. The noncomplete stabilized interior penalty dG method is proved to fulfil the DMP property for the one-dimensional linear case when adding such AV with certain parameters. The benchmarks for the constant values to satisfy the DMP are calculated and tested in the numerical experiments section. Finally, the method is applied to different test problems in one and two dimensions to show its performance.},
+	urldate = {2015-01-12},
+	journal = {Computer Methods in Applied Mechanics and Engineering},
+	author = {Badia, Santiago and Hierro, Alba},
+	year = {2015},
+	keywords = {Convection–diffusion, Convection-dominated flows, Discontinuous Galerkin, Nonlinear stabilization, shock capturing, Stabilized finite elements},
+	pages = {107--122},
+	file = {ScienceDirect Full Text PDF:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/X9I4FPQS/Badia and Hierro - 2015 - On discrete maximum principles for discontinuous G.pdf:application/pdf;ScienceDirect Snapshot:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/BI7P2G73/S004578251400485X.html:text/html}
+}
+
+@article{badia_monotonicity-preserving_2014,
+	title = {On {Monotonicity}-{Preserving} {Stabilized} {Finite} {Element} {Approximations} of {Transport} {Problems}},
+	volume = {36},
+	issn = {1064-8275, 1095-7197},
+	url = {http://epubs.siam.org/doi/abs/10.1137/130927206},
+	doi = {10.1137/130927206},
+	language = {en},
+	number = {6},
+	urldate = {2015-05-07},
+	journal = {SIAM Journal on Scientific Computing},
+	author = {Badia, Santiago and Hierro, Alba},
+	year = {2014},
+	pages = {A2673--A2697},
+	file = {130927206.pdf:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/K24INI6F/130927206.pdf:application/pdf}
+}
+
+@article{badia_differentiable_2017,
+	title = {Differentiable monotonicity-preserving schemes for discontinuous {Galerkin} methods on arbitrary meshes},
+	volume = {320},
+	issn = {0045-7825},
+	url = {http://www.sciencedirect.com/science/article/pii/S0045782516319090},
+	doi = {10.1016/j.cma.2017.03.032},
+	abstract = {This work is devoted to the design of interior penalty discontinuous Galerkin (dG) schemes that preserve maximum principles at the discrete level for the steady transport and convection–diffusion problems and the respective transient problems with implicit time integration. Monotonic schemes that combine explicit time stepping with dG space discretization are very common, but the design of such schemes for implicit time stepping is rare, and it had only been attained so far for 1D problems. The proposed scheme is based on a piecewise linear dG discretization supplemented with an artificial diffusion that linearly depends on a shock detector that identifies the troublesome areas. In order to define the new shock detector, we have introduced the concept of discrete local extrema. The diffusion operator is a graph-Laplacian, instead of the more common finite element discretization of the Laplacian operator, which is essential to keep monotonicity on general meshes and in multi-dimension. The resulting nonlinear stabilization is non-smooth and nonlinear solvers can fail to converge. As a result, we propose a smoothed (twice differentiable) version of the nonlinear stabilization, which allows us to use Newton with line search nonlinear solvers and dramatically improve nonlinear convergence. A theoretical numerical analysis of the proposed schemes shows that they satisfy the desired monotonicity properties. Further, the resulting operator is Lipschitz continuous and there exists at least one solution of the discrete problem, even in the non-smooth version. We provide a set of numerical results to support our findings.},
+	urldate = {2017-05-11},
+	journal = {Computer Methods in Applied Mechanics and Engineering},
+	author = {Badia, Santiago and Bonilla, Jesús and Hierro, Alba},
+	year = {2017},
+	keywords = {Discontinuous Galerkin, Discrete maximum principle, Finite elements, Local extrema diminishing, Monotonicity, shock capturing},
+	pages = {582--605},
+	file = {ScienceDirect Snapshot:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/PCWRUBNE/S0045782516319090.html:text/html}
+}
+
+
+@article{hierro_shock_2016,
+	title = {Shock capturing techniques for -adaptive finite elements},
+	volume = {309},
+	issn = {0045-7825},
+	url = {http://www.sciencedirect.com/science/article/pii/S0045782516305862},
+	doi = {10.1016/j.cma.2016.06.017},
+	abstract = {The aim of this work is to propose an h p -adaptive algorithm for discontinuous Galerkin methods that is capable to detect the discontinuities and sharp layers and avoid the spurious oscillation of the solution around them. In order to control the spurious oscillations, artificial viscosity is used with the particularity that it is only applied around the layers where the solution changes abruptly. To do so, a novel troubled-cell detector has been developed in order to mark the elements around those layers and to impose linear order in them. The detector takes advantage of the evolution of the value of the gradient through the adaptive process.},
+	urldate = {2017-01-10},
+	journal = {Computer Methods in Applied Mechanics and Engineering},
+	author = {Hierro, Alba and Badia, Santiago and Kus, Pavel},
+	year = {2016},
+	keywords = {Convection–diffusion, Convection-dominated flows, Discontinuous Galerkin, h  p  -adaptivity, shock capturing, Troubled-cell detector},
+	pages = {532--553},
+	file = {ScienceDirect Full Text PDF:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/C72IGK4M/Hierro et al. - 2016 - Shock capturing techniques for -adaptive finite el.pdf:application/pdf;ScienceDirect Snapshot:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/Z2WXKQDR/S0045782516305862.html:text/html}
+}
+
+@article{badia_monotonicity-preserving_2017,
+	title = {Monotonicity-preserving finite element schemes based on differentiable nonlinear stabilization},
+	volume = {313},
+	issn = {0045-7825},
+	url = {http://www.sciencedirect.com/science/article/pii/S0045782516306405},
+	doi = {10.1016/j.cma.2016.09.035},
+	abstract = {In this work, we propose a nonlinear stabilization technique for scalar conservation laws with implicit time stepping. The method relies on an artificial diffusion method, based on a graph-Laplacian operator. It is nonlinear, since it depends on a shock detector. Further, the resulting method is linearity preserving. The same shock detector is used to gradually lump the mass matrix. The resulting method is LED, positivity preserving, and also satisfies a global DMP. Lipschitz continuity has also been proved. However, the resulting scheme is highly nonlinear, leading to very poor nonlinear convergence rates. We propose a smooth version of the scheme, which leads to twice differentiable nonlinear stabilization schemes. It allows one to straightforwardly use Newton’s method and obtain quadratic convergence. In the numerical experiments, steady and transient linear transport, and transient Burgers’ equation have been considered in 2D. Using the Newton method with a smooth version of the scheme we can reduce 10 to 20 times the number of iterations of Anderson acceleration with the original non-smooth scheme. In any case, these properties are only true for the converged solution, but not for iterates. In this sense, we have also proposed the concept of projected nonlinear solvers, where a projection step is performed at the end of every nonlinear iterations onto a FE space of admissible solutions. The space of admissible solutions is the one that satisfies the desired monotonic properties (maximum principle or positivity).},
+	urldate = {2017-01-10},
+	journal = {Computer Methods in Applied Mechanics and Engineering},
+	author = {Badia, Santiago and Bonilla, Jesús},
+	year = {2017},
+	keywords = {Discrete maximum principle, Finite elements, Monotonicity, Nonlinear solvers, shock capturing},
+	pages = {133--158},
+	file = {ScienceDirect Full Text PDF:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/PR9TGUSJ/Badia and Bonilla - 2017 - Monotonicity-preserving finite element schemes bas.pdf:application/pdf;ScienceDirect Snapshot:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/WF2AVS2Z/S0045782516306405.html:text/html}
+}
+
+@article{badia_balancing_2016,
+	title = {Balancing {Domain} {Decomposition} by {Constraints} and {Perturbation}},
+	volume = {54},
+	issn = {0036-1429},
+	url = {http://epubs.siam.org.recursos.biblioteca.upc.edu/doi/abs/10.1137/15M1045648},
+	doi = {10.1137/15M1045648},
+	abstract = {In this paper, we formulate and analyze a perturbed formulation of the balancing domain decomposition by constraints (BDDC) method. We prove that the perturbed BDDC has the same polylogarithmic bound for the condition number as the standard formulation. Two types of properly scaled zero-order perturbations are considered: one uses a mass matrix, and the other uses a Robin-type boundary condition, i.e, a mass matrix on the interface. With perturbation, the well-posedness of the local Neumann problems and the global coarse problem is automatically guaranteed, and coarse degrees of freedom can be defined only for convergence purposes but not well-posedness. This allows a much simpler implementation as no complicated corner selection algorithm is needed. Minimal coarse spaces using only face or edge constraints can also be considered. They are very useful in extreme scale calculations where the coarse problem is usually the bottleneck that can jeopardize scalability. The perturbation also adds extra robustness as the perturbed formulation works even when the constraints fail to eliminate a small number of subdomain rigid body modes from the standard BDDC space. This is extremely important when solving problems on unstructured meshes partitioned by automatic graph partitioners since arbitrary disconnected subdomains are possible. Numerical results are provided to support the theoretical findings.},
+	number = {6},
+	urldate = {2017-01-10},
+	journal = {SIAM Journal on Numerical Analysis},
+	author = {Badia, S. and Nguyen, H.},
+	year = {2016},
+	pages = {3436--3464},
+	file = {Full Text PDF:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/I2BZK6GD/Badia and Nguyen - 2016 - Balancing Domain Decomposition by Constraints and .pdf:application/pdf;Snapshot:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/BPDX629H/15M1045648.html:text/html}
+}
+
+@article{chiumenti_numerical_2017,
+	title = {Numerical modelling and experimental validation in {Selective} {Laser} {Melting}},
+	volume = {18},
+	issn = {22148604},
+	url = {http://linkinghub.elsevier.com/retrieve/pii/S2214860417302087},
+	doi = {10.1016/j.addma.2017.09.002},
+	language = {en},
+	urldate = {2018-01-15},
+	journal = {Additive Manufacturing},
+	author = {Chiumenti, Michele and Neiva, Eric and Salsi, Emilio and Cervera, Miguel and Badia, Santiago and Moya, Joan and Chen, Zhuoer and Lee, Caroline and Davies, Christopher},
+	year = {2017},
+	pages = {171--185}
+}
+
+@article{badia_robust_2017,
+	title = {Robust and scalable domain decomposition solvers for unfitted finite element methods},
+	issn = {03770427},
+	url = {http://linkinghub.elsevier.com/retrieve/pii/S037704271730465X},
+	doi = {10.1016/j.cam.2017.09.034},
+	language = {en},
+	urldate = {2018-01-15},
+	journal = {Journal of Computational and Applied Mathematics},
+	author = {Badia, Santiago and Verdugo, Francesc},
+	year = {2017}
+}
+
+@article{badia_space-time_2017,
+	title = {Space-{Time} {Balancing} {Domain} {Decomposition}},
+	volume = {39},
+	issn = {1064-8275},
+	url = {http://epubs.siam.org.recursos.biblioteca.upc.edu/doi/abs/10.1137/16M1074266},
+	doi = {10.1137/16M1074266},
+	abstract = {In this work, we propose two-level space-time domain decomposition preconditioners for parabolic problems discretized using finite elements. They are motivated as an extension to space-time of balancing domain decomposition by constraints preconditioners. The key ingredients to be defined are the subassembled space and operator, the coarse degrees of freedom (DOFs) in which we want to enforce continuity among subdomains at the preconditioner level, and the transfer operator from the subassembled to the original finite element space. With regard to the subassembled operator, a perturbation of the time derivative is needed to end up with a well-posed preconditioner. The set of coarse DOFs includes the time average (at the space-time subdomain) of classical space constraints plus new constraints between consecutive subdomains in time. Numerical experiments show that the proposed schemes are weakly scalable in time, i.e., we can efficiently exploit increasing computational resources to solve more time steps in the same total elapsed time. Further, the scheme is also weakly space-time scalable, since it leads to asymptotically constant iterations when solving larger problems both in space and time. Excellent wall clock time weak scalability is achieved for space-time parallel solvers on some thousands of cores.},
+	number = {2},
+	urldate = {2017-05-11},
+	journal = {SIAM Journal on Scientific Computing},
+	author = {Badia, S. and Olm, M.},
+	year = {2017},
+	pages = {C194--C213},
+	file = {Full Text PDF:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/SD9G3DEH/Badia and Olm - 2017 - Space-Time Balancing Domain Decomposition.pdf:application/pdf;Snapshot:/home/sbadia/.zotero/zotero/q366twt9.default/zotero/storage/SRG8I265/16M1074266.html:text/html}
+}
+
+@article{Badia2020euler,
+abstract = {This work presents the design of nonlinear stabilization techniques for the finite element discretization of Euler equations in both steady and transient form. Implicit time integration is used in the case of the transient form. A differentiable local bounds preserving method has been developed, which combines a Rusanov artificial diffusion operator and a differentiable shock detector. Nonlinear stabilization schemes are usually stiff and highly nonlinear. This issue is mitigated by the differentiability properties of the proposed method. Moreover, in order to further improve the nonlinear convergence, we also propose a continuation method for a subset of the stabilization parameters. The resulting method has been successfully applied to steady and transient problems with complex shock patterns. Numerical experiments show that it is able to provide sharp and well resolved shocks. The importance of the differentiability is assessed by comparing the new scheme with its non-differentiable counterpart. Numerical experiments suggest that, for up to moderate nonlinear tolerances, the method exhibits improved robustness and nonlinear convergence behavior for steady problems. In the case of transient problem, we also observe a reduction in the computational cost.},
+archivePrefix = {arXiv},
+arxivId = {1911.06792},
+author = {Badia, Santiago and Bonilla, Jes{\'{u}}s and Mabuza, Sibusiso and Shadid, John N.},
+doi = {10.1016/j.cma.2020.113267},
+eprint = {1911.06792},
+issn = {00457825},
+journal = {Computer Methods in Applied Mechanics and Engineering},
+keywords = {Euler equations,Hyperbolic systems,Positivity preservation,Shock capturing},
+mendeley-groups = {Members_libraries/SB},
+pages = {113267},
+publisher = {Elsevier B.V.},
+title = {{On differentiable local bounds preserving stabilization for Euler equations}},
+volume = {370},
+year = {2020}
+}
+
+@article{Bonilla2019b,
+abstract = {In this work we propose a nonlinear stabilization technique for convection–diffusion–reaction and pure transport problems discretized with space–time isogeometric analysis. The stabilization is based on a graph-theoretic artificial diffusion operator and a novel shock detector for isogeometric analysis. Stabilization in time and space directions are performed similarly, which allow us to use high-order discretizations in time without any CFL-like condition. The method is proven to yield solutions that satisfy the discrete maximum principle (DMP) unconditionally for arbitrary order. In addition, the stabilization is linearity preserving in a space–time sense. Moreover, the scheme is proven to be Lipschitz continuous ensuring that the nonlinear problem is well-posed. Solving large problems using a space–time discretization can become highly costly. Therefore, we also propose a partitioned space–time scheme that allows us to select the length of every time slab, and solve sequentially for every subdomain. As a result, the computational cost is reduced while the stability and convergence properties of the scheme remain unaltered. In addition, we propose a twice differentiable version of the stabilization scheme, which enjoys the same stability properties while the nonlinear convergence is significantly improved. Finally, the proposed schemes are assessed with numerical experiments. In particular, we considered steady and transient pure convection and convection–diffusion problems in one and two dimensions.},
+author = {Bonilla, Jes{\'{u}}s and Badia, Santiago},
+doi = {10.1016/J.CMA.2019.05.042},
+issn = {0045-7825},
+journal = {Computer Methods in Applied Mechanics and Engineering},
+mendeley-groups = {Members_libraries/SB/published,Members_libraries/SB,Members_libraries},
+pages = {422--440},
+publisher = {North-Holland},
+title = {{Maximum-principle preserving space–time isogeometric analysis}},
+url = {https://www-sciencedirect-com.ezproxy.lib.monash.edu.au/science/article/pii/S0045782519303123},
+volume = {354},
+year = {2019}
+}
+
+@article{Bonilla2020,
+abstract = {This work is focused on the extension and assessment of the monotonicity-preserving scheme in [3] and the local bounds preserving scheme in [5] to hierarchical octree adaptive mesh refinement (AMR). Whereas the former can readily be used on this kind of meshes, the latter requires some modifications. A key question that we want to answer in this work is whether to move from a linear to a nonlinear stabilization mechanism pays the price when combined with shock-adapted meshes. Whereas nonlinear (or shock-capturing) stabilization leads to improved accuracy compared to linear schemes, it also negatively hinders nonlinear convergence, increasing computational cost. We compare linear and nonlinear schemes in terms of the required computational time versus accuracy for several steady benchmark problems. Numerical results indicate that, in general, nonlinear schemes can be cost-effective for sufficiently refined meshes. Besides, it is also observed that it is better to refine further around shocks rather than use sharper shock capturing terms, which usually yield stiffer nonlinear problems. In addition, a new refinement criterion has been proposed. The proposed criterion is based on the graph Laplacian used in the definition of the stabilization method. Numerical results show that this shock detector performs better than the well-known Kelly estimator for problems with shocks or discontinuities.},
+archivePrefix = {arXiv},
+arxivId = {1912.11487},
+author = {Bonilla, Jes{\'{u}}s and Badia, Santiago},
+doi = {10.1016/j.jcp.2020.109522},
+eprint = {1912.11487},
+issn = {10902716},
+journal = {Journal of Computational Physics},
+keywords = {Adaptive mesh refinement,Discrete maximum principle,Euler equations,Hyperbolic problems,Shock capturing},
+mendeley-groups = {Members_libraries/SB},
+pages = {109522},
+publisher = {Academic Press Inc.},
+title = {{Monotonicity-preserving finite element schemes with adaptive mesh refinement for hyperbolic problems}},
+volume = {416},
+year = {2020}
+}
+
+
+@article{Badia2019,
+abstract = {A simple variant of the BDDC preconditioner in which constraints are imposed on a selected set of subobjects (subdomain subedges, subfaces and vertices between pairs of subedges) is presented. We are able to show that the condition number of the preconditioner is bounded by C(1+log(L∕h))2, where C is a constant, and h and L are the characteristic sizes of the mesh and the subobjects, respectively. As L can be chosen almost freely, the condition number can theoretically be as small as O(1). We will discuss the pros and cons of the preconditioner and its application to heterogeneous problems. Numerical results on supercomputers are provided.},
+author = {Badia, Santiago and Mart{\'{i}}n, Alberto F. and Nguyen, Hieu},
+doi = {10.1016/J.AML.2018.07.033},
+issn = {0893-9659},
+journal = {Applied Mathematics Letters},
+mendeley-groups = {Solvers},
+pages = {93--100},
+publisher = {Pergamon},
+title = {{Balancing domain decomposition by constraints associated with subobjects}},
+url = {https://www.sciencedirect.com/science/article/pii/S089396591830257X},
+volume = {87},
+year = {2019}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
