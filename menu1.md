@@ -14,45 +14,48 @@ rss = "Curriculum vitae by A.F. Martin"
 
 ## Personal/Contact information
 
-- Surnames, name: Martín Huertas, Alberto Francisco
-- Birth date: November, 1982
-- Birth place: Cartagena (Murcia)
-- Citizenship: Spaniard
-- Job Address: 325, Level 3, 9 Rainforest walk, Clayton campus, Monash University
-- E-mail: alberto.martin@monash.edu
-- Webpage: [https://research.monash.edu/en/persons/alberto-f-martin](https://research.monash.edu/en/persons/alberto-f-martin)
+- **Surnames**, **Name**: Martín Huertas, Alberto Francisco
+- **Birth date**: November, 1982
+- **Birth place**: Cartagena (Murcia)
+- **Citizenship**: Spaniard
+- **Job Address**: 325, Level 3, 9 Rainforest walk, Clayton campus, Monash University
+- **Institutional Webpage**: [https://research.monash.edu/en/persons/alberto-f-martin](https://research.monash.edu/en/persons/alberto-f-martin)
 
 ## Researcher Identification
 
-- Researcher ID: [D-2761-2015](https://publons.com/researcher/2425480/alberto-f-afm-martin/)
-- ORCID: [0000-0001-5751-4561](http://orcid.org/0000-0001-5751-4561)
-- Scopus Author ID: [25960202000](https://www.scopus.com/authid/detail.uri?authorId=25960202000)
-- Google Scholar Profile:  [https://scholar.google.es/citations?user=CumvSwwAAAAJ](https://scholar.google.es/citations?user=CumvSwwAAAAJ)
+- **Researcher ID**: [D-2761-2015](https://publons.com/researcher/2425480/alberto-f-afm-martin/)
+- **ORCID**: [0000-0001-5751-4561](http://orcid.org/0000-0001-5751-4561)
+- **Scopus Author ID**: [25960202000](https://www.scopus.com/authid/detail.uri?authorId=25960202000)
+- **Google Scholar Profile**:  [https://scholar.google.es/citations?user=CumvSwwAAAAJ](https://scholar.google.es/citations?user=CumvSwwAAAAJ)
 
 ## Academic degrees
 
-- Mar, 2006 - Jul, 2010: *PhD in Computer Science* by [Universitat Jaume I](https://www.uji.es/#0), Castellon, Spain. Dissertation: Exploiting Thread-Level Parallelism in the Preconditioning and the Iterative Solution of Sparse Linear Systems. Advisors: Prof. J. I. Aliaga-Estell\'{e}s and Prof. E. S. Quintana-Ortí
+- Mar, 2006 - Jul, 2010: *PhD in Computational Science* by [Universitat Jaume I](https://www.uji.es/#0), Castellon, Spain. Dissertation: Exploiting Thread-Level Parallelism in the Preconditioning and the Iterative Solution of Sparse Linear Systems. Advisors: Prof. J. I. Aliaga-Estelles and Prof. E. S. Quintana-Ortí
 - Mar, 2006 - Dec, 2007: *Master of Advanced Studies* by [Universitat Jaume I](https://www.uji.es/#0), Castellon, Spain. Master thesis: Parallel Multilevel Preconditioners Constructed from Inverse-based ILUs on Shared-Memory Multiprocessors. Advisors: Prof. J. I. Aliaga-Estelles and Prof. E. S. Quintana-Ortí
 - Sep, 2000 - Sep, 2005: *Bachelor in Computer Science* by [Universitat Jaume I](https://www.uji.es/#0), Castellon, Spain.
 
-## Research Interests 
-Computational Science and Engineering. High Performance Scientific Computing. Scientific Machine Learning. Physics-informed Neural Networks. GPU computing. Partial Differential Equations. Finite
-Elements. Parallel Preconditioning for Large Scale Linear Systems. Scalable Domain Decomposition Preconditioners. Open Source Scientific Software.
+## Research Interests
+
+* Computational Mathematics. 
+* Computational Science and Engineering. 
+* High Performance Scientific Computing. 
+* Partial Differential Equations. Finite Elements. 
+* Parallel Preconditioning for Large Scale PDEs.
+* Scalable Domain Decomposition Preconditioners. 
+* Scientific Machine Learning. 
+* Artificial Neural Networks. 
+* GPU computing. 
+* Open Source Scientific Software.
 
 ## Experience
 
-After completing my PhD studies at Universitat Jaume I, and a short 6-month post-doc at that university (EU-FP7 TEXT project), I moved to Barcelona (Spain) in Mar, 2011, where I did post-doctoral research until Dec, 2015. I worked for CIMNE/UPC funded by two competitive post-doctoral research grants (awarded by UPC and the Catalan gov, resp.) Besides, I participated in two strategic EU projects for CIMNE, the ERC Starting Grant COMFUS, to support basic research in scalable numerical algorithms for the HPC simulation of realistic fusion technology problems, and the EU-FP7 NUMEXAS project, towards the next generation of advanced numerical methods for future exascale computing infrastructures. In Jan, 2016 I was promoted as senior researcher at CIMNE, position which I held until Nov, 2019. Then, early 2020, I moved to Monash University, Australia, where was appointed as senior research fellow for a 3-year period after winning an international call for candidates.  My research on these positions is focused on points 1., 2. and 3. above with application to computational magnetohydrodynamics, electromagnetics, thermo-mechanics, geophysical flows and bushfire dynamics. 
-<!-- 
-% Recently, my project proposal on space-time adaptive unfitted finite element methods, in which I am co-PI, has been funded by the Australian NCMAS. During a period of 10 years, I have provided to a group of 10 researchers access to different world-class supercomputing facilities via winning project proposals submitted to different funding agencies (RES, EU PRACE, German GCS). My research has translated into 24 articles (23 Q1-ranked) published in high-ranked JCR indexed journals, with 644 citations, h/i-index 14/19 (Google Scholar). Besides, I am co-founder of FEMPAR, an HPC open-source software package awarded by the JSC (Germany) with the High-Q Club award to one of the most scalable EU scientific codes. FEMPAR has been used in 40x papers published in Q1-ranked JCR journals, and its users span several institutions, including UPC, CIMNE, ICMAB-CSIC, CIEMAT, ICTJA-CSIC, Czech Academy of Sciences, Sandia National Labs and North Carolina State University, Duy Tan University, Monash University, and l’Ecole Politechnique. I am co-founder of the Fortran Modernization Workshop initiative (along with researchers from NAG, Durham and Cambridge Universities, UK), a series of workshops that fosters modern engineering practices in research-oriented scientific software, and I chaired the instance held at UPC (70x attendees from Spain, Portugal, Germany, USA, and Sweden). I am also contributor to the open source scientific software Gridap.jl, and co-author of GridapDistributed.jl, its parallel distributed-memory version, which provide a new FE framework written in Julia for the numerical simulation of models governed by PDEs, from desktop/laptops to supercomputers. Despite its short life (about 2 years), the Gridap ecosystem is spreading fast in different application fields and research teams worldwide, e.g., MIT (photonics, USA), Perimeter Institute for Theoretical Physics (relativity, Canada), TUDelft (offshore renewable energy, Netherlands) and BOM (climate, Melbourne), to mention but a few. The project has more than 250 starts in GitHub and a growing community of developers worldwide.
--->
+After completing my PhD studies at Universitat Jaume I, and a short 6-month post-doc at that university (EU-FP7 TEXT project), I moved to Barcelona (Spain) in Mar, 2011, where I did post-doctoral research until Dec, 2015. I worked for CIMNE/UPC funded by two competitive post-doctoral research grants (awarded by UPC and the Catalan gov, resp.) Besides, I participated in two strategic EU projects for CIMNE, the ERC Starting Grant COMFUS, to support basic research in scalable numerical algorithms for the HPC simulation of realistic fusion technology problems, and the EU-FP7 NUMEXAS project, towards the next generation of advanced numerical methods for future exascale computing infrastructures. In Jan, 2016 I was promoted as senior researcher at CIMNE, position which I held until Nov, 2019. Then, early 2020, I moved to Monash University, Australia, where was appointed as senior research fellow for a 3-year period after winning an international call for candidates.  My research on these positions is focused on points 1., 2. and 3. above with application to computational magnetohydrodynamics, electromagnetics, thermo-mechanics, and geophysical flows. 
 
 ### Current position
 
 - January, 2020 -- today: *Research fellow* at [Monash University](https://www.monash.edu/), Melbourne, Australia. 
 
-    Includes research on new algorithms and software design of large scale scientific applications. 
-    Research topics: parallel numerical methods for geophysical flows, hybrid finite element schemes.
-    Design and implementation of Gridap, a Julia framework for the FE simulation of problems governed by PDEs.([See research](/menu2/#career))
+    Includes research on new algorithms and software design of large scale scientific applications. **Research topics**: parallel numerical methods for geophysical flows, hybridizable finite element schemes, scientific machine learning for PDEs. Design and implementation of GridapDistributed and GridapHybrid and GridapDistributed, a Julia framework for the FE simulation of problems governed by PDEs. ([See research](/menu2/#career))
 
 
 ### Previous positions
@@ -60,30 +63,29 @@ After completing my PhD studies at Universitat Jaume I, and a short 6-month post
 - December, 2015 -- November, 2019: *Senior researcher* [International Center for Numerical Methods in Engineering (CIMNE)](https://www.cimne.com/), Barcelona, Spain.
 
     Includes research on new algorithms and software design of large scale scientific applications. 
-    Research topics: Unfitted FE methods. Extreme scale Adaptive Mesh Refinement (AMR) via forests-of-trees.
+    **Research topics**: Unfitted FE methods. Extreme scale Adaptive Mesh Refinement (AMR) via forests-of-trees.
     Domain decomposition preconditioners for multi-material and truly-heterogeneous problems.
     Large scale modelling of High Temperature Superconductors (HTS) and Additive Manufacturing (AM) processes.
     Design and implementation of `FEMPAR`, an object-oriented framework for the FE simulation of problems governed by PDEs.
-    ([See research](/menu2/#career))
 
 - February, 2014 - November, 2019: *Adjoint Professor* at [Universitat Politecnica de Catalunya (UPC)](https://www.upc.edu/), Barcelona, Spain.
 
-    Responsible for the organization and deployment of an introductory master course on HPC domain decomposition solvers within the framework of the UPC/CIMNE Master for Numerical Methods in Engineering (MNME) and the Erasmus Mundus Master on Computational Mechanics.([See research](/menu2/#career))
+    Responsible for the organization and deployment of an introductory master course on HPC domain decomposition solvers within the framework of the UPC/CIMNE Master for Numerical Methods in Engineering (MNME) and the Erasmus Mundus Master on Computational Mechanics.
 
 - July, 2012 -- November, 2015: *Postdoc researcher* at [Universitat Politecnica de Catalunya (UPC)](https://www.upc.edu/), Barcelona, Spain.
 
-    Includes research on new algorithms and software design of large scale scientific applications. Research topics: Novel stabilized FE formulations and parallel block preconditioners for the MagnetoHydroDynamics (MHD) PDE system with application to computational fusion. Extreme scale iterative substructuring domain decomposition methods for PDEs. Hybrid message-passing/multi-threaded implementations of these methods on current multicore-based massively parallel computers. Performance evaluation of developed software on large-scale computing infrastructures. Design and implementation of `FEMPAR`, an object-oriented framework for the FE simulation of problems governed by PDEs. ([See research](/menu2/#career))
+    Includes research on new algorithms and software design of large scale scientific applications. **Research topics**: Novel stabilized FE formulations and parallel block preconditioners for the MagnetoHydroDynamics (MHD) PDE system with application to computational fusion. Extreme scale iterative substructuring domain decomposition methods for PDEs. Hybrid message-passing/multi-threaded implementations of these methods on current multicore-based massively parallel computers. Performance evaluation of developed software on large-scale computing infrastructures. Design and implementation of `FEMPAR`, an object-oriented framework for the FE simulation of problems governed by PDEs. ([See research](/menu2/#career))
 
  - March, 2011 -- July, 2012:  *Post-doc researcher* at [International Center for Numerical Methods in Engineering (CIMNE)](https://www.cimne.com/), Barcelona, Spain. 
     ([See research](/menu2/#career))
 
 - September, 2010 -- March, 2011: *Post-doc researcher* at [Universitat Jaume I, Dpto. de Ingenieria y Ciencia de los Computadores](https://www.uji.es/#0), Castellon, Spain.
 
-    Includes research and software developing. Research topics: novel parallel programming models, exploitation of MPI/SMPSs task dataflow parallelism within distributed software for dense linear algebra (ScaLAPACK library), performance evaluation of developed software on large-scale computing infrastructures
+    Includes research and software developing. **Research topics**: novel parallel programming models, exploitation of MPI/SMPSs task dataflow parallelism within distributed software for dense linear algebra (ScaLAPACK library), performance evaluation of developed software on large-scale computing infrastructures
 
 - March, 2006 -- July, 2010: *Graduate Research Assistant* at  [Universitat Jaume I, Dpto. de Ingenieria y Ciencia de los Computadores](https://www.uji.es/#0), Castellon, Spain.
 
-    Includes Ph.D.research, Ph.D. and DEA level coursework. Research topics: parallel algorithms for inverse-based factorization-based preconditioning and iterative solution of large and sparse linear systems, developer of the parallel/multi-threaded version of the ILUPACK numerical linear algebra library  
+    Includes Ph.D.research, Ph.D. and DEA level coursework. **Research topics**: parallel algorithms for inverse-based factorization-based preconditioning and iterative solution of large and sparse linear systems, developer of the parallel/multi-threaded version of the ILUPACK numerical linear algebra library  
 
 - Feb. -- Jun., 2008 & Feb. -- Jun., 2009 & Sept., 2009 -- Feb., 2010: *Graduate Research Assistant* at  [Universitat Jaume I, Dpto. de Ingenieria y Ciencia de los Computadores](https://www.uji.es/#0), Castellon, Spain. 
 
@@ -106,11 +108,12 @@ After completing my PhD studies at Universitat Jaume I, and a short 6-month post
 
 ## Teaching and research supervision activities
 
-1. Post-doc researcher supervision (Dr. Manuel Caicedo). Topic: adaptive unfitted finite element techniques for nonlinear solid mechanics. Period: 2018-2020.
-1. PhD student supervision. Start date: 2021 (international border restrictions permitting). Project title: Machine learning-based nonlinear approximation of PDEs on complex domains. Student: Kishore Nori. School: Mathematics. Organization: Monash University, Australia.
-1. AMSI APR intership supervision (together with BOM). Project title: Geofem: A test bed for geo-physical flows on the cubed sphere using mixed finite elements. Year: 2021. Student: C. Bladwell.
-1. AMSI VRS student supervision. Year: 2020-2021. Project title: Development of HPC hybrid multi-scale methods. Student: J. Vandenberg. School: Mathematics. Organization: Monash University, Australia.
-1. Module leader in the unit Introduction to Scientific Coding of the Bachelor degree in Science. Year: 2020. School: Mathematics. Organization: Monash University, Australia.
+1. PhD student co-supervision. Start date: Dic, 2021. Project title: Scientific Machine Learning for Inverse Problems. Student: Wei Li. School: Mathematics. Organization: Monash University, Australia.
+1. PhD student co-supervision. Start date: Jan, 2022. Project title: Nonlinear hierarchical preconditioners for numerical PDEs. Student: Kishore Nori. School: Mathematics. Organization: Monash University, Australia.
+1. AMSI APR intership supervision (together with BOM). Project title: Geofem: A test bed for geophysical flows on the cubed sphere using mixed finite elements. Year: 2021. Student: C. Bladwell.
+1. AMSI VRS student supervision. Year: 2020-2021. Project title: Development of HPC hybrid multiscale methods. Student: J. Vandenberg. School: Mathematics. Organization: Monash University, Australia. 
+1. Post-doc researcher supervision (Dr. Manuel Caicedo). Topic: adaptive unfitted finite element techniques for nonlinear solid mechanics. Period: 2018-2020. 
+1. Module leader in the unit Introduction to Scientific Coding of the Bachelor degree in Science. Year: 2020/2021/2022. School: Mathematics. Organization: Monash University, Australia.
 1. Co-organizer of a MSc. course in domain decomposition methods at the International Master in Computational Mechanics. Years (2nd semester): 2014-2015; 2015-2016; 2016-2017; 2017-2018; 2018-2019. School: ETSECCPB. Organization: UPC, Spain.
 
 
@@ -142,10 +145,6 @@ After completing my PhD studies at Universitat Jaume I, and a short 6-month post
 1. S. Badia, **A. F. Martín**, and J. Principe. Enhanced balancing Neumann-Neumann preconditioning in computational fluid and solid mechanics. *International Journal for Numerical Methods in Engineering*, 96(4):203–230, 2013. \doi{10.1002/nme.4541}
 1. S. Badia, **A. F. Martín**, and J. Principe. Implementation and Scalability Analysis of Balancing Domain Decomposition Methods. *Archives of Computational Methods in Engineering*, 20(3):239–262, 2013. \doi{10.1007/s11831-013-9086-4}
 1. J. I. Aliaga, M. Bollhoefer, **A. F. Martín**, and E. S. Quintana-Ortí. Exploiting thread-level parallelism in the iterative solution of sparse linear systems. *Parallel Computing*, 37(3):183–202, 2011. \doi{10.1016/j.parco.2010.11.002}
-
-
-### Manuscripts in preparation
-1. C. Badwell, **A. F. Martín**, D. R. Lee, and S. Badia. Non-linearly stable, energetically balanced time integration for the rotating shallow water equations, 2021. In preparation
 
 ### Publications in Refereed Collections
 1. M. Bollhöfer, J. I. Aliaga, **A. F. Martín**, and E. S. Quintana-Ortí. ILUPACK. In D. A. Padua, editor, *Encyclopedia of Parallel Computing*, pages 917–926. Springer, 2011. \doi{10.1007/978-0-387-09766-4_513}
@@ -217,10 +216,10 @@ I have developed several R&D management roles.  Within the FETHPC-H2020 ExaQute 
 
 ## Seminars and Invited Talks
 
+- Monash Workshop on Numerical Differential Equations and Applications, Melbourne, Australia. February, 2020
+
 - Organizer and lecturer of the Fortran Modernization Workshop at UPC.
     Research-oriented workshop, targeting CSE practitioners and researchers, that encourages, among others, the usage of clean and modern software engineering practices in  scientific software. This workshop is free for the attendees, and is funded by NAG (private company) and the UK government. I chaired the last instance of the workshop, held at UPC in July, 2017. 70x researchers from different institutions and countries  (Spain, Portugal, Germany, Holland, USA, and Sweden) attended the workshop. Barcelona, Spain. July, 2017.
-
-- Monash Workshop on Numerical Differential Equations and Applications, Melbourne, Australia. February, 2020
 
 - SIAM Conference on Computational Science and Engineering. Invited Speaker to Minisymposium, Atlanta, USA. March, 2017
 
@@ -244,13 +243,13 @@ I have developed several R&D management roles.  Within the FETHPC-H2020 ExaQute 
 ## Research Products with Intellectual Property
 Author (together with Profs. S. Badia and J. Principe) and essential contributor to `FEMPAR`: Finite Element Multiphysics PARallel scientific computing software.
 
-I am also contributor to `Gridap.jl`, and co-author of `GridapDistributed.jl`, its parallel version, which provide a new FE framework written in Julia for the numerical simulation of models governed by PDEs, from desktop/laptops to supercomputers. `Gridap.jl` exploits the modern features of the Julia language in order to strike a remarkable balance among performance and generality via appropriate mathematically-driven software abstractions.
+I am also leading the `GridapHybrid.jl`, `GridapDistributed.jl`, and `GridapGeosciences.jl` packages. I am also a developer of Gridap.jl. These packages provide a fresh FE framework written in Julia for the numerical simulation of models governed by PDEs, from desktop/laptops to supercomputers. These packages exploit the modern features of the Julia language in order to strike a remarkable balance among performance and generality via appropriate mathematically-driven software abstractions.
 
-## Programming skills COMPLETAR
+## Programming skills
 
-- Programming languages: Julia ([see projects](/software/#projects_i_created)), Python, Fortran ([see projects](/software/#fempar)), C/C++ ([see projects](/software/#baci)), Matlab.
+- Programming languages: Julia, Python, Fortran, C/C++, Matlab.
 - Parallel programming: [MPI](https://www.open-mpi.org/), [OpenMP](https://www.openmp.org/), [Julia multi-threading](https://docs.julialang.org/en/v1/manual/multi-threading/), [Julia Distributed](https://docs.julialang.org/en/v1/manual/distributed-computing/).
-- My Favourite text editor: [VIM](https://www.vim.org/).
+- My Favourite IDE: [VSCODE](https://code.visualstudio.com/).
 
 
 
