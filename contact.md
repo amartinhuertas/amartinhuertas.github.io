@@ -3,5 +3,5 @@
 You can find me at my institutional email
 
 ```
-alberto (dot) martin (at) monash (dot) edu
+alberto.martin (at) monash (dot) edu
 ```
