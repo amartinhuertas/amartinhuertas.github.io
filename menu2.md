@@ -1004,25 +1004,7 @@ Fig.[](#fig_par_ilupack_perf) shows the performance and scalability of the code 
 \biblabel{aliaga_assessing_2014}{63}
 63. J. I. Aliaga, M. Barreda, M. F. Dolz, **A. F. Martín**, R. Mayo, and E. S. Quintana-Ortí. Assessing the impact of the CPU power-saving modes on the task-parallel solution of sparse linear systems. *Cluster Computing*, 17(4):1335–1348, 2014. \doi{10.1007/s10586-014-0402-z}.
 \biblabel{AliBMQ10c}{64}
-64. 
-<!--
-@incollection{AliBMQ10c,
-  author = {Matthias Bollhoefer and Jose I. Aliaga and  Alberto F. Martin and Enrique S. Quintana-Ortí},
-  booktitle = {Encyclopedia of Parallel Computing},
-  editor = {Padua, David A.},
-  ee = {http://dx.doi.org/10.1007/978-0-387-09766-4_513},
-  interhash = {4448798ff50bb695ab376d2f71d85a24},
-  intrahash = {9c18f47dfbf33bb1d6450289f03d6b7c},
-  isbn = {978-0-387-09765-7},
-  keywords = {dblp},
-  pages = {917-926},
-  publisher = {Springer},
-  timestamp = {2012-01-11T00:00:00.000+0100},
-  title = {{ILUPACK.}},
-  url = {http://dblp.uni-trier.de/db/reference/parallel/parallel2011.html#BollhoferAMQ11},
-  year = 2011
-}
--->
+64. XXXX
 \biblabel{AliBMQ10}{65}
 65. J. I. Aliaga, M. Bollhoefer, **A. F. Martín**, and E. S. Quintana-Ortí. Parallelization of Multilevel ILU Preconditioners on Distributed-Memory Multiprocessors. *Lecture Notes in Computer Science*, 7133:162–172, 2012. \doi{10.1007/978-3-642-28151-8_16}.
 \biblabel{AliBMQ10}{65}
