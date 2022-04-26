@@ -684,4 +684,27 @@ franklin-toc {
   }
 }
 
+.challenge {
+  margin-top: 1.5em;
+  width: 95%;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:  aliceblue;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+.challenge .content {
+  padding: 10px;
+  padding-left: 12px;
+}
+.challenge .title{
+  font-size: 105%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding-left: 7px;
+  padding-top: 2px;
+  color: white;
+  background: cornflowerblue;
+}
+
 

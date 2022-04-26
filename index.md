@@ -3,19 +3,21 @@
 <!--@@![](/assets/figures/NSWE_48x48_1_trapezoidal_dt_480_tau_dtdiv2.gif) @@ -->
 
 
-# Profile Summary
+# Overview
 
-I have specialized in high performance computational mathematics, within the broad field of {{cse}}, with a particular focus on the numerical solution of {{pdes}}. 
-As a researcher within this field, I have acquired expertise in the development of 
-advanced {{fe}} discretization schemes and solution methods for the 
-{{hpc}} modeling of large-scale problems of scientific and engineering relevance, 
-while putting special emphasis on scientific software design innovations as a key output of my research. 
-My contributions so far to this field span: 
+My field of expertise is in **high performance computational mathematics**, under the umbrella of the broader, multi-disciplinary field of {{cse_extended}}, a.k.a. {{sc_extended}}. My research aims, experience, and contributions so far are in the advancement of the state-of-the-art solution strategies for three  main challenges {{cse}} as a discipline has to address, which are key for its success and wide applicability.
 
+\challenge{The numerical and computational challenge}{The ever-increasing demand for accuracy (e.g., the need for increasingly complex and flexible geometry representations, the efficient resolution of multiple time and space scales, or the discrete conservation of continuum balances) in real-world application problems, and the widespread adoption of explicit hardware parallelism (e.g., multi-core CPUs and many-core accelerators) as the  approach to sustain an exponential increase in computational power (as Moore's law dictated), calls for breakthrough inventions in advanced discretization methods (e.g., embedded methods on general polytopal meshes) and scalable solution methods (e.g.,  hybrid multiscale  domain decomposition solvers). 
 
-1. The design and mathematical analysis of new, application-tailored FE discretizations and solution methods, or innovative algorithmic adaptations of state-of-the-art ones towards different goals. 
-1. The efficient parallel implementation of these in the form of HPC software packages provided to the general CSE community. 
-1. The application of the advances of 1. and 2. for the realistic computer simulation of real-world challenges in the sciences and engineering, in collaboration with application-problem specialists, and/or .private sector companies.
+> To this end, I have specialized in the design of advanced, application-tailored, {{fe_extended}} discretizations and fast and scalable solution methods for the numerical approximation of {{pde}}, and their parallel message-passing implementation for the efficient exploitation of current petascale distributed memory supercomputers.}
+
+\challenge{The software and application challenge}{The design and development of flexible, extensible, sustainable, fast and scalable, generic and broadly-applicable {{fe}} discretization software packages is a daunting task in itself in which I have developed expertise.  This requires a deep understanding of the numerical methods at hand and innovative ideas from the mathematical software abstraction point of view. These endeavours also help in mitigating the gap between breakthrough advances in numerical algorithms and {{hpsc}} tools and its generalized adoption by application problem domain experts, e.g., in industry and government research agencies. 
+
+> To this end, I have specialized in the development of innovative mathematical software design patterns for the numerical approximation of {{pdes}},  the implementation of these in open source scientific software packages, and the application of these advances in the solution of real-world challenges in collaboration with application-problem specialists, and/or private sector companies.}
+
+\challenge{The data explosion challenge}{The steep improvements in data acquisition systems and storage capacity has resulted in an explosion of data from (possibly indirect) experimental observations, which have to be assimilated (under real-time constraints in some cases) for enhanced model predictions and reliability, using, e.g., {{anns_extended}}, {{pde}}-constrained inverse problem solvers, {{ml_extended}} and optimization techniques. A prototypical mission-critical application problem in which this is needed is in the data assimilation of meteorology station measurements for {{nwp_extended}} models, but there are many more, such as, e.g., bushfire transport and dynamics prediction from satellite infrared data, or the analysis of cardiac electrophysiology from MRI images. 
+
+>I currently find myself immersed in a process towards developing expertise in this direction.}
 
 <!--
 ## My 10 selected research achievements

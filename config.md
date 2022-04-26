@@ -50,6 +50,11 @@ Add here global page variables to use throughout your website.
 @def uji = "UJI"  <!--Jaime I University-->
 @def dp = "DP"  <!--Discovery Project-->
 @def arc = "ARC"  <!--Australian Research Council-->
+@def nwp = "NWP"  <!--Numerical Weather Prediction-->
+@def ml = "ML" <!--Machine Learning-->
+@def ann = "ANN" <!--Artificial Neural Network -->
+@def anns = "ANNs" <!--Artificial Neural Network -->
+@def hpsc = "HPSC"  <!--High Performance Scientific Computing-->
 
 @def agg_extended = "Aggregated unfitted Finite Element Method (AgFEM)"
 @def upc_extended = "Technical University of Catalonia (UPC)"
@@ -84,6 +89,7 @@ Add here global page variables to use throughout your website.
 @def bddc_extended = "Balancing Domain Decomposition by Constraints (BDDC)"
 @def mpi_extended = "Message Passing Interface (MPI)"
 @def cse_extended = "Computational Science & Engineering (CSE)"
+@def sc_extended = "Scientific Computing (SC)"
 @def ilu_extended = "Incomplete LU decomposition (ILU)"
 @def ilus_extended = "Incomplete LU decompositions (ILUs)"
 @def sfc_extended = "Space-Filling Curve (SFC)"
@@ -94,6 +100,10 @@ Add here global page variables to use throughout your website.
 @def uji_extended = "Jaime I University (UJI)" 
 @def dp_extended = "Discovery Project (DP)"
 @def arc_extended = "Australian Research Council (ARC)"
+@def ml_extended = "Machine Learning (ML)"
+@def anns_extended = "Artificial Neural Networks (ANNs)" <!--Artificial Neural Network -->
+@def nwp_extended = "Numerical Weather Prediction (NWP)"  <!--Numerical Weather Prediction-->
+
 
 +++
 
@@ -120,3 +130,5 @@ Add here global latex commands to use throughout your pages.
 \newcommand{\scal}[1]{\langle #1 \rangle}
 
 \newcommand{\doi}[1]{[DOI:#1](https://dx.doi.org/#1)}
+
+\newcommand{\challenge}[2]{@@challenge @@title **!#1**@@ @@content #2 @@ @@}
