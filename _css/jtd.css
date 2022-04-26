@@ -662,6 +662,7 @@ franklin-toc {
   .author__avatar {
     display: none;
   }
+} 
 
 @media (min-width: 64em) {
   .author__avatar {
