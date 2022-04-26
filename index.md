@@ -1,4 +1,4 @@
-@def title = "Franklin Example"
+@def title = "PhD. Alberto F. Martin"
 @def tags = ["syntax", "code"]
 <!--@@![](/assets/figures/NSWE_48x48_1_trapezoidal_dt_480_tau_dtdiv2.gif) @@ -->
 
@@ -17,11 +17,7 @@ My contributions so far to this field span:
 1. The efficient parallel implementation of these in the form of HPC software packages provided to the general CSE community. 
 1. The application of the advances of 1. and 2. for the realistic computer simulation of real-world challenges in the sciences and engineering, in collaboration with application-problem specialists, and/or .private sector companies.
 
-As output of my research, among others, I have co-authored 24 research articles published in highly ranked peer-reviewed JCR journals (23 Q1-ranked),
-1 article published in a refereed collection, and 6 articles published as 
-refereed book chapters (see below for further reference).
-
-
+<!--
 ## My 10 selected research achievements
 
 1. I have developed a novel bulk-asynchronous, fully-distributed, communicator-aware, inter-level overlapped, and recursive algorithmic adaptation of MultiLevel {{bddc}} preconditioners that efficiently scales up to the 458K cores of the IBM BG/Q supercomputer installed in JSC, Germany, in the solution of linear elliptic {{pde}} problems (e.g., Poisson or Elasticity) with dozens of billions of unknowns. Thanks to these outstanding results (unprecedented in the literature for domain decomposition techniques), `FEMPAR` (see item below) has been qualified for High-Q club status <!--[^1]-->\citep{brommel_juqueen_2015}, a distinction that the Juelich Supercomputing Center (Germany) awards to the most scalable EU codes. This work was published in a series of two papers at  SIAM Journal of Scientific Computing \citep{badia_highly_2014,badia_multilevel_2016}.
@@ -98,7 +94,7 @@ refereed book chapters (see below for further reference).
 
 \biblabel{Neiva2019a}{19}
 19. E. Neiva, S. Badia, **A. F. Martín**, and M. Chiumenti. A scalable parallel finite element framework for growing geometries. Application to metal additive manufacturing. *International Journal for Numerical Methods in Engineering*, \doi{10.1002/nme.6085}.
-
+-->
 @@
 <!-->
 \tableofcontents <!-- you can use \toc as well -->
