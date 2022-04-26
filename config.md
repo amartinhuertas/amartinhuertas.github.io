@@ -41,6 +41,7 @@ Add here global page variables to use throughout your website.
 @def ilus = "ILUs"  <!--Incomplete LU decompositions-->
 @def sfc = "SFC"  <!--Space-Filling Curve-->
 @def rl = "RL"  <!--Research Line-->
+@def rls = "RLs"  <!--Research Lines-->
 @def tbm = "TBM"  <!--Test Blanket Module-->
 @def bb = "BB"  <!--Breeding Blanket-->
 @def mhd = "MHD"  <!--Magneto Hydrodynamics-->
