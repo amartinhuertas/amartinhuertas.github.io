@@ -1,0 +1,4 @@
+Sitemap: https://amartinhuertas.github.io/sitemap.xml
+
+User-agent: *
+Disallow:
