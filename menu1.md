@@ -117,7 +117,7 @@ After completing my PhD studies at Universitat Jaume I, and a short 6-month post
 1. Co-organizer of a MSc. course in domain decomposition methods at the International Master in Computational Mechanics. Years (2nd semester): 2014-2015; 2015-2016; 2016-2017; 2017-2018; 2018-2019. School: ETSECCPB. Organization: UPC, Spain.
 
 ## Publications
-<!--See publications [here](https://amartinhuertas.github.io/menu4/).-->
+See publications [here](https://amartinhuertas.github.io/menu4/).
 
 ## Service
 - Reviewer invitation to JCR-indexed journals. Q1-ranked: *Journal of Scientific Computing* (2020), *Computer Physics Communications* (2020), *Computers and Mathematics with Applications* (2020), *Additive Manufacturing* (2020),  *Computer Physics Communications* (2019), *Journal of Computational and Applied Mathematics* (2019); Q2-ranked: *Computational Materials Science* (2019); and Q3-ranked: *Parallel Computing* (2016).
