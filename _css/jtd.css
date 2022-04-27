@@ -644,11 +644,7 @@ body { counter-reset: eqnum; }
 
 .hljs-metap { color: rgb(51, 131, 231); }
 
-franklin-toc {
-  /* Avoid clickable elements being too close together. */
-  margin: 0.6rem 0;
-}
-}
+
 
 .author__avatar {
   display: table-cell;
