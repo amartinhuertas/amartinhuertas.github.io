@@ -654,7 +654,7 @@ Fourth, although it is still a prototype, **this tool is already providing insig
     <div style="clear: both"></div>
     <tr>
         <td><img width="100" src="/assets/figures/experimental-rig-hts.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/B_400up.png" alt="" </img></td>
+        <td><img width="100" src="/assets/figures/B_400up_resized.png" alt="" </img></td>
     </tr>
     <tr>
         <th>(a)</th>
@@ -662,8 +662,10 @@ Fourth, although it is still a prototype, **this tool is already providing insig
     </tr> 
 </table>
 ~~~
-*Figure 16: (a)Experimental rig designed by ICMAB-CSIC in order to measure the external magnetic field produced by a transport current in a 2G HTS tape. (b)Vertical component of the magnetic field at different tape regions for a
-snapshot at a particular time in which the external applied current is of 400 Amperes.*
+
+@@im-100
+*Figure 16: (a)Experimental rig designed by ICMAB-CSIC in order to measure the external magnetic field produced by a transport current in a 2G HTS tape. (b)Vertical component of the magnetic field at different tape regions for a snapshot at a particular time in which the external applied current is of 400 Amperes.*
+@@
 
 \label{sec_rl3}
 #### RL3: Software engineering of large scale scientific applications, open source scientific software
@@ -687,6 +689,7 @@ A part of  my research career has been focused on developing advanced mathematic
 `FEMPAR` has a mature software architecture equipped with robust software abstractions for all the basic building blocks typically involved in a {{fe}} simulation; see Fig.[](#fig_main-structure) for an sketch of the ones involved in the discretization of the {{pde}} problem at hand. This software architecture has been judiciously engineered using advanced {{oo}} mechanisms (inheritance, dynamic run-time polymorphism, data hiding and encapsulation), design patterns and principles, in order to break {{fe}}-based simulation pipelines into smaller blocks that can be arranged to fit user’s application requirements. Through this approach, **`FEMPAR` supports a large number of different applications covering a wide range of scientific areas, programming methodologies, and application-tailored algorithms, without imposing a rigid framework into which they have to fit**; see e.g., the ones covered in RL1, RL2, and RL4. In seek, among others, of `FEMPAR` to become a community code, it is released for free for non-commercial purpose under the terms of the open source GNU GPLv3 license.
 
 \label{fig_main-structures}
+<!--
 ~~~
 <table>
     <div style="clear: both"></div>
@@ -695,8 +698,10 @@ A part of  my research career has been focused on developing advanced mathematic
     </tr>
 </table>
 ~~~
+-->
+@@im-100 ![](/assets/figures/fempar-abstractions.png)
 *Figure 17: Main software abstractions in `FEMPAR` and some of their relationships.*
-
+@@
 There is a number of, high-quality, open source OO {{fe}} libraries available in the community, e.g., deal.II, FEniCS, GRINS, Nektar++, MOOSE, MFEM, FreeFem++, DUNE, OpenFOAM. In general, these libraries aim to provide all the machinery required to simulate complex problems governed by {{pdes}} using {{fe}} techniques. However, **in all of these libraries, the solution of the linear system is clearly segregated from the discretization step.** The linear system is transferred to a general-purpose sparse linear algebra library, mainly PETSc, Hypre, and/or TRILINOS. This might limit numerical robustness and efficiency for specific applications. It in particular eludes to fully exploit the underlying properties of the PDE operator and the numerical discretization at hand to build an optimal solver. In contrast to this approach. **`FEMPAR`’s hallmark is that it has been developed with the aim to provide a framework that will allow researchers to investigate on novel complex computational algorithms that are not well-suited in the traditional segregated workflow commented above, among other advantages**. Even though every block within the library preserves modularity, the interface between discretization and numerical linear algebra modules within `FEMPAR` is very rich and focused on PDE-tailored linear systems.
 
 **`FEMPAR` has been successfully used in 40x JCR Q1-ranked research papers on different topics and application areas**: simulation of turbulent flows and stabilized {{fe}} methods \citep{colomes_assessment_2015,colomes_segregated_2016,colomes_mixed_2016,colomes_segregated_2017}, MHD \citep{badia_analysis_2015, badia_unconditionally_2013, badia_unconditionally_2013-1, planas_approximation_2011, smolentsev_approach_2015}, monotonic {{fes}} \citep{badia_monotonicity-preserving_2017, badia_differentiable_2017, badia_discrete_2015, badia_monotonicity-preserving_2014, hierro_shock_2016,Badia2020euler,Bonilla2019b,Bonilla2020}, unfitted {{fes}} and embedded boundary methods \citep{badia_robust_2017,badia_stokes_2018,badia_aggregated_2017,Verdugo2019b}, {{amr}} \citep{Badia2019a}, AM \citep{Neiva2020,Neiva2019a,chiumenti_numerical_2017} and {{hts}} \citep{Olm2019} simulations, and scientific software engineering \citep{Badia2020fempar,Olm2019b,badia_fempar_2017}. It has also been used for the highly efficient implementation of DD solvers \citep{badia_highly_2014,badia_enhanced_2013,badia_implementation_2013,badia_multilevel_2016,badia_scalability_2015,badia_balancing_2016,badia_space-time_2017,Badia2018pb,Badia2019,Badia2019maxwell} and block preconditioning techniques [badia_block_2014]. Its users/developers span different research groups on national and international-level institutions, including UPC, CIMNE, ICMAB-CSIC, CIEMAT, ICTJA-CSIC, Czech Academy of Sciences (Czech Republic), Sandia National Labs (EEUU), North Carolina State University (USA), Duy Tan University (Vietnam),  Monash University (Australia), and l’Ecole Politechnique (Paris). Besides, it has been/is being a crucial tool for the successful execution of several high-quality EU-funded projects, namely, 1x ERC starting grant, 2x ERC PoC projects, 1x EU-FP7 project, and 3x H2020 projects.
@@ -728,6 +733,7 @@ The ultimate goal of RL4 is the realistic simulation of liquid metals in {{bbs}}
 The block recursive LU preconditioners discussed below, at the preconditioner level, the computation of every physical variable in a multi-physics problem. Thus, even though the starting point is a complex multi-physics problem to be solved, the application of the block LU preconditioner only involves the solution of one-physics problems, usually Poisson or CDR-type problems (diagonal blocks). Next, these one-physics problem are replaced, e.g., by a highly scalable parallel solver, in order to end up with a truly scalable {{mhd}} solver. In this context, a remarkable contribution within RL4 is as follows: **I have been able to demonstrate the high-suitability of Multilevel BDDC preconditioners for the efficient/scalable solution of huge sparse linear systems arising from the {{fe}} discretization of linear elliptic {{pdes}} (e.g., Poisson, Elasticity) on current state-of-the-art petascale world-class massively parallel processors.** In order to achieve this goal, **I have proposed a novel bulk-asynchronous, fully-distributed, communicator-aware, inter-level overlapped, and recursive algorithmic adaptation of MultiLevel BDDC preconditioners towards extreme-scale computations** which has been shown to efficiently scale up to the 458K cores of the IBM BG/Q supercomputer installed in JSC, Germany, in the solution of linear elliptic {{pde}} problems with dozens of billions of unknowns; see Fig.[18](#fig_weak_mlbddc). **This work was published in a series of two papers at the SIAM Journal of Scientific Computing~ \citep{badia_highly_2014,badia_multilevel_2016}**. This sort of solvers are not only of paramount importance for large-scale {{mhd}} simulations, but are at the core of many large-scale scientific codes grounded on the {{fe}} solution of {{pde}} problems. Indeed, extreme-scale solvers for sparse linear algebra is a broad and timely subject of strategic importance, as evidenced by the significant increase in investment during the past few years. **Thanks to these outstanding results, `FEMPAR` has been qualified for High-Q club status \citep{brommel_juqueen_2015}, a distinction that JSC (Germany) awards to the most scalable EU codes.**
 
 \label{fig_weak_mlbddc}
+<!-->
 ~~~
 <table>
     <div style="clear: both"></div>
@@ -736,7 +742,10 @@ The block recursive LU preconditioners discussed below, at the preconditioner le
     </tr>
 </table>
 ~~~
+-->
+@@im-100 ![](/assets/figures/weak_3D_H_div_h_4_3_bddc_ce_tot.pdf-1.png)
 *Figure 18: Weak scalability (computation time in seconds) for a 4-level MLBDDC preconditioner in the solution of a Poisson problem up to 20 billion {{dofs}} on 1.8M MPI tasks at the IBM BG/Q supercomputer.*
+@@
 
 
 Within this line of research **I have also contributed to the rehabilitation of the Balancing Neumann-Neumann preconditioner as an efficient preconditioning strategy for large-scale fluid and solid mechanics simulations \citep{badia_enhanced_2013}, and to the scalability boost of inexact BDDC preconditioners \citep{badia_scalability_2015}**. Besides, **I have developed a new variant of BDDC for multi-material problems~\citep{Badia2018pb}**}. The coarse space in this preconditioner, referred as PB-BDDC, is based on a Physics-Based aggregation technique, and unlike BDDC solvers based on adaptive selection of constraints, does not involve expensive eigenvalue solvers. The new preconditioner have been shown to be robust and scalable for materials with heterogeneous properties. Besides, in \citep{Badia2018pb}, it is compared against a state-of-the-art, highly efficient MPI implementation of an adaptive-coarse-space BDDC preconditioner implemented in the PETSc software package from ANL. For the largest-scale problem evaluated (more than a half billion {{dofs}} on 8.2K cores), the new algorithm/software combination is 8x times faster, while consuming significantly less memory resources. Finally, **in \citep{Badia2019}, I have also developed an enhanced variant of the original BDDC preconditioner that is able to eliminate the condition number matrix dependence on the ratio among the subdomain and mesh resolutions.**
@@ -745,6 +754,7 @@ Within this line of research **I have also contributed to the rehabilitation of 
 The Galerkin {{fe}} approximation of this problem by means of grad-conforming Lagrangian {{fe}} spaces faces several well-known drawbacks. First, convective dominated flows may lead to oscillations because the system loses its elliptic nature. Second, a strong coupling between the two saddle-point subproblems, the hydrodynamic and the magnetic ones, may introduce numerical instabilities when solving the resulting linear systems of equations. Finally, in order to have a well-posed problem, the classical inf-sup conditions between the approximation spaces for the velocity and the pressure must be satisfied. This also applies to the current density and the electric potential as well. There exist several options to circumvent these difficulties, with stabilization methods being one of the most widely used. In order to cope with this problem, **a first remarkable contribution within RL4 comes in the form of a new stabilized, variational multiscale-like {{fe}} scheme tailored for this system of {{pdes}}**; see Fig.[19](#fig_sherc_asgs) for the convergence analysis of the new method for the so-called Shercliff’s benchmark, and [badia_block_2014] for further details. **The most particular feature of these approaches is the current density being treated as an actual unknown of the problem.** This is in contrast to the typical approach based on simplifying the original problem by decoupling the fluid and electromagnetic problems. For large Hartmann numbers (in fusion {{bb}} simulations these are in the order of $10^4$-$10^5$), this latter approach can only work for extremely small time steps, and it cannot be used for steady problems. 
 
 \label{fig_sherc_asgs}
+<!-->
 ~~~
 <table>
     <div style="clear: both"></div>
@@ -753,8 +763,10 @@ The Galerkin {{fe}} approximation of this problem by means of grad-conforming La
     </tr>
 </table>
 ~~~
+-->
+@@im-25 ![](/assets/figures/sherc_asgs_ha10.pdf-1_resized.png)
 *Figure 19: Optimal convergence for the $L^2$-norm of the velocity error and its gradient, and the current density error, and its divergence.*
-
+@@
 
 **A remarkable contribution within RL4 comes in the form of algorithmically scalable (i.e., mesh resolution independent) preconditioning algorithms for the discrete operators resulting from these new {{fe}} schemes**. The novel approach that was proposed in order to tackle these highly-coupled, multi-physics problems is based on an approximate block recursive LU factorization of the system matrix. An abstract setting presented in [badia_block_2014] enables the application of this idea to other multi-physics problems like resistive {{mhd}} or liquid crystal problems. For the particular problem at hand, I derived two different preconditioners using this abstract setting. The first preconditioner, the so-called fluid-magnetic subproblem factorization (**FMS preconditioner**) is based on an initial factorization of the system matrix into fluid and magnetic subproblems. The second preconditioner, the so-called Field-Lagrange multiplier factorization (**FLM preconditioner**), segregates at the first level field variables (velocity and current) from Lagrange multiplier-type variables (pressure and electric potential). The key point for these preconditioners to be efficient relies in obtaining a good approximation of the Schur complement for all 2x2 systems. In order to define the Schur complement approximations, I extended the ideas used for the incompressible Navier-Stokes equations to the inductionless {{mhd}} system. The efficiency and robustness of the FMS and FLM block LU recursive preconditioners was confirmed with respect to both mesh size and Hartmann number by means of a detailed set of numerical tests [badia_block_2014].
 
@@ -776,7 +788,10 @@ The Galerkin {{fe}} approximation of this problem by means of grad-conforming La
     </tr> 
 </table>
 ~~~
+
+@@im-100 
 *Figure 20: Simulation results for the Tecnofus {{tbm}}*
+@@
 
 \label{sec_rl5}
 #### RL5: Leveraging novel parallel programming models in legacy parallel scientific software packages
@@ -796,6 +811,7 @@ The work developed resulted in 1x paper published in a Q1-ranked JCR journal \ci
 
 
 \label{fig_ompss_scalapack}
+<!-->
 ~~~
 <table>
     <div style="clear: both"></div>
@@ -804,7 +820,10 @@ The work developed resulted in 1x paper published in a Q1-ranked JCR journal \ci
     </tr>
 </table>
 ~~~
+-->
+@@im-100 ![](/assets/figures/scalapack_ompss.jpg)
 *Figure 21: Weak/strong scalability of proposed solution (''SMPSs'') compared with other parallel Cholesky codes on a 17.7K CPU cores HPC cluster.*
+@@
 
 \label{sec_phd}
 ### Pre-doctoral researcher stage
@@ -822,6 +841,7 @@ In applications involving the discretization of {{pdes}}, the efficient solution
 
 #### Research work description, and outcomes
 \label{fig_ilupack_pivoting}
+<!-->
 ~~~
 <table>
     <div style="clear: both"></div>
@@ -830,14 +850,17 @@ In applications involving the discretization of {{pdes}}, the efficient solution
     </tr>
 </table>
 ~~~
+-->
+@@im-100 ![](/assets/figures/ilupack_pivoting.png)
 *Figure 22: Left: ILUPACK pivoting strategy. Right: multilevel preconditioner.*
-
+@@
 
 Multilevel preconditioners constructed from inverse-based {{ilus}} lay the foundations for the software package ILUPACK. ILUPACK is the abbreviation for Incomplete LU factorization PACKage. It is a software library, written in Fortran77 and C, for the iterative solution of large sparse linear systems. **The first release of ILUPACK was launched in 2004 by Prof. Bollhoefer, and was restricted to sequential computers. Since then, it has been improved in a number of ways, including its ability to efficiently exploit parallel computers. This latest feature is the main software outcome of my PhD. thesis**. ILUPACK is mainly built on {{ilus}} applied to the system matrix in conjunction with Krylov subspace methods. **The fundamental difference of ILUPACK is the so-called inverse-based approach.** This approach consists on extracting information from the approximate inverse factors during the incomplete factorization itself in order to improve preconditioner robustness. While this idea has been shown to be successful to satisfy this goal, its downside was initially that the norm of the inverse factors could become large such that small entries could hardly be dropped during Gaussian elimination, resulting in an unacceptable level of fill-in in the resulting preconditioner. To overcome this shortcoming, a multilevel strategy is in charge of limiting the growth of the inverse factors. For example, for preconditioning the conjugate gradient (PCG) method, ILUPACK computes an incomplete factorization $P\approx LDL^T$, where  is $L$ unit lower triangular and entries of small modulus are dropped in the course of the factorization. ILUPACK’s hallmark is to keep $||L ^{-1}||$  below a given bound $\kappa$. To do so, at each step, the factorization of the current row/column is pursued whenever $||L ^{-1}|| \leq \kappa$, or postponed, otherwise, as shown in Fig.[22](#fig_ilupack_pivoting), left. The block of postponed updates $S_C$ (known as Schur complement) becomes the starting matrix of the next level; see [22](#fig_ilupack_pivoting), right. Using this inverse-based strategy and a moderate value of $\kappa$ (e.g. $\kappa=5$) it can be shown that small eigenvalues of $P$ are revealed by $S_C$. Thus,  $S_C$ serves as some kind of coarse-grid system, which resembles those built by {{amg}} preconditioners, in particular, when applied, e.g., to elliptic {{pdes}}.
 
 **The research work carried out was focused on the design, development, and {{hpc}} software implementation of task-parallel friendly variants of the algorithm presented so far.** At this point, it is important to stress that this sort of algorithm does not inherently expose parallelism readily to be exploited. Thus, it had to be transformed towards the achievement of this goal. Parallelism in the computation of approximate factorizations can be exposed by means of graph-based symmetric reordering algorithms. Among this class of algorithms, nested dissection orderings enhance parallelism in the approximate factorization of the linear system coefficient matrix $A$ by partitioning its associated adjacency graph $G(A)$ into a hierarchy of vertex separators and independent subgraphs; see Fig.[23](#fig_nested_dissection). Relabeling the nodes of $G(A)$ according to the levels in the hierarchy, leads to a reordered matrix, $\Phi^T A \Phi$, with a structure amenable to efficient parallelization. This type of parallelism can be expressed by a binary task dependency tree, where nodes represent concurrent tasks and edges dependencies among them. State-of-the-art reordering software packages as, e.g., METIS or SCOTCH, provide fast and efficient multilevel variants of nested dissection orderings.
 
 \label{fig_nested_dissection}
+<!-->
 ~~~
 <table>
     <div style="clear: both"></div>
@@ -846,7 +869,10 @@ Multilevel preconditioners constructed from inverse-based {{ilus}} lay the found
     </tr>
 </table>
 ~~~
+-->
+@@im-100 ![](/assets/figures/nested_dissection.png)
 *Figure 23: Nested dissection partitioning.*
+@@
 
 The dependencies in the task tree are resolved while the computational data and results are generated and passed from the leaves towards the root. The leaves are responsible for approximating the leading diagonal blocks of, while those blocks which will be later factorized by their ancestors are only updated. In other words, ILUPACK pivoting strategy in Fig.[22](#fig_ilupack_pivoting), left, is restricted to the leading diagonal blocks of $\Phi^T A \Phi$, instead of being applied to the whole matrix as in the sequential algorithm. This is the main compromise that it is taken in order to expose concurrent tasks. **The approach proposed leads to an algorithm that exposes a high degree of parallelism, at the price of enforcing a certain order of elimination.** Thus, an important effort of the research work focused on evaluating to what extent the algorithmic variant proposed preserved preconditioning robustness and efficiency. Both set of algorithms were thoroughly compared using metrics such as memory consumption, fill-in ratio in the preconditioner, and number of PCG iterations for a wide range of application problems. **The study revealed that the algorithmic variation introduced has a negligible impact on the numerical properties of the inverse-based preconditioning approach**, in the sense that the convergence rate of the preconditioned iterative method is largely independent on the number of parallel tasks used to decompose the computation.
 
@@ -859,13 +885,15 @@ Fig.[](#fig_par_ilupack_perf) shows the performance and scalability of the code 
 <table>
     <div style="clear: both"></div>
     <tr>
-        <td><img width="100" src="/assets/figures/mic_scal_nd_hamd_b.png" alt="" </img></td>
+        <td><img width="100" src="/assets/figures/mic_scal_nd_hamd_b.pdf-1_resized.png" alt="" </img></td>
         <td><img width="100" src="/assets/figures/par_ilupack_iterations.png" alt="" </img></td>
     </tr>
 </table>
 ~~~
-*Figure 24: Left: Parallel speed-up. Right: Number of PCG iterations versus degree of concurrence.
 
+@@im-100 
+*Figure 24: Left: Parallel speed-up. Right: Number of PCG iterations versus degree of concurrence.*
+@@
 
 ## References
 @@bibrefs

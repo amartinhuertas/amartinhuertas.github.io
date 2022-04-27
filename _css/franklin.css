@@ -162,7 +162,7 @@ h6 {
 td {
   font-size: var(--small);
   padding: 10px;
-  border: 1px solid black;
+  border: 0px solid black;
 }
 
 .franklin-content blockquote {
@@ -350,7 +350,12 @@ code {
     CUSTOM
 ================================================================== */
 
-.im-25 {text-align: center;}
+.im-25 {
+  line-height: 130%;
+  font-size: 80%;
+  text-align: center;
+  margin-bottom: 2em;
+}
 .im-25 img {
     padding: 0;
     width: 25%;
@@ -360,10 +365,12 @@ code {
  line-height: 130%;
  font-size: 80%;
  text-align: center;
+ margin-bottom: 2em;
  }
 .im-100 img {
     padding: 0;
     width: 100%;
+    
 }
 
 
