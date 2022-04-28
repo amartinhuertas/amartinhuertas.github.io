@@ -551,7 +551,7 @@ Fig.[](#fig_par_ilupack_perf) shows the performance and scalability of the code 
 \biblabel{aliaga_assessing_2014}{63}
 63. J. I. Aliaga, M. Barreda, M. F. Dolz, **A. F. Martín**, R. Mayo, and E. S. Quintana-Ortí. Assessing the impact of the CPU power-saving modes on the task-parallel solution of sparse linear systems. *Cluster Computing*, 17(4):1335–1348, 2014. \doi{10.1007/s10586-014-0402-z}.
 \biblabel{AliBMQ10c}{64}
-64.  M. Bollhoefer, J. I. Aliaga, A. F. Martin, and E. S. Quintana-Orti. ILUPACK. In D. A. Padua, editor, Encyclopedia of Parallel Computing, pages 917–926. Springer, 2011.
+64.  M. Bollhoefer, J. I. Aliaga, **A. F. Martín**, and E. S. Quintana-Orti. ILUPACK. In D. A. Padua, editor, Encyclopedia of Parallel Computing, pages 917–926. Springer, 2011.
 \biblabel{AliBMQ10}{65}
 65. J. I. Aliaga, M. Bollhoefer, **A. F. Martín**, and E. S. Quintana-Ortí. Parallelization of Multilevel ILU Preconditioners on Distributed-Memory Multiprocessors. *Lecture Notes in Computer Science*, 7133:162–172, 2012. \doi{10.1007/978-3-642-28151-8_16}.
 \biblabel{AliBMQ10}{66}
