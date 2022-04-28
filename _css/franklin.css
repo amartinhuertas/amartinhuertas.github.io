@@ -84,6 +84,7 @@ html {
   padding-left: 12.5%;
   padding-right: 12.5%;
   line-height: 1.35em;
+  text-align: justify;
 }
 
 /* On wide screens, fix content width to a max value. */
@@ -110,6 +111,9 @@ html {
 .franklin-content h1 { font-size: 24px; }
 .franklin-content h2 { font-size: 22px; }
 .franklin-content h3 { font-size: 20px; }
+.franklin-content h4 { font-size: 18px; }
+.franklin-content h5 { font-size: 18px; }
+.franklin-content h6 { font-size: 18px; }
 
 .franklin-content h1,
 h2,
@@ -117,7 +121,7 @@ h3,
 h4,
 h5,
 h6 {
-  text-align: left;
+  text-align: justify;
 }
 
 .franklin-content h1 {
@@ -353,7 +357,7 @@ code {
 .im-25 {
   line-height: 130%;
   font-size: 80%;
-  text-align: center;
+  text-align: justify;
   margin-bottom: 2em;
 }
 .im-25 img {
@@ -364,7 +368,7 @@ code {
 .im-100 {
  line-height: 130%;
  font-size: 80%;
- text-align: center;
+ text-align: justify;
  margin-bottom: 2em;
  }
 .im-100 img {

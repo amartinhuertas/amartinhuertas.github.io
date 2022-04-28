@@ -49,7 +49,7 @@ The library currently supports linear and nonlinear PDE systems for scalar and v
 > - To get started, take a look at the [Gridap.jl Tutorials](https://gridap.github.io/Tutorials/stable/).
 > - Ask us anything in our [Gitter chat](https://gitter.im/Gridap-jl/community).
 
-I am an essential contributor to the project since early 2020 (e.g., 3rd in number of commits). I have adquired a deep understanding of its internals, and developed/improved some major components of it, mainly those related to extending it towards distributed memory parallelism and hybridizable finite element discretization schemes. I have also written several tutorials, including a [major one for developers](https://gridap.github.io/Tutorials/dev/pages/t013_poisson_dev_fe/), which goes over its internals, and it is an essential resource to computational math researchers that want to leverage the package for their own research. 
+I am an essential contributor to the project since early 2020 (e.g., 3rd in number of commits). I have acquired a deep understanding of its internals, and developed/improved some major components of it, mainly those related to extending it towards distributed memory parallelism and hybridizable finite element discretization schemes. I have also written several tutorials, including a [major one for developers](https://gridap.github.io/Tutorials/dev/pages/t013_poisson_dev_fe/), which goes over its internals, and it is an essential resource to computational math researchers that want to leverage the package for their own research. 
 
 ## Past projects 
 
