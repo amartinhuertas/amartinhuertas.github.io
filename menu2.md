@@ -32,7 +32,7 @@ Work in progress ...
 
 Topics:
 * Hybridizable finite element methods for general polytopal meshes (HDG, HHO, VEM, etc.).
-* Scalable preconditioning for this schemes (h/p geometric multigrid approaches, hybrid multiscale domain decomposition, etc.). 
+* Scalable preconditioning for these schemes (h/p geometric multigrid approaches, hybrid multiscale domain decomposition, etc.). 
 * Exploiting the synergy among Artificial Neural Networks and the numerical solution of PDEs.
 * Scientific Machine Learning approches for large-scale inverse problems.
 * Physics-informed Neural Networks with application to prediction of bushfire dynamics.
@@ -680,9 +680,9 @@ Fig.[](#fig_par_ilupack_perf) shows the performance and scalability of the code 
 \biblabel{Verdugo2019b}{11}
 11. F. Verdugo, **A. F. Martín**, and S. Badia. Distributed-memory parallelization of the aggregated unfitted finite element method. *Computer Methods in Applied Mechanics and Engineering*, 357:112583, 2019. \doi{10.1016/j.cma.2019.112583}.
 \biblabel{Badia2020}{12}
-12. S. Badia, A. F. Martín, E. Neiva, and F. Verdugo. The aggregated unfitted finite element method on parallel tree-based adaptive meshes. 2020.
+12. S. Badia, **A. F. Martín**, E. Neiva, and F. Verdugo. The aggregated unfitted finite element method on parallel tree-based adaptive meshes. *SIAM Journal on Scientific Computing*, 43(3):C203–C234, 2021. \doi{10.1137/20M1344512}
 \biblabel{badia2020robust}{13}
-13. S. Badia, M. Caicedo, A. F. Martín, and J. Principe. A robust and scalable unfitted adaptive finite element framework for nonlinear solid mechanics. *Arxiv preprints - 2012.00280*, 2020.
+13. S. Badia, M. Caicedo, **A. F. Martín**, and J. Principe. A robust and scalable unfitted adaptive finite element framework for nonlinear solid mechanics. *Computer Methods in Applied Mechanics and Engineering*, 386, 2021. \doi{10.1016/j.cma.2021.114093}
 \biblabel{Holke2018}{14}
 14. J. Holke. Scalable Algorithms for Parallel Tree-based Adaptive Mesh Refinement with General Element Types. 2018.
 \biblabel{burstedde_p4est_2011}{15}
