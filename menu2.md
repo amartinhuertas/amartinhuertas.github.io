@@ -46,7 +46,7 @@ This section overviews my research trajectory and main {{rl}} pursued. This will
 \label{sec_senior}
 ### Senior researcher stage 
 
-This period spans 2016-2020. Early 2016, **I was promoted as senior researcher at the {{cimne}}**, position which I held until late 2019, concurrently with my position as adjoint professor at {{upc}}. Then, early 2020, **I moved to the School of Mathematics at Monash University (Melbourne, Australia), where I was appointed as senior research fellow (Level B) for a 3-year period after winning an international competitive call for candidates**. During this period, I have carried out three main {{rls}} which are labeled as RL1-RL3 below. These are on-going  {{rls}} , and not chronologically ordered. Besides, they are not fully decoupled, as the research outputs from some of these provides advances readily to be used for the others as well. RL3 should be regarded as a cross-cutting, continuous {{rl}} , on which the advances of the other {{rls}}  are grounded on, and vice-versa.
+This period spans 2016-2020. Early 2016, **I was promoted as senior researcher at the {{cimne}}**, position which I held until late 2019, concurrently with my position as adjoint professor at {{upc}}. Then, early 2020, **I moved to the School of Mathematics at Monash University (Melbourne, Australia), where I was appointed as senior research fellow (Level B) for a 3-year period after winning an international competitive call for candidates**. During this period, I have carried out three main {{rls}} which are labeled as RL1-RL3 below. RL3 should be regarded as a cross-cutting, continuous {{rl}} , on which the advances of the other {{rls}}  are grounded on, and vice-versa.
 
 \label{sec:rl1}
 #### RL1: Robust and scalable adaptive unfitted finite element methods with application to additive manufacturing 
@@ -456,7 +456,7 @@ The results that my team and me have obtained with this tool on the BSC-CNS MN-I
 First, **it has been shown to be able to accurately model an industrially-relevant, state-of-the-art, large-scale problem in the {{hts}} community with unprecedented resolution, and time-to-solution \citep{Badia2019maxwell}.** 
 Second, in the framework of the collaboration with ICMAB-CSIC, **we could confirm that it significantly reduces computational times (with respect to a COMSOL-based solution) from weeks and hours, to days and minutes**, resp., for a number of 2D toy benchmarks problem proposed by ICMAB-CSIC, while being able to successfully (accurately) model 3D problems, **out of reach until today by ICMAB-CSIC**. 
 Third, **the numerical tool has been validated experimentally against the so-called Hall probe mapping experiment**. A high agreement of numerical results against measured data was observed; see Fig.[16](#fig_hts-validation), and \citep{Olm2019} for details. 
-Fourth, although it is still a prototype, **this tool is already providing insightful understanding of the electromagnetic behavior, under different design parameters (e.g., size and shape), of the {{hts}} tapes manufactured by OXOLUTIA S.L.** On-going work within RL2 is being focused on the improvement of this tool. In particular, it is being extended to thermo-mechanical coupling. 
+Fourth, although it is still a prototype, **this tool is already providing insightful understanding of the electromagnetic behavior, under different design parameters (e.g., size and shape), of the {{hts}} tapes manufactured by OXOLUTIA S.L.** 
 
 \label{fig_hts-validation}
 ~~~
