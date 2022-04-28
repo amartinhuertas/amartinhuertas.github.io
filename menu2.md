@@ -10,22 +10,21 @@
 
 ## Framing my research career \label{career}
 
-
 In this introductory section I pinpoint the field of application of my research, and some general features of the problems within this field that my research targets.  This will help the reader understand my trajectory and the main {{rl}} I have carried out, which are covered in Section 
 [Research trajectory and main research lines](#sec_rt_rl).
-
-I am computer scientist whose research is framed within the broad field of **{{cse}}** (a.k.a. Scientific Computing). As a researcher working in this field, I contribute to the development of advanced computational models and algorithms able to solve complex physical problems of relevance in science and engineering.  My research is thus **highly interdisciplinary**, as it integrates methodologies from applied mathematics, computer science, and the physical sciences, *while developing new ideas at their interfaces*. Of particular relevance for the wide applicability and success of {{cse}}, *with a high influence on my research career*, are: (1)  the synergy among {{cse}} and **{{hpc}}**; 
-and (2) the importance of high-quality, sustainable, and broadly-applicable **large-scale scientific software as a key output of {{cse}} research**. 
-
-While I consider this to be a hallmark of my trajectory, I have had on the downside to devote considerable efforts towards being able to contribute at the interface of computer science and other areas which are not usually covered in the curriculum of a research-oriented computer scientist (and that were unfamiliar to me), such as computational continuum mechanics, finite element discretization methods, and numerical analysis. Despite this, I consider that, in the 10 years since my PhD. graduation ( **this is the last call I can present my candidacy to the "Ayudas para contratos Ramón y Cajal (RYC)"**) I have acquired a large degree of professional independence and academic maturity in this field, and a remarkable level of scientific productivity. In regards to my journal publications, I have to stress that most of my papers are published in Q1-ranked JCR journals, signed by a limited number of authors (3/4 authors on average), and the authors names were ordered in alphabetic order in 15/22 of them (this is indeed the standard practice that is followed, and we have followed, except rare exceptions, for articles published in the scientific computing/computational mathematics field). For a better indication of my contribution to these research papers I refer to Section [Research trajectory and main research lines](#sec_rt_rl). Finally, I would like to stress that, although I am not officially the principal investigator in the EC/ERC projects I have participated during my senior research period at CIMNE (*these indeed were decided accordingly to strategical decisions of the center/research unit*), I have had executive roles in 3 of these projects, in particular I have acted as Work Package leader in the FETHPC-H2020 *ExaQute* project (spanning 2018-2021), and as a Delegated Chief Investigator the EU-FP7 FORTISSIMO and ERC PoC FEXFEM. This have undoubtedly contributed to my capacity to lead my own research lines while managing teams of researchers.
 
 As a researcher working in the {{cse}} field, I contribute to the development of computational models, algorithms, and software for several application problems. All of these share three common general features (not restricted to, though):
 
 1. The physical phenomena to be simulated are governed by a (potentially highly nonlinear) {{pde}}, or more generally, by a system of {{pdes}}. These phenomena may span multiple temporal and spatial scales, and involve different physical models.
-1. The system of {{pde}} is discretized by means of the {{fem}}. Thus, broadly speaking, the simulation pipeline encompasses three main ingredients: mesh generation and partitioning, space-time {{fe}} discretization, and solution of (non)linear system(s) of equations.
+1. The system of {{pded}} is discretized by means of the {{fem}}. Thus, broadly speaking, the simulation pipeline encompasses three main ingredients: mesh generation and partitioning, space-time {{fe}} discretization, and solution of (non)linear system(s) of equations.
 1. These are application problems with ever increasing modelling accuracy requirements, and thus highly demanding from the computational viewpoint. In particular, simulation pipelines grounded on highly parallel, algorithmically scalable algorithms and {{hpc}} software, thus able to efficiently exploit the vast amount of computational resources in current petascale supercomputers, are required in order to achieve the aforementioned modelling requirements.
 
-The increasing levels of complexity both in terms of algorithms and hardware make the development of scientific software able to tackle the aforementioned features, while running efficiently on state-of-the-art numerical algorithms on {{hpc}} resources, a scientific challenge in itself. *A part of my research work has been devoted towards the achievement of this goal.* This is motivated by the fact that research on advanced, newly developed {{fe}} discretizations and solution algorithms for the {{hpc}} solution of {{cse}} complex problems frequently requires **innovative solutions on the software engineering aspects of a numerical software package as well**, and that these latter also represent an important contribution to other researchers working in the {{cse}} community. I am indeed co-founder, main software architect and project coordinator of `FEMPAR`(available at [https://github.com/fempar/fempar](https://github.com/fempar/fempar)), an open-source, scientific software package for the numerical modelling of problems governed by {{pde}} on {{hpc}} platforms. I am also contributor to `Gridap.jl` (available at [https://github.com/gridap/Gridap.jl](https://github.com/gridap/Gridap.jl)), and co-author of `gridapdistributed.jl` (available at [https://github.com/gridap/GridapDistributed.jl](https://github.com/gridap/GridapDistributed.jl)), its parallel message-passing version, which provide a new {{fe}} framework written in Julia for such a purpose. These latter two packages exploit the modern features of the Julia programming language (available at [https://julialang.org/](https://julialang.org/)) in order to strike a remarkable balance among performance and generality via appropriate mathematically-driven software abstractions. As a recent development, these software packages lay at the core of a 3-year {{dp}} project (ref: DP210103092) spanning 2021-2023 on large-scale inverse interface stochastic problems with application to groundwater modelling that has been recently awarded by the {{arc}}.
+The increasing levels of complexity both in terms of algorithms and hardware make the development of scientific software able to tackle the aforementioned features, while running efficiently on state-of-the-art numerical algorithms on {{hpc}} resources, a scientific challenge in itself. *A part of my research work has been devoted towards the achievement of this goal.* This is motivated by the fact that research on advanced, newly developed {{fe}} discretizations and solution algorithms for the {{hpc}} solution of {{cse}} complex problems frequently requires **innovative solutions on the software engineering aspects of a numerical software package as well**, and that these latter also represent an important contribution to other researchers working in the {{cse}} community. 
+
+<!--
+I am indeed co-founder, main software architect and project coordinator of `FEMPAR`(available at [https://github.com/fempar/fempar](https://github.com/fempar/fempar)), an open-source, scientific software package for the numerical modelling of problems governed by {{pde}} on {{hpc}} platforms. I am also contributor to `Gridap.jl` (available at [https://github.com/gridap/Gridap.jl](https://github.com/gridap/Gridap.jl)), and co-author of `gridapdistributed.jl` (available at [https://github.com/gridap/GridapDistributed.jl](https://github.com/gridap/GridapDistributed.jl)), its parallel message-passing version, which provide a new {{fe}} framework written in Julia for such a purpose. These latter two packages exploit the modern features of the Julia programming language (available at [https://julialang.org/](https://julialang.org/)) in order to strike a remarkable balance among performance and generality via appropriate mathematically-driven software abstractions.
+--> 
+
 
 \label{sec_rt_rl}
 ## Research trajectory and main research lines 
@@ -47,20 +46,20 @@ This main long-term research goal of this RL is the development of novel numeric
 
 @@im-100
 ![](/assets/figures/growingInTime.png)
-*Figure 1: In an {{am}} macroscopic simulation, one has to design a mechanism that approximates the geometry $\Omega(t)$ following the real scanning path of the machine. It is $*$impractical$*$ to produce body-fitted unstructured meshes conforming with $\Omega(t)$ at all times.  Evolving geometries jeopardize the applicability of traditional simulation workflows. The proposed solution combines tree-based adaptive background meshes for the functional discretisation and cell-wise sub-meshes for integration purposes.*
+*Figure 1: In an {{am}} macroscopic simulation, one has to design a mechanism that approximates the geometry $\Omega(t)$ following the real scanning path of the machine. It is **impractical** to produce body-fitted unstructured meshes conforming with $\Omega(t)$ at all times.  Evolving geometries jeopardize the applicability of traditional simulation workflows. The proposed solution combines tree-based adaptive background meshes for the functional discretisation and cell-wise sub-meshes for integration purposes.*
 @@
 
 ##### Funding
-This {{rl}} has been most recently funded by means of the FETHPC-H2020 *ExaQute* project (spanning 2018-2021). In particular, within this project, I have had the role of leader of the Working Package ''WP3 - Space-time parallelization'' (project web page available at [http://exaqute.eu/](http://exaqute.eu/)). **This has allowed me to fund and supervise a 2-year post-doc on robust and scalable adaptive unfitted {{fe}} methods and non-linear preconditioners for highly non-linear and multi-scale solid mechanics problems, and set up my own research team to work on this research line.** I also prepared a winning project proposal for the  *''Personal Técnico de Apoyo (PTA) 2019''* call in order to co-fund the position at {{upc}}  of a scientific software engineer at my team during a 3-year period. Recently, my project proposal on space-time adaptive unfitted methods has been funded by the Australian National Computational Merit Allocation Scheme (NCMAS) 2021 call (available at [https://my.nci.org.au/mancini/ncmas/2021/](https://my.nci.org.au/mancini/ncmas/2021/)). I have the role of co-{{pi}} in this project.
+This {{rl}} was funded by means of the FETHPC-H2020 *ExaQute* project (spanning 2018-2021). Besides, my project proposal on space-time adaptive unfitted methods has been funded by the Australian National Computational Merit Allocation Scheme (NCMAS) 2021 call. I have the role of co-{{pi}} in this project.
 
 In early stages, this line was (partially) funded by two large H2020 EU projects, namely the *CAxMan-Computer Aided Technologies for Additive Manufacturing* and *eMUSIC- Efficient Manufacturing for Aerospace Components USing Additive Manufacturing, Net Shape HIP and Investment Casting* projects, in which the applicant participated as a researcher. These projects do not have a strong research component, and are led by the industrial sector.  However, they enabled joint collaboration efforts with leading experimental validation partners of {{am}} computer modelling tools. These include SKLSP in Xian, China, MCAM in Melbourne, Australia, and IK4-Lortek in Gipuzkoa, Spain. Both projects have strong technology-transfer potential. They include the application of their advances to the metal {{am}} process of several industrial use cases, such as the patented NUGEAR gearbox by STAM, Italy. 
 
 ##### Publications
-The research work I have developed so far within RL1 has resulted in 6x research manuscripts  
- \citep{Badia2019a,Neiva2020,badia_stokes_2018,badia_aggregated_2017,Neiva2019a,Verdugo2019b} published in top quality JCR journals (Q1-ranked) and 2x preprints submitted for publication \citep{Badia2020,badia2020robust}.
+The research work I developed within RL1 has resulted in 8x research manuscripts  
+ \citep{Badia2019a,Neiva2020,badia_stokes_2018,badia_aggregated_2017,Neiva2019a,Verdugo2019b,Badia2020badia2020robust} published in top quality JCR journals (Q1-ranked).
 
 \label{sec_scalable_amr}
-##### Scalable Adaptive Mesh Refinement and coarsening (AMR) with dynamic load balancing via forests-of-trees 
+##### Scalable Adaptive Mesh Refinement and coarsening with dynamic load balancing via forests-of-trees 
 {{amr}} is a highly appealing technique for the computationally efficient solution of {{pdes}} problems exhibiting highly localized features, such as moving fronts, or internal boundary layers. The basic idea is simple, to adapt the mesh, possibly dynamically, i.e., in the course of the simulation, with a higher mesh resolution wherever it is needed. However, the materialization of this idea on petascale parallel distributed-memory computers is a daunting challenge in itself.  Among others, mesh densification in localized areas can cause severe load unbalance. *The approach that I have pursued to tackle this challenge grounds on a new generation of petascale-capable algorithms and software for fast {{amr}} using adaptive tree-based meshes endowed with {{sfcs}}\citep{Holke2018}.
 {{sfcs}} are exploited for efficient data storage and traversal of the adaptive mesh, fast computation of hierarchy and neighborship relations among the mesh cells, and scalable partitioning and dynamic load balancing. In particular, {{sfcs}} remarkably offer a linear run-time solution to the problem of (re)partitioning a tree-based mesh into processors. For hexahedral meshes, the state-of-the-art in tree-based *amr* with {{sfcs}}  is available at the `p4est` software \citep{burstedde_p4est_2011,Isaac2014}, which has been proven to scale up to hundreds of thousands of cores. This approach can be generalized to other cell topologies as well \citep{Holke2018}.
 
@@ -80,23 +79,7 @@ In a nutshell, the experiments starts from an initial uniform mesh, and the  mes
 @@
 
 
-<!--
-~~~
-@@table
-@@div
-    @@tr
-      @@td
-        @@im-100 ![](/assets/figures/fempar_am_gadi_scalability.png) 
-        *Figure 2: Strong scaling test results (i.e., global problem fixed, increasing number of cores) for `FEMPAR` on Gadi.*
-        @@ 
-      @@
-    @@
-@@
-@@
--->  
-
-
-**This work has been recently published at the *SIAM Journal on Scientific Computing* \citep{Badia2019a}-->**. This paper substantially improves the current understanding of this topic with rigorous proofs of the computational benefits of the 2:1 k-balance (ease of parallel implementation and high-scalability) and the minimum requirements a parallel tree-based mesh must fulfil to yield correct parallel finite element solvers atop them assuming one is to keep the constraint that only a single layer of ghost cells is stored.
+**This work has been published at the *SIAM Journal on Scientific Computing* \citep{Badia2019a}**. This paper substantially improves the current understanding of this topic with rigorous proofs of the computational benefits of the 2:1 k-balance (ease of parallel implementation and high-scalability) and the minimum requirements a parallel tree-based mesh must fulfil to yield correct parallel finite element solvers atop them assuming one is to keep the constraint that only a single layer of ghost cells is stored.
 
 ##### Relaxing mesh generation constraints with embedded methods
 **Mesh generation is known to be one of the main bottlenecks of real-world industrial {{fe}} simulations.** Conventional {{fes}} require meshes that are body-fitted. That is, meshes  that conform to the geometrical boundaries of the computational domain (see Fig.[3b](#fig_fitted-vs-unfitted)). Constructing such grids is not an obvious task for complex geometries, 
@@ -153,20 +136,6 @@ However, embedded methods have known drawbacks. The most salient one, **still an
 @@im-100
 *Figure 4: (a) The shape functions associated to {{dofs}} in the exterior of the domain (marked with a red cross in the figure) may have an arbitrarily small support in the interior of the domain. Thus, there is no guarantee that the condition number of the linear system arising from discretization is bounded. (b) {{agg}} formulations extrapolate these ill-posed {{dofs}} as a linear combination of selected interior {{dofs}} (via suitably-defined algebraic constraints imposed into the space of {{fe}} functions). These constraints are defined by building the so-called cell aggregates (in blue), that give the name to the formulation. A cell aggregation is an agglomeration of cells composed by a single interior cell, and a set of face-connected neighbouring cut cells connected to it. (c) Visualization of the cell aggregates built by the method for a 3D pop-corn like domain embedded in a uniform Cartesian mesh.*
 @@
-
-<!-- 
-\begin{figure}[H]
-\centering
-\begin{tabular}{ccc}
-\includegraphics[width=0.2\textwidth]{figures/fig_spaces_2_z.pdf} &
-\includegraphics[width=0.2\textwidth]{figures/fig_dof_to_cell_map_3.pdf} & 
-\includegraphics[width=0.2\textwidth]{figures/fig_test_popcorn_3d_aggr_light.png} \\
-(a) & (b) & (c)
-\end{tabular}
-	*(a) The shape functions associated to {{dofs}} in the exterior of the domain (marked with a red cross in the figure) may have an arbitrarily small support in the interior of the domain. Thus, there is no guarantee that the condition number of the linear system arising from discretization is bounded. (b) {{agg}} formulations extrapolate these ill-posed {{dofs}} as a linear combination of selected interior {{dofs}} (via suitably-defined algebraic constraints imposed into the space of {{fe}} functions). These constraints are defined by building the so-called cell aggregates (in blue), that give the name to the formulation. A cell aggregation is an agglomeration of cells composed by a single interior cell, and a set of face-connected neighbouring cut cells connected to it. (c) Visualization of the cell aggregates built by the method for a 3D pop-corn like domain embedded in a uniform Cartesian mesh.*
-
-\end{figure}
--->
 \label{fig_agfem_poisson}
 ~~~
 <table>
@@ -184,26 +153,6 @@ However, embedded methods have known drawbacks. The most salient one, **still an
 @@im-100
 *Figure 5: Poisson problem defined on a moving domain. Note that the standard embedded formulation leads to very high condition numbers, which are very sensitive to the relative position between the computational domain and the background mesh, specially for second order interpolations ($p=2$). In contrast, the condition number is much lower for the enhanced formulation (the {{agg}} method) and it is nearly independent of the position of the domain.*
 @@
-<!--
-\begin{figure}[H]
-\centering
-\begin{subfigure}[b]{0.27\textwidth}
-\centering
-\includegraphics[width=\textwidth]{figures/fig_test_sphere_2d_var_setup.pdf}
-\caption{Moving computational domain}
-\end{subfigure}
-\hspace*{1em}
-\begin{subfigure}[b]{0.45\textwidth}
-\centering
-\includegraphics[width=\textwidth]{figures/fig_test_sphere_2d_var_condest_diri.pdf}
-\caption{Condition number vs. domain position}
-\end{subfigure}
-\caption{Poisson problem defined on a moving domain. Note that the standard embedded formulation leads to very high condition numbers, which are very sensitive to the relative position between the computational domain and the background mesh, specially for second order interpolations ($p=2$). In contrast, the condition number is much lower for the enhanced formulation (the {{agg}} method) and it is nearly independent of the position of the domain.}
-\label{fig_agfem_poisson}
-\end{figure}
-
--->
-
 \label{fig_agfem_stokes}
 ~~~
 <table>
@@ -229,62 +178,6 @@ However, embedded methods have known drawbacks. The most salient one, **still an
 @@im-100
 *Figure 6: Numerical solution of a (dimensionless) Stokes problem using the {{agg}} method (streamlines colored by velocity magnitude and pressure). This computation is carried out without constructing an unstructured body fitted mesh thanks to the application of the {{agg}} method.*
 @@
-
-<!--
-\definecolor{myellow}{RGB}{255,230,128}
-\definecolor{gray20}{RGB}{204,204,204}
-\definecolor{mygray}{RGB}{204,204,204}
-\definecolor{mygreen}{RGB}{138,203,95}
-\definecolor{myblue}{RGB}{77,151,214}
-\begin{figure}[H]
-  \centering
-  \begin{subfigure}[c]{0.32\textwidth}
-      \centering
-      \tikz{\fill[myblue]  (0,0) rectangle (2.0em,0.5em);} {\small Inflow}
-      \hspace{1em}
-      \tikz{\fill[mygreen]  (0,0) rectangle (2.0em,0.5em);} {\small Outflow}
-  \end{subfigure}
-      %
-  \begin{subfigure}[c]{0.32\textwidth}
-    \centering
-    \begin{tikzpicture}
-      \node[inner sep=0pt] (cbar) at (0,0) {\includegraphics[width=0.4\textwidth]{figures/fig_colorbar_h.pdf}};
-      \node[anchor=west] at (cbar.east) {\small $75.0$};
-      \node[anchor=east] at (cbar.west) {\small $0.0$};
-    \end{tikzpicture}
-  \end{subfigure}
-      %
-  \begin{subfigure}[c]{0.32\textwidth}
-    \centering
-    \begin{tikzpicture}
-      \node[inner sep=0pt] (cbar) at (0,0) {\includegraphics[width=0.4\textwidth]{figures/fig_colorbar_h.pdf}};
-      \node[anchor=west] at (cbar.east) {\small $53.0$};
-      \node[anchor=east] at (cbar.west) {\small $-1.4$};
-    \end{tikzpicture}
-  \end{subfigure}
-
-  \begin{subfigure}[b]{0.32\textwidth}
-      \centering
-      \includegraphics[width=0.99\textwidth]{figures/fig_bullets_3d_geo.png}
-      \caption{Problem geometry.}
-    \label{fig:complex-case1-sol-a}
-  \end{subfigure}
-  \hspace{0em}
-  \begin{subfigure}[b]{0.32\textwidth}
-    \centering
-    \includegraphics[width=0.99\textwidth]{figures/fig_bullets_3d_sol_u.png}
-    \caption{Velocity (magnitude).}
-    \label{fig:complex-case1-sol-b}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.32\textwidth}
-    \includegraphics[width=0.99\textwidth]{figures/fig_bullets_3d_sol_p.png}
-    \caption{Pressure.}
-    \label{fig:complex-case1-sol-c}
-  \end{subfigure}
-  \caption{Numerical solution of a (dimensionless) Stokes problem using the {{agg}} method (streamlines colored by velocity magnitude and pressure). This computation is carried out without constructing an unstructured body fitted mesh thanks to the application of the {{agg}} method.}
-  \label{fig_agfem_stokes}
-\end{figure}
--->
 
 ##### Petascale-capable distributed-memory parallelization of AgFEM
 
@@ -313,20 +206,6 @@ The obtained results confirm the expectations: when using {{agg}}, the resulting
 *Figure 7: (a) Geometry. (b) Wall clock time in seconds in Marenostrum-IV for the major phases (except linear solver) versus scaled problem size in proportion to the number of CPU cores. (c) Linear solver wall clock times.*
 @@
 
-<!-- 
-\begin{figure}[H]
-\centering
-\begin{tabular}{ccc}
-\includegraphics[width=0.25\textwidth]{figures/fig_array_geom.pdf} &
-\includegraphics[width=0.33\textwidth]{figures/scalability/fig_paper_phases_time_vs_num_dofs_a0b0c0d1e0f0g0h0i0_l3.pdf} & 
-\includegraphics[width=0.33\textwidth]{figures/scalability/fig_solver_phases_time_vs_num_dofs_a0b0c0d1e0f0g0h0i0_l3.pdf} \\ 
-(a) & (b) & (c) \\
-\end{tabular}
-\caption{(a) Geometry. (a) Wall clock time in seconds in Marenostrum-IV for the major phases (except linear solver) versus scaled problem size in proportion to the number of CPU cores. (c) Linear solver wall clock times.}
-\label{fig_fig_scalability-agfem}
-\end{figure}
--->
-
 ##### $h$-AgFEM: extension of AgFEM to support AMR
 Embedded methods can be used with a variety of background mesh types.
 **The approach that I have pursued particularly leverages octree-based background meshes using the tools covered in Sec. [Scalable {{amr}} with dynamic load balancing via forests-of-trees](#sec_scalable_amr}).** This is achieved by means of a recursive approach in which a mesh with a very coarse resolution, in the limit a single cube that embeds the entire domain, is recursively refined step by step, until all mesh cells fulfill suitably-defined (geometrical and/or numerical) error criteria. See Fig.[8](#fig_embedded_amr).
@@ -350,21 +229,8 @@ Embedded methods can be used with a variety of background mesh types.
 
 @@im-100
 *Figure 8: (a) A circle domain with some circular holes inside embedded in a locally-refined quadtree-like background mesh. The colors represent the partition into 6 subdomains induced by a Z-shaped (a.k.a. as Morton) SFC. (b) Mesh used for integration purposes resulting from the intersection of the surface description of a cantilever beam with a set of spherical holes and a uniform Cartesian background mesh. (c) Mesh used for integration purposes resulting from the intersection of the surface above and a locally-adapted octree-like background mesh.*@@
-<!-- 
-\begin{figure}[H]
-\centering
-\begin{tabular}{ccc}
-\includegraphics[width=0.25\textwidth]{figures/fig_filling_curve_a.pdf-1.png} &
-\includegraphics[width=0.25\textwidth]{figures/BSACB_initial_mesh.png} & 
-\includegraphics[width=0.25\textwidth]{figures/BSACB_final_mesh_clamped_side.png} \\ 
-(a) & (b) & (c) \\
-\end{tabular}
-\caption{(a) A circle domain with some circular holes inside embedded in a locally-refined quadtree-like background mesh. The colors represent the partition into 6 subdomains induced by a Z-shaped (a.k.a. as Morton) SFC. (b) Mesh used for integration purposes resulting from the intersection of the surface description of a cantilever beam with a set of spherical holes and a uniform Cartesian background mesh. (c) Mesh used for integration purposes resulting from the intersection of the surface above and a locally-adapted octree-like background mesh.}
-\label{fig_embedded_amr}
-\end{figure}
--->
 
-In a recent work~\citep{Badia2020}, currently under revision, **I have addressed the challenge of developing an adaptive unfitted finite element scheme that combines {{agg}} with parallel {{amr}}.** At the core of this development lies a  
+In a recent work~\citep{Badia2020}, **I have addressed the challenge of developing an adaptive unfitted finite element scheme that combines {{agg}} with parallel {{amr}}.** At the core of this development lies a  
 two-step algorithm to construct the {{fe}} space at hand that carefully mixes aggregation constraints of ill-posed {{dofs}} (to get rid of the small cut cell problem), and standard hanging {{dofs}} constraints (to ensure trace continuity on non-conforming meshes). Following this approach, I have derived a {{fe}} space that can be expressed as the original one plus well-defined linear constraints. Mathematical analysis and numerical experiments demonstrate its optimal mesh adaptation capability, robustness to cut location and parallel efficiency, on classical Poisson $hp$-adaptivity benchmarks. See Figs. [9](#fig_hagfem_solution)- [10](#fig_hagfem_condition). **This work opens the path to functional and geometrical error-driven dynamic mesh adaptation with {{agg}} in large-scale realistic scenarios. Likewise, it can offer guidance for bridging other scalable unfitted methods and parallel {{amr}}.**
 
 \label{fig_hagfem_solution}
@@ -392,50 +258,6 @@ two-step algorithm to construct the {{fe}} space at hand that carefully mixes ag
 *Figure 9: Geometries and numerical solution to the problems studied with tree-based $h$-adaptive {{agg}} (from here on, referred to as $h$-AgFEM). (a)-(b) consider a variant of the Fichera corner problem, whereas (c)-(e) a Poisson problem with multiple shocks.*
 @@
 
-<!-- 
-\begin{figure}[H]
-  \centering
-  \begin{subfigure}[b]{0.18\textwidth}
-      \centering
-      \includegraphics[width=0.99\textwidth]{figures/hAgFEM/pacman.png}
-      \caption{}
-  \end{subfigure}
-  \hspace{0em}
-  \begin{subfigure}[b]{0.18\textwidth}
-    \centering
-    \includegraphics[width=0.99\textwidth]{figures/hAgFEM/popcorn.png}
-    \caption{}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.18\textwidth}
-    \includegraphics[width=0.99\textwidth]{figures/hAgFEM/cheese.png}
-    \caption{}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.18\textwidth}
-    \includegraphics[width=0.99\textwidth]{figures/hAgFEM/array.png}
-    \caption{}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.18\textwidth}
-    \includegraphics[width=0.99\textwidth]{figures/hAgFEM/spiral.png}
-    \caption{}
-  \end{subfigure}
-  \caption{Geometries and numerical solution to the problems studied with tree-based $h$-adaptive {{agg}} (from here on, referred to as $h$-AgFEM). (a)-(b) consider a variant of the Fichera corner problem, whereas (c)-(e) a Poisson problem with multiple shocks.}
-  \label{fig_hagfem_solution}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.7\textwidth]{figures/hAgFEM/convergence_unfitted.png}
-\caption{For all cases in Fig.~\ref{fig:hagfem_solution}, $h$-{{agg}} converges optimally. Moreover, in contrast to standard (std.) FEM, it does not suffer from severe ill-conditioning, that precludes generating solutions where $h$-{{agg}} can.}
-\label{fig:hagfem_convergence}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.7\textwidth]{figures/hAgFEM/condition_numbers_unfitted.png}
-\caption{For all cases in Fig.~\ref{fig:hagfem_solution}, $h$-{{agg}} condition number estimates are consistently well-below those of std. FEM.}
-\label{fig_hagfem_condition}
-\end{figure}
--->
 \label{fig_hagfem_convergence}
 ~~~
 <table>
@@ -467,7 +289,7 @@ two-step algorithm to construct the {{fe}} space at hand that carefully mixes ag
 @@
 
 ##### Extension of $h$-AgFEM to non-linear solid mechanics 
-**Recently, in a close collaboration with the post-doc researcher that I have supervised during a 2-year period, we have introduced the algorithmic extensions to $h$-{{agg}} in order to deal with non-linear solid mechanics problems.** This work has been recently submitted for publication, and is currently under review \citep{badia2020robust}. In a first stage, we have restricted ourselves to problems involving nonlinear materials whose behavior depends on the strain history. This sort of problems are used as a demonstrator, but we
+**In a close collaboration with the post-doc researcher that I have supervised during a 2-year period, we have introduced the algorithmic extensions to $h$-{{agg}} in order to deal with non-linear solid mechanics problems.** This work has been published in \citep{badia2020robust}. In a first stage, we have restricted ourselves to problems involving nonlinear materials whose behavior depends on the strain history. This sort of problems are used as a demonstrator, but we
 stress that the techniques presented can also be applied to, e.g., problems with geometric nonlinearities (i.e., solids undergoing large deformations or deflections).
 For such a purpose, we have devised a novel strategy that uses $h$-adaptive dynamic mesh refinement and re-balancing driven by a-posteriori error estimators in combination with an incremental solution of the nonlinear problem (a.k.a. pseudo-time stepping). Besides, this work also addresses the functional space representation of the history variables describing the nonlinear evolution of the constitutive model. The strategy is general enough to cover a wide range of constitutive models endowed with variables of any tensorial order.
 
@@ -529,7 +351,7 @@ As an illustration, **Fig.[12](ig_hagfem_plasticity) reports the results obtaine
 -->
 
 ##### Application to metal additive manufacturing processes
-I am applying the tools presented in previous sections, together with other modelling and numerical discretization inventions, in order to build an accurate computational model for the simulation of metal AM processes. (I note, however, that these are essential contributions in numerical methods for the {{fe}} discretization of {{pdes}}, and thus, their applicability goes far beyond AM computer modeling.) **The advances so far in this regard have been published in two  Q1-ranked JCR research journals<~\citep{Neiva2020,Neiva2019a}.**
+I have applied the tools presented in previous sections, together with other modelling and numerical discretization inventions, in order to build an accurate computational model for the simulation of metal AM processes. (I note, however, that these are essential contributions in numerical methods for the {{fe}} discretization of {{pdes}}, and thus, their applicability goes far beyond AM computer modeling.) **The advances so far in this regard have been published in two  Q1-ranked JCR research journals<~\citep{Neiva2020,Neiva2019a}.**
 
 AM (a.k.a. 3D printing) refers to a set of sophisticated manufacturing technologies to build up 3D objects, on a layer-by-layer basis, from a CAD model. AM has nowadays become sufficiently mature for the 3D printing of metallic objects readily to operate in industrially-relevant applications, including the aerospace, aeronautic, automotive or medical industry, among others. **The main breakthrough of AM is its ability to create cost-effective, short time-to-market objects with properties (i.e., strength, surface quality, material behavior, shape, etc.) almost impossible to produce with traditional technologies as e.g., casting or welding.** However, high-energy sources used to melt metal powders during the printing process induce thermo-mechanical shape distortions and residual stresses, that deteriorate the geometrical quality and the requested material properties. 
 The current industrial practice is based on an expensive, time-consuming, trial-and-error process, which involves the production of hundreds of uncertified copies of the object before reaching the final part. A more sophisticated approach to cope with this limitation is to shift to virtual-based design and certification, using predictive computer modeling tools. **However, state-of-the-art simulation software available at the literature is still far beyond the accuracy and time frame requirements to unlock the full potential of 3D printers in real industrial use.**
@@ -563,22 +385,6 @@ The specific goal is the high-fidelity thermal simulation of the printing proces
 @@im-100
 *Figure 13: Snapshots of a thermal 3D printing simulation using the $h$-{{agg}} method in order to effectively represent the geometry of the growing piece.*
 @@
-<!--
-\begin{figure}[H]
-\centering
-\vspace*{-1mm}
-\includegraphics[width=0.25\textwidth]{figures/popcornFlake-0425.png}
-\hspace*{-7mm}
-\includegraphics[width=0.25\textwidth]{figures/popcornFlake-0427.png}
-\hspace*{-7mm}
-\includegraphics[width=0.25\textwidth]{figures/popcornFlake-0429.png}
-\hspace*{-7mm}
-\includegraphics[width=0.25\textwidth]{figures/popcornFlake-0431.png}
-
-\caption{Snapshots of a thermal 3D printing simulation using the $h$-{{agg}} method in order to effectively represent the geometry of the growing piece.}
-\label{fig_AM-AggFEM}
-\end{figure}
--->
 
 \label{sec_rl2}
 #### RL2: Advanced numerical methods for the large-scale simulation of high temperature superconductors
@@ -609,15 +415,7 @@ Computational tools are a powerful technique to simulate the behavior of {{hts}}
 *Figure 14: Current density profile (color map) computed by the {{hts}} modeling tool for a toy 3D problem at a given fixed time.*
 @@
 
-<!--
-\begin{wrapfigure}{r}{0.5\linewidth}
-\centering
-\includegraphics[width=0.4\textwidth]{figures/image21.png}
-\caption{Current density profile (color map) computed by the {{hts}} modeling tool for a toy 3D problem at a given fixed time.}
-\label{fig:hts_current_density}
-\end{wrapfigure}
--->
-One of the outputs so far by this RL is a novel {{hpc}} software tool, grounded on `FEMPAR` (see Sec. [](#sec_rl3)), for the non-linear eddy current, AC loss large-scale modelling of {{hts}} tapes and bulks. **The hallmark of this tool, compared to any other available in the literature, is its ability to combine arbitrary-order Edge {{fes}} for the Maxwell Equations with {{amr}} on octree-based meshes (see Sec.[](#sec_scalable_amr)) while exploiting message-passing parallelism in all stages of the simulation pipeline \citep{Olm2019}, and a novel 2-level BDDC preconditioner that I have developed for the linearized discrete Maxwell Equations with heterogeneous materials able to scale up to dozens of thousands for computational cores \citep{Badia2019maxwell}**. The problem to be simulated consists of a superconductor material surrounded by a dielectric (i.e., extremely high resistivity) box, ''large enough'' (compared to region spanned by the superconductor) for neglecting the effects of the superconductor magnetization on the boundary of the dielectric box; see Fig.[14](#fig_hts_current_density). The system of {{pdes}} selected for describing this problem is grounded on the H-formulation of the Maxwell system of equations, properly extended to {{hts}} modelling via a judiciously-selected power law to describe the electric field-current density relation (see \citep{Olm2019} and references therein). This latter constitutive equation, which is required to describe the penetration of the magnetic flux and induced currents on {{hts}} materials, transforms the linear system of Maxwell equations into an extremely non-linear problem. 
+One of the outputs by this RL is a novel {{hpc}} software tool, grounded on `FEMPAR` (see Sec. [](#sec_rl3)), for the non-linear eddy current, AC loss large-scale modelling of {{hts}} tapes and bulks. **The hallmark of this tool, compared to any other available in the literature, is its ability to combine arbitrary-order Edge {{fes}} for the Maxwell Equations with {{amr}} on octree-based meshes (see Sec.[](#sec_scalable_amr)) while exploiting message-passing parallelism in all stages of the simulation pipeline \citep{Olm2019}, and a novel 2-level BDDC preconditioner that I have developed for the linearized discrete Maxwell Equations with heterogeneous materials able to scale up to dozens of thousands for computational cores \citep{Badia2019maxwell}**. The problem to be simulated consists of a superconductor material surrounded by a dielectric (i.e., extremely high resistivity) box, ''large enough'' (compared to region spanned by the superconductor) for neglecting the effects of the superconductor magnetization on the boundary of the dielectric box; see Fig.[14](#fig_hts_current_density). The system of {{pdes}} selected for describing this problem is grounded on the H-formulation of the Maxwell system of equations, properly extended to {{hts}} modelling via a judiciously-selected power law to describe the electric field-current density relation (see \citep{Olm2019} and references therein). This latter constitutive equation, which is required to describe the penetration of the magnetic flux and induced currents on {{hts}} materials, transforms the linear system of Maxwell equations into an extremely non-linear problem. 
 
 The {{fe}} discretization and solver machinery is based on {{hts}}-tailored, state-of-the-art numerical algorithms. First, **the magnetic field is discretized using curl-conforming, Nèdèlec (a.k.a. edge) {{fes}} of arbitrary order.**  The usage of this sort of {{fe}} spaces is absolutely essential for the robust and accurate modelling of {{hts}} devices, as they relax continuity-constraints, compared to nodal Lagrangian {{fes}} typically used in the structural mechanics community, by letting the normal component of the discrete magnetic field to be discontinuous across the interface of two media (i.e., superconductor-dielectric box) with highly contrasting properties. 
 On the other hand, **parallel {{amr}} by means of non-conforming, octree-based meshes, is used in order to tackle the multiscale nature of the phenomena, while keeping moderate computational requirements.** For example, in Fig.[14](#fig_hts_current_density), magnetic field and current density have to be captured in high detail within the superconductor through a high resolution mesh, while the ones at the dielectric box hardly vary, and thus a coarse-mesh resolution suffices. Finally, at the (non)linear solver kernel, **I have developed a highly-scalable software implementation of the aforementioned preconditioner (grounded on the advances in Sec.[](#sec_rl4), tailored for the discrete curl-curl operator with heterogeneous materials \citep{Badia2019maxwell}.** In a nutshell, in order to enforce the continuity across subdomains of the method, I have used a partition of the interface objects (edges and faces) into sub-objects determined by the variation of the physical coefficients of the problem. Besides, the addition of perturbation terms to the preconditioner is empirically shown to be effective in order to deal with the case where the two coefficients of the model problem jump simultaneously across the interface.  The new method, in contrast to existing approaches for problems in curl-conforming space does not require spectral information whilst providing robustness with regard to coefficient jumps and heterogeneous materials.  
@@ -675,7 +473,7 @@ This RL was *directly* funded by the EU-ERC PoC project, *FEXFEM-On a free open 
 
 
 ##### Publications
-The research work I developed so far within RL3 has resulted in 4x research manuscripts published in Q1-ranked JCR journals \citep{Badia.etal.ACME.2013,Badia2020fempar,Olm2019b,badia_fempar_2017}, and in the form of open source {{hpc}} software packages for the general {{cse}} community.
+The research work I developed within RL3 has resulted in 4x research manuscripts published in Q1-ranked JCR journals \citep{Badia.etal.ACME.2013,Badia2020fempar,Olm2019b,badia_fempar_2017}, and in the form of open source {{hpc}} software packages for the general {{cse}} community.
 
 ##### Research line statement and motivation
 This work is motivated by the fact that research on **advanced, newly developed {{fe}} discretizations and solution algorithms for the {{hpc}} solution of {{cse}}  complex problems frequently requires innovative solutions on the software engineering aspects of a numerical software package as well, and that these latter also represent an important contribution to other researchers working in the {{cse}}  community**. As an example, edge {{fes}} for the Maxwell equations, although well-understood mathematically, are hard to implement in practice, at least in its full generality (e.g., bricks and simplices, arbitrary polynomial order, arbitrary neighbouring cells orientation, etc.). This is due to their extremely complex mathematical structure. In \citep{Olm2019b}, I have presented a mathematically-supported software architecture that sheds some light into this task to practitioners working in this field  by providing, among others, an straightforward manner for constructing its associated functional spaces. 
@@ -707,8 +505,6 @@ There is a number of, high-quality, open source OO {{fe}} libraries available in
 **`FEMPAR` has been successfully used in 40x JCR Q1-ranked research papers on different topics and application areas**: simulation of turbulent flows and stabilized {{fe}} methods \citep{colomes_assessment_2015,colomes_segregated_2016,colomes_mixed_2016,colomes_segregated_2017}, MHD \citep{badia_analysis_2015, badia_unconditionally_2013, badia_unconditionally_2013-1, planas_approximation_2011, smolentsev_approach_2015}, monotonic {{fes}} \citep{badia_monotonicity-preserving_2017, badia_differentiable_2017, badia_discrete_2015, badia_monotonicity-preserving_2014, hierro_shock_2016,Badia2020euler,Bonilla2019b,Bonilla2020}, unfitted {{fes}} and embedded boundary methods \citep{badia_robust_2017,badia_stokes_2018,badia_aggregated_2017,Verdugo2019b}, {{amr}} \citep{Badia2019a}, AM \citep{Neiva2020,Neiva2019a,chiumenti_numerical_2017} and {{hts}} \citep{Olm2019} simulations, and scientific software engineering \citep{Badia2020fempar,Olm2019b,badia_fempar_2017}. It has also been used for the highly efficient implementation of DD solvers \citep{badia_highly_2014,badia_enhanced_2013,badia_implementation_2013,badia_multilevel_2016,badia_scalability_2015,badia_balancing_2016,badia_space-time_2017,Badia2018pb,Badia2019,Badia2019maxwell} and block preconditioning techniques [badia_block_2014]. Its users/developers span different research groups on national and international-level institutions, including UPC, CIMNE, ICMAB-CSIC, CIEMAT, ICTJA-CSIC, Czech Academy of Sciences (Czech Republic), Sandia National Labs (EEUU), North Carolina State University (USA), Duy Tan University (Vietnam),  Monash University (Australia), and l’Ecole Politechnique (Paris). Besides, it has been/is being a crucial tool for the successful execution of several high-quality EU-funded projects, namely, 1x ERC starting grant, 2x ERC PoC projects, 1x EU-FP7 project, and 3x H2020 projects.
 
 Apart from `FEMPAR`, recently, I have started a new scientific endeavour within the so-called the Gridap ecosystem of Julia packages (available at [https://github.com/gridap](https://github.com/gridap)). At the core of this ecosystem lie the `Gridap.jl` and `GridapEmbedded.jl` Julia packages. `Gridap.jl` is an extensible {{fe}} toolbox fully written in Julia, while  `GridapEmbedded.jl`  extends `Gridap.jl` in order to support embedded {{fe}} discretizations. On top of these two packages,  **I am leading the development of `GridapDistributed.jl`**, which  provides programming paradigm-neutral, parallel {{fe}} data structures for distributed computing environments. This feature implies that communication among tasks are not tailored for a particular programming model, and thus can be leveraged with, e.g., MPI or the master-worker programming model built-in in Julia. Whenever one sticks to MPI as the underlying communication layer,  `GridapDistributed.jl`  leverages the suite of non-linear and linear solvers available in the PETSc software package for the solution of discrete systems of equations. The architecture and API of these packages has been carefully designed in order to achieve a remarkable balance among typically competing constraints, namely generality, flexibility, extensibility, ease-of-use and high performance. To this end, these packages judiciously combine a set of novel features in Julia, namely Just-In-Time (JIT) compilation, dynamic type inference, multiple dispatching, immutable data types, and its powerful abstract interfaces.
-
-In a close link to this RL, **I am co-organizer and co-lecturer (together with my colleagues at NAG, Durham and Cambridge University, UK) of the so-called "Fortran Modernization Workshop" initiative**, a research-oriented workshop, targeting {{cse}}  practitioners and researchers, that encourages, among others, the usage of clean and modern software engineering practices in scientific software. This workshop is free for the attendees, and is funded by NAG (private company) and the UK government. I chaired the instance of the workshop, held at UPC in July, 2017. 70x researchers from different institutions and countries (Spain, Portugal, Germany, USA, and Sweden) attended the workshop. Further instances were held in Cambridge, UK and Germany during 2018-2020.
 
 \label{sec_post_doc}
 ### Post-doctoral researcher stage 
@@ -831,7 +627,7 @@ The work developed resulted in 1x paper published in a Q1-ranked JCR journal \ci
 #### RL6: Task-parallel friendly variants of multilevel preconditioners built from inverse-based ILUs
 
 ##### Funding
-This period started on January, 2006, when I enrolled a PhD program of the {{uji}} at Castellón, Spain, and ended on July, 2010, where I obtained my PhD degree in Computer Science (CS) with honors (Cum Laude) under the supervision of Profs. Enrique S. Quintana-Ortí and José I. Aliaga. **A 4-year competitive FPI fellowship awarded by Generalitat Valenciana funded my PhD. studies**, and let me incorporate to the {{hpc}}\&A research group at {{uji}} where I participated as a researcher in several regional, national, and EU-level competitive projects. **The main {{rl}} was developed in tight collaboration with the group of Prof. Matthias Bollhoefer at TU Braunschweig, Germany.** During this period, I also visited this group 4 times, for a total duration of 4 months. **These research stays were funded by a competitive fellowship that {{uji}} awarded to me, and a project of the “Acciones Integradas” and DAAD subprograms of the Spanish MICINN and the German Science Foundation, respectively.**
+This period started on January, 2006, when I enrolled a PhD program of the {{uji}} at Castellón, Spain, and ended on July, 2010, where I obtained my PhD degree in Computational Science and Engineering (CSE) with honors (Cum Laude) under the supervision of Profs. Enrique S. Quintana-Ortí and José I. Aliaga. **A 4-year competitive FPI fellowship awarded by Generalitat Valenciana funded my PhD. studies**, and let me incorporate to the {{hpc}}\&A research group at {{uji}} where I participated as a researcher in several regional, national, and EU-level competitive projects. **The main {{rl}} was developed in tight collaboration with the group of Prof. Matthias Bollhoefer at TU Braunschweig, Germany.** During this period, I also visited this group 4 times, for a total duration of 4 months. **These research stays were funded by a competitive fellowship that {{uji}} awarded to me, and a project of the “Acciones Integradas” and DAAD subprograms of the Spanish MICINN and the German Science Foundation, respectively.**
 
 ##### Publications
 This research work that I performed within this {{rl}} has resulted in 2x papers published in Q1-ranked JCR journals \citep{aliaga_exploiting_2011,aliaga_assessing_2014}, 1x chapter at the Encyclopedia of Parallel Computing by Springer \citep{AliBMQ10c}, and 5x articles published in peer-reviewed book series \citep{AliBMQ10,AliBMQ08a,AliDMMQ12,AliBMQ07,AliBMQ09}.
