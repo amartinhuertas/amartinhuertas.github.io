@@ -16,7 +16,7 @@ In this introductory section I pinpoint the field of application of my research,
 As a researcher working in the {{cse}} field, I contribute to the development of computational models, algorithms, and software for several application problems. All of these share three common general features (not restricted to, though):
 
 1. The physical phenomena to be simulated are governed by a (potentially highly nonlinear) {{pde}}, or more generally, by a system of {{pdes}}. These phenomena may span multiple temporal and spatial scales, and involve different physical models.
-1. The system of {{pded}} is discretized by means of the {{fem}}. Thus, broadly speaking, the simulation pipeline encompasses three main ingredients: mesh generation and partitioning, space-time {{fe}} discretization, and solution of (non)linear system(s) of equations.
+1. The system of {{pdes}} is discretized by means of the {{fem}}. Thus, broadly speaking, the simulation pipeline encompasses three main ingredients: mesh generation and partitioning, space-time {{fe}} discretization, and solution of (non)linear system(s) of equations.
 1. These are application problems with ever increasing modelling accuracy requirements, and thus highly demanding from the computational viewpoint. In particular, simulation pipelines grounded on highly parallel, algorithmically scalable algorithms and {{hpc}} software, thus able to efficiently exploit the vast amount of computational resources in current petascale supercomputers, are required in order to achieve the aforementioned modelling requirements.
 
 The increasing levels of complexity both in terms of algorithms and hardware make the development of scientific software able to tackle the aforementioned features, while running efficiently on state-of-the-art numerical algorithms on {{hpc}} resources, a scientific challenge in itself. *A part of my research work has been devoted towards the achievement of this goal.* This is motivated by the fact that research on advanced, newly developed {{fe}} discretizations and solution algorithms for the {{hpc}} solution of {{cse}} complex problems frequently requires **innovative solutions on the software engineering aspects of a numerical software package as well**, and that these latter also represent an important contribution to other researchers working in the {{cse}} community. 
@@ -25,21 +25,33 @@ The increasing levels of complexity both in terms of algorithms and hardware mak
 I am indeed co-founder, main software architect and project coordinator of `FEMPAR`(available at [https://github.com/fempar/fempar](https://github.com/fempar/fempar)), an open-source, scientific software package for the numerical modelling of problems governed by {{pde}} on {{hpc}} platforms. I am also contributor to `Gridap.jl` (available at [https://github.com/gridap/Gridap.jl](https://github.com/gridap/Gridap.jl)), and co-author of `gridapdistributed.jl` (available at [https://github.com/gridap/GridapDistributed.jl](https://github.com/gridap/GridapDistributed.jl)), its parallel message-passing version, which provide a new {{fe}} framework written in Julia for such a purpose. These latter two packages exploit the modern features of the Julia programming language (available at [https://julialang.org/](https://julialang.org/)) in order to strike a remarkable balance among performance and generality via appropriate mathematically-driven software abstractions.
 --> 
 
+\label{sec_cur_res}
+## Current research 
+
+Work in progress ...
+
+Topics:
+* Hybridizable finite element methods for general polytopal meshes (HDG, HHO, VEM, etc.).
+* Scalable preconditioning for this schemes (h/p geometric multigrid approaches, hybrid multiscale domain decomposition, etc.). 
+* Exploiting the synergy among Artificial Neural Networks and the numerical solution of PDEs.
+* Scientific Machine Learning approches for large-scale inverse problems.
+* Physics-informed Neural Networks with application to prediction of bushfire dynamics.
+* Numerical methods for geophysical flows with application to Numerical Weather Prediction.
 
 \label{sec_rt_rl}
-## Research trajectory and main research lines 
+## Past research, trajectory, and main research lines 
 
 This section overviews my research trajectory and main {{rl}} pursued. This will be presented in **reverse chronological order**, and split into three differentiated stages, namely: [senior researcher](#sec_senior),  [post-doctoral](#sec_post_doc), and [pre-doctoral stages](#sec_phd). We note that that there is not necessarily a one-to-one correspondence among stage and position at an academic organization. The division into stages is done accordingly to the level of professional independence and academic maturity that was expected from me at the corresponding organizational units. 
 
 \label{sec_senior}
 ### Senior researcher stage 
 
-This period spans 2016-2020. Early 2016, **I was promoted as senior researcher at the {{cimne}}**, position which I held until late 2019, concurrently with my position as adjoint professor at {{upc}}. Then, early 2020, **I moved to the School of Mathematics at Monash University (Melbourne, Australia), where I have been selected/appointed as senior research fellow (Level B) for a 3-year period after winning an international competitive call for candidates**. During this period, I have carried out/I am carrying three main {{rls}} which are labeled as RL1-RL3 below. These are on-going  {{rls}} , and not chronologically ordered. Besides, they are not fully decoupled, as the research outputs from some of these might indeed provide advances readily to be used for the others as well. RL3 should be regarded as a cross-cutting, continuous {{rl}} , on which the advances of the other {{rls}}  are grounded on, and vice-versa.
+This period spans 2016-2020. Early 2016, **I was promoted as senior researcher at the {{cimne}}**, position which I held until late 2019, concurrently with my position as adjoint professor at {{upc}}. Then, early 2020, **I moved to the School of Mathematics at Monash University (Melbourne, Australia), where I was appointed as senior research fellow (Level B) for a 3-year period after winning an international competitive call for candidates**. During this period, I have carried out three main {{rls}} which are labeled as RL1-RL3 below. These are on-going  {{rls}} , and not chronologically ordered. Besides, they are not fully decoupled, as the research outputs from some of these provides advances readily to be used for the others as well. RL3 should be regarded as a cross-cutting, continuous {{rl}} , on which the advances of the other {{rls}}  are grounded on, and vice-versa.
 
 \label{sec:rl1}
 #### RL1: Robust and scalable adaptive unfitted finite element methods with application to additive manufacturing 
 ##### Research line statement
-This main long-term research goal of this RL is the development of novel numerical methods for the accurate, computationally efficient and scalable simulation of large-scale transient multiscale {{pdes}} on complex evolving domains, with moving interfaces and/or free boundaries, with application to the simulation of metal {{am}} processes (a.k.a. 3D printing). The traditional {{cad}}/{{cae}} paradigm, which relies on (semi-automatic, hard-to-parallelize) unstructured mesh generators for spatial discretization, and the (inherently sequential) {{mol}} for time discretization, presents a poor integration among {{cad}} geometrical models and the {{pde}} numerical discretization algorithms, and at the most favorable scenario, is not efficient to tackle problems on non-trivial evolving geometries, *if not applicable/feasible at all*; see, e.g., Fig.[1](#fig_am_macro). To this end, **my contribution is the development of parallel-friendly advanced discretization methods based on the so-called unfitted (a.k.a. embedded) embedded finite element techniques \citep{Badia2018,burman_cutfem_2015,Schillinger2015} and their combination with highly scalable parallel linear solvers including multilevel domain decomposition \citep{Toselli2005} and {{amg}} \citep{Briggs2000}**. The final purpose of this research is to speed up the main bottlenecks of large multiscale/multiphysics finite element computations, in particular, the mesh generation, mesh partitioning, and the linear solver phase. More details are given in the subsections below. 
+This main research goal of this RL was the development of novel numerical methods for the accurate, computationally efficient and scalable simulation of large-scale transient multiscale {{pdes}} on complex evolving domains, with moving interfaces and/or free boundaries, with application to the simulation of metal {{am}} processes (a.k.a. 3D printing). The traditional {{cad}}/{{cae}} paradigm, which relies on (semi-automatic, hard-to-parallelize) unstructured mesh generators for spatial discretization, and the (inherently sequential) {{mol}} for time discretization, presents a poor integration among {{cad}} geometrical models and the {{pde}} numerical discretization algorithms, and at the most favorable scenario, is not efficient to tackle problems on non-trivial evolving geometries, *if not applicable/feasible at all*; see, e.g., Fig.[1](#fig_am_macro). To this end, **my contribution is the development of parallel-friendly advanced discretization methods based on the so-called unfitted (a.k.a. embedded) embedded finite element techniques \citep{Badia2018,burman_cutfem_2015,Schillinger2015} and their combination with highly scalable parallel linear solvers including multilevel domain decomposition \citep{Toselli2005} and {{amg}} \citep{Briggs2000}**. The final purpose of this research is to speed up the main bottlenecks of large multiscale/multiphysics finite element computations, in particular, the mesh generation, mesh partitioning, and the linear solver phase. More details are given in the subsections below. 
 
 
 \label{fig_am_macro}
@@ -56,7 +68,7 @@ In early stages, this line was (partially) funded by two large H2020 EU projects
 
 ##### Publications
 The research work I developed within RL1 has resulted in 8x research manuscripts  
- \citep{Badia2019a,Neiva2020,badia_stokes_2018,badia_aggregated_2017,Neiva2019a,Verdugo2019b,Badia2020badia2020robust} published in top quality JCR journals (Q1-ranked).
+ \citep{Badia2019a,Neiva2020,badia_stokes_2018,badia_aggregated_2017,Neiva2019a,Verdugo2019b,Badia2020,badia2020robust} published in top quality JCR journals (Q1-ranked).
 
 \label{sec_scalable_amr}
 ##### Scalable Adaptive Mesh Refinement and coarsening with dynamic load balancing via forests-of-trees 
@@ -502,10 +514,10 @@ A part of  my research career has been focused on developing advanced mathematic
 @@
 There is a number of, high-quality, open source OO {{fe}} libraries available in the community, e.g., deal.II, FEniCS, GRINS, Nektar++, MOOSE, MFEM, FreeFem++, DUNE, OpenFOAM. In general, these libraries aim to provide all the machinery required to simulate complex problems governed by {{pdes}} using {{fe}} techniques. However, **in all of these libraries, the solution of the linear system is clearly segregated from the discretization step.** The linear system is transferred to a general-purpose sparse linear algebra library, mainly PETSc, Hypre, and/or TRILINOS. This might limit numerical robustness and efficiency for specific applications. It in particular eludes to fully exploit the underlying properties of the PDE operator and the numerical discretization at hand to build an optimal solver. In contrast to this approach. **`FEMPAR`’s hallmark is that it has been developed with the aim to provide a framework that will allow researchers to investigate on novel complex computational algorithms that are not well-suited in the traditional segregated workflow commented above, among other advantages**. Even though every block within the library preserves modularity, the interface between discretization and numerical linear algebra modules within `FEMPAR` is very rich and focused on PDE-tailored linear systems.
 
-**`FEMPAR` has been successfully used in 40x JCR Q1-ranked research papers on different topics and application areas**: simulation of turbulent flows and stabilized {{fe}} methods \citep{colomes_assessment_2015,colomes_segregated_2016,colomes_mixed_2016,colomes_segregated_2017}, MHD \citep{badia_analysis_2015, badia_unconditionally_2013, badia_unconditionally_2013-1, planas_approximation_2011, smolentsev_approach_2015}, monotonic {{fes}} \citep{badia_monotonicity-preserving_2017, badia_differentiable_2017, badia_discrete_2015, badia_monotonicity-preserving_2014, hierro_shock_2016,Badia2020euler,Bonilla2019b,Bonilla2020}, unfitted {{fes}} and embedded boundary methods \citep{badia_robust_2017,badia_stokes_2018,badia_aggregated_2017,Verdugo2019b}, {{amr}} \citep{Badia2019a}, AM \citep{Neiva2020,Neiva2019a,chiumenti_numerical_2017} and {{hts}} \citep{Olm2019} simulations, and scientific software engineering \citep{Badia2020fempar,Olm2019b,badia_fempar_2017}. It has also been used for the highly efficient implementation of DD solvers \citep{badia_highly_2014,badia_enhanced_2013,badia_implementation_2013,badia_multilevel_2016,badia_scalability_2015,badia_balancing_2016,badia_space-time_2017,Badia2018pb,Badia2019,Badia2019maxwell} and block preconditioning techniques [badia_block_2014]. Its users/developers span different research groups on national and international-level institutions, including UPC, CIMNE, ICMAB-CSIC, CIEMAT, ICTJA-CSIC, Czech Academy of Sciences (Czech Republic), Sandia National Labs (EEUU), North Carolina State University (USA), Duy Tan University (Vietnam),  Monash University (Australia), and l’Ecole Politechnique (Paris). Besides, it has been/is being a crucial tool for the successful execution of several high-quality EU-funded projects, namely, 1x ERC starting grant, 2x ERC PoC projects, 1x EU-FP7 project, and 3x H2020 projects.
-
+**`FEMPAR` has been successfully used in 40x JCR Q1-ranked research papers on different topics and application areas**: simulation of turbulent flows and stabilized {{fe}} methods \citep{colomes_assessment_2015,colomes_segregated_2016,colomes_mixed_2016,colomes_segregated_2017}, MHD \citep{badia_analysis_2015, badia_unconditionally_2013, badia_unconditionally_2013-1, planas_approximation_2011, smolentsev_approach_2015}, monotonic {{fes}} \citep{badia_monotonicity-preserving_2017, badia_differentiable_2017, badia_discrete_2015, badia_monotonicity-preserving_2014, hierro_shock_2016,Badia2020euler,Bonilla2019b,Bonilla2020}, unfitted {{fes}} and embedded boundary methods \citep{badia_robust_2017,badia_stokes_2018,badia_aggregated_2017,Verdugo2019b}, {{amr}} \citep{Badia2019a}, AM \citep{Neiva2020,Neiva2019a,chiumenti_numerical_2017} and {{hts}} \citep{Olm2019} simulations, and scientific software engineering \citep{Badia2020fempar,Olm2019b,badia_fempar_2017}. It has also been used for the highly efficient implementation of DD solvers \citep{badia_highly_2014,badia_enhanced_2013,badia_implementation_2013,badia_multilevel_2016,badia_scalability_2015,badia_balancing_2016,badia_space-time_2017,Badia2018pb,Badia2019,Badia2019maxwell} and block preconditioning techniques \citep{badia_block_2014}. Its users/developers span different research groups on national and international-level institutions, including UPC, CIMNE, ICMAB-CSIC, CIEMAT, ICTJA-CSIC, Czech Academy of Sciences (Czech Republic), Sandia National Labs (EEUU), North Carolina State University (USA), Duy Tan University (Vietnam),  Monash University (Australia), and l’Ecole Politechnique (Paris). Besides, it has been/is being a crucial tool for the successful execution of several high-quality EU-funded projects, namely, 1x ERC starting grant, 2x ERC PoC projects, 1x EU-FP7 project, and 3x H2020 projects.
+<!--
 Apart from `FEMPAR`, recently, I have started a new scientific endeavour within the so-called the Gridap ecosystem of Julia packages (available at [https://github.com/gridap](https://github.com/gridap)). At the core of this ecosystem lie the `Gridap.jl` and `GridapEmbedded.jl` Julia packages. `Gridap.jl` is an extensible {{fe}} toolbox fully written in Julia, while  `GridapEmbedded.jl`  extends `Gridap.jl` in order to support embedded {{fe}} discretizations. On top of these two packages,  **I am leading the development of `GridapDistributed.jl`**, which  provides programming paradigm-neutral, parallel {{fe}} data structures for distributed computing environments. This feature implies that communication among tasks are not tailored for a particular programming model, and thus can be leveraged with, e.g., MPI or the master-worker programming model built-in in Julia. Whenever one sticks to MPI as the underlying communication layer,  `GridapDistributed.jl`  leverages the suite of non-linear and linear solvers available in the PETSc software package for the solution of discrete systems of equations. The architecture and API of these packages has been carefully designed in order to achieve a remarkable balance among typically competing constraints, namely generality, flexibility, extensibility, ease-of-use and high performance. To this end, these packages judiciously combine a set of novel features in Julia, namely Just-In-Time (JIT) compilation, dynamic type inference, multiple dispatching, immutable data types, and its powerful abstract interfaces.
-
+-->
 \label{sec_post_doc}
 ### Post-doctoral researcher stage 
 
@@ -529,16 +541,6 @@ The ultimate goal of RL4 is the realistic simulation of liquid metals in {{bbs}}
 The block recursive LU preconditioners discussed below, at the preconditioner level, the computation of every physical variable in a multi-physics problem. Thus, even though the starting point is a complex multi-physics problem to be solved, the application of the block LU preconditioner only involves the solution of one-physics problems, usually Poisson or CDR-type problems (diagonal blocks). Next, these one-physics problem are replaced, e.g., by a highly scalable parallel solver, in order to end up with a truly scalable {{mhd}} solver. In this context, a remarkable contribution within RL4 is as follows: **I have been able to demonstrate the high-suitability of Multilevel BDDC preconditioners for the efficient/scalable solution of huge sparse linear systems arising from the {{fe}} discretization of linear elliptic {{pdes}} (e.g., Poisson, Elasticity) on current state-of-the-art petascale world-class massively parallel processors.** In order to achieve this goal, **I have proposed a novel bulk-asynchronous, fully-distributed, communicator-aware, inter-level overlapped, and recursive algorithmic adaptation of MultiLevel BDDC preconditioners towards extreme-scale computations** which has been shown to efficiently scale up to the 458K cores of the IBM BG/Q supercomputer installed in JSC, Germany, in the solution of linear elliptic {{pde}} problems with dozens of billions of unknowns; see Fig.[18](#fig_weak_mlbddc). **This work was published in a series of two papers at the SIAM Journal of Scientific Computing~ \citep{badia_highly_2014,badia_multilevel_2016}**. This sort of solvers are not only of paramount importance for large-scale {{mhd}} simulations, but are at the core of many large-scale scientific codes grounded on the {{fe}} solution of {{pde}} problems. Indeed, extreme-scale solvers for sparse linear algebra is a broad and timely subject of strategic importance, as evidenced by the significant increase in investment during the past few years. **Thanks to these outstanding results, `FEMPAR` has been qualified for High-Q club status \citep{brommel_juqueen_2015}, a distinction that JSC (Germany) awards to the most scalable EU codes.**
 
 \label{fig_weak_mlbddc}
-<!-->
-~~~
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/weak_3D_H_div_h_4_3_bddc_ce_tot.pdf-1.png" alt="" </img></td>
-    </tr>
-</table>
-~~~
--->
 @@im-100 ![](/assets/figures/weak_3D_H_div_h_4_3_bddc_ce_tot.pdf-1.png)
 *Figure 18: Weak scalability (computation time in seconds) for a 4-level MLBDDC preconditioner in the solution of a Poisson problem up to 20 billion {{dofs}} on 1.8M MPI tasks at the IBM BG/Q supercomputer.*
 @@
@@ -547,24 +549,14 @@ The block recursive LU preconditioners discussed below, at the preconditioner le
 Within this line of research **I have also contributed to the rehabilitation of the Balancing Neumann-Neumann preconditioner as an efficient preconditioning strategy for large-scale fluid and solid mechanics simulations \citep{badia_enhanced_2013}, and to the scalability boost of inexact BDDC preconditioners \citep{badia_scalability_2015}**. Besides, **I have developed a new variant of BDDC for multi-material problems~\citep{Badia2018pb}**}. The coarse space in this preconditioner, referred as PB-BDDC, is based on a Physics-Based aggregation technique, and unlike BDDC solvers based on adaptive selection of constraints, does not involve expensive eigenvalue solvers. The new preconditioner have been shown to be robust and scalable for materials with heterogeneous properties. Besides, in \citep{Badia2018pb}, it is compared against a state-of-the-art, highly efficient MPI implementation of an adaptive-coarse-space BDDC preconditioner implemented in the PETSc software package from ANL. For the largest-scale problem evaluated (more than a half billion {{dofs}} on 8.2K cores), the new algorithm/software combination is 8x times faster, while consuming significantly less memory resources. Finally, **in \citep{Badia2019}, I have also developed an enhanced variant of the original BDDC preconditioner that is able to eliminate the condition number matrix dependence on the ratio among the subdomain and mesh resolutions.**
 
 ##### A novel stabilized FE formulation and block LU preconditioning formulations
-The Galerkin {{fe}} approximation of this problem by means of grad-conforming Lagrangian {{fe}} spaces faces several well-known drawbacks. First, convective dominated flows may lead to oscillations because the system loses its elliptic nature. Second, a strong coupling between the two saddle-point subproblems, the hydrodynamic and the magnetic ones, may introduce numerical instabilities when solving the resulting linear systems of equations. Finally, in order to have a well-posed problem, the classical inf-sup conditions between the approximation spaces for the velocity and the pressure must be satisfied. This also applies to the current density and the electric potential as well. There exist several options to circumvent these difficulties, with stabilization methods being one of the most widely used. In order to cope with this problem, **a first remarkable contribution within RL4 comes in the form of a new stabilized, variational multiscale-like {{fe}} scheme tailored for this system of {{pdes}}**; see Fig.[19](#fig_sherc_asgs) for the convergence analysis of the new method for the so-called Shercliff’s benchmark, and [badia_block_2014] for further details. **The most particular feature of these approaches is the current density being treated as an actual unknown of the problem.** This is in contrast to the typical approach based on simplifying the original problem by decoupling the fluid and electromagnetic problems. For large Hartmann numbers (in fusion {{bb}} simulations these are in the order of $10^4$-$10^5$), this latter approach can only work for extremely small time steps, and it cannot be used for steady problems. 
+The Galerkin {{fe}} approximation of this problem by means of grad-conforming Lagrangian {{fe}} spaces faces several well-known drawbacks. First, convective dominated flows may lead to oscillations because the system loses its elliptic nature. Second, a strong coupling between the two saddle-point subproblems, the hydrodynamic and the magnetic ones, may introduce numerical instabilities when solving the resulting linear systems of equations. Finally, in order to have a well-posed problem, the classical inf-sup conditions between the approximation spaces for the velocity and the pressure must be satisfied. This also applies to the current density and the electric potential as well. There exist several options to circumvent these difficulties, with stabilization methods being one of the most widely used. In order to cope with this problem, **a first remarkable contribution within RL4 comes in the form of a new stabilized, variational multiscale-like {{fe}} scheme tailored for this system of {{pdes}}**; see Fig.[19](#fig_sherc_asgs) for the convergence analysis of the new method for the so-called Shercliff’s benchmark, and \citep{badia_block_2014} for further details. **The most particular feature of these approaches is the current density being treated as an actual unknown of the problem.** This is in contrast to the typical approach based on simplifying the original problem by decoupling the fluid and electromagnetic problems. For large Hartmann numbers (in fusion {{bb}} simulations these are in the order of $10^4$-$10^5$), this latter approach can only work for extremely small time steps, and it cannot be used for steady problems. 
 
 \label{fig_sherc_asgs}
-<!-->
-~~~
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/sherc_asgs_ha10.pdf-1.png" alt="" </img></td>
-    </tr>
-</table>
-~~~
--->
 @@im-25 ![](/assets/figures/sherc_asgs_ha10.pdf-1_resized.png)
 *Figure 19: Optimal convergence for the $L^2$-norm of the velocity error and its gradient, and the current density error, and its divergence.*
 @@
 
-**A remarkable contribution within RL4 comes in the form of algorithmically scalable (i.e., mesh resolution independent) preconditioning algorithms for the discrete operators resulting from these new {{fe}} schemes**. The novel approach that was proposed in order to tackle these highly-coupled, multi-physics problems is based on an approximate block recursive LU factorization of the system matrix. An abstract setting presented in [badia_block_2014] enables the application of this idea to other multi-physics problems like resistive {{mhd}} or liquid crystal problems. For the particular problem at hand, I derived two different preconditioners using this abstract setting. The first preconditioner, the so-called fluid-magnetic subproblem factorization (**FMS preconditioner**) is based on an initial factorization of the system matrix into fluid and magnetic subproblems. The second preconditioner, the so-called Field-Lagrange multiplier factorization (**FLM preconditioner**), segregates at the first level field variables (velocity and current) from Lagrange multiplier-type variables (pressure and electric potential). The key point for these preconditioners to be efficient relies in obtaining a good approximation of the Schur complement for all 2x2 systems. In order to define the Schur complement approximations, I extended the ideas used for the incompressible Navier-Stokes equations to the inductionless {{mhd}} system. The efficiency and robustness of the FMS and FLM block LU recursive preconditioners was confirmed with respect to both mesh size and Hartmann number by means of a detailed set of numerical tests [badia_block_2014].
+**A remarkable contribution within RL4 comes in the form of algorithmically scalable (i.e., mesh resolution independent) preconditioning algorithms for the discrete operators resulting from these new {{fe}} schemes**. The novel approach that was proposed in order to tackle these highly-coupled, multi-physics problems is based on an approximate block recursive LU factorization of the system matrix. An abstract setting presented in \citep{badia_block_2014} enables the application of this idea to other multi-physics problems like resistive {{mhd}} or liquid crystal problems. For the particular problem at hand, I derived two different preconditioners using this abstract setting. The first preconditioner, the so-called fluid-magnetic subproblem factorization (**FMS preconditioner**) is based on an initial factorization of the system matrix into fluid and magnetic subproblems. The second preconditioner, the so-called Field-Lagrange multiplier factorization (**FLM preconditioner**), segregates at the first level field variables (velocity and current) from Lagrange multiplier-type variables (pressure and electric potential). The key point for these preconditioners to be efficient relies in obtaining a good approximation of the Schur complement for all 2x2 systems. In order to define the Schur complement approximations, I extended the ideas used for the incompressible Navier-Stokes equations to the inductionless {{mhd}} system. The efficiency and robustness of the FMS and FLM block LU recursive preconditioners was confirmed with respect to both mesh size and Hartmann number by means of a detailed set of numerical tests \citep{badia_block_2014}.
 
 ##### Large-scale TBM simulations
 
@@ -607,16 +599,6 @@ The work developed resulted in 1x paper published in a Q1-ranked JCR journal \ci
 
 
 \label{fig_ompss_scalapack}
-<!-->
-~~~
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/scalapack_ompss.jpg" alt="" </img></td>
-    </tr>
-</table>
-~~~
--->
 @@im-100 ![](/assets/figures/scalapack_ompss.jpg)
 *Figure 21: Weak/strong scalability of proposed solution (''SMPSs'') compared with other parallel Cholesky codes on a 17.7K CPU cores HPC cluster.*
 @@
@@ -637,16 +619,6 @@ In applications involving the discretization of {{pdes}}, the efficient solution
 
 #### Research work description, and outcomes
 \label{fig_ilupack_pivoting}
-<!-->
-~~~
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/ilupack_pivoting.png" alt="" </img></td>
-    </tr>
-</table>
-~~~
--->
 @@im-100 ![](/assets/figures/ilupack_pivoting.png)
 *Figure 22: Left: ILUPACK pivoting strategy. Right: multilevel preconditioner.*
 @@
@@ -656,16 +628,6 @@ Multilevel preconditioners constructed from inverse-based {{ilus}} lay the found
 **The research work carried out was focused on the design, development, and {{hpc}} software implementation of task-parallel friendly variants of the algorithm presented so far.** At this point, it is important to stress that this sort of algorithm does not inherently expose parallelism readily to be exploited. Thus, it had to be transformed towards the achievement of this goal. Parallelism in the computation of approximate factorizations can be exposed by means of graph-based symmetric reordering algorithms. Among this class of algorithms, nested dissection orderings enhance parallelism in the approximate factorization of the linear system coefficient matrix $A$ by partitioning its associated adjacency graph $G(A)$ into a hierarchy of vertex separators and independent subgraphs; see Fig.[23](#fig_nested_dissection). Relabeling the nodes of $G(A)$ according to the levels in the hierarchy, leads to a reordered matrix, $\Phi^T A \Phi$, with a structure amenable to efficient parallelization. This type of parallelism can be expressed by a binary task dependency tree, where nodes represent concurrent tasks and edges dependencies among them. State-of-the-art reordering software packages as, e.g., METIS or SCOTCH, provide fast and efficient multilevel variants of nested dissection orderings.
 
 \label{fig_nested_dissection}
-<!-->
-~~~
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/nested_dissection.png" alt="" </img></td>
-    </tr>
-</table>
-~~~
--->
 @@im-100 ![](/assets/figures/nested_dissection.png)
 *Figure 23: Nested dissection partitioning.*
 @@
@@ -835,12 +797,13 @@ Fig.[](#fig_par_ilupack_perf) shows the performance and scalability of the code 
 \biblabel{AliBMQ09}{69}
 69. J. I. Aliaga, M. Bollhoefer, **A. F. Martín**, and E. S. Quintana-Ortí. Evaluation of Parallel Sparse Matrix Partitioning Software for Parallel Multilevel ILU Preconditioning on Shared-Memory Multiprocessors. *Advances in Parallel Computing*, 19:125–132, 2009. \doi{10.3233/978-1-60750-530-3-125}.
 
-<!-- NO REFERENCIADO
-\biblabel{badia_block_2014}{42}
-[^badia_block_2014] S. Badia, **A. F. Martín**, and R. Planas. Block recursive LU preconditioners for the thermally coupled incompressible inductionless MHD problem. *Journal of Computational Physics*, 274:562-591, 2014. \doi{10.1016/j.jcp.2014.06.028}.
+70. S. Badia, **A. F. Martín**, and R. Planas. Block recursive LU preconditioners for the thermally coupled incompressible inductionless MHD problem. *Journal of Computational Physics*, 274:562-591, 2014. \doi{10.1016/j.jcp.2014.06.028}.
+\biblabel{badia_block_2014}{70}
 
-\biblabel{Badia2018a}{Badia2018a}
-S. Badia, **A. F. Martín** and F. Verdugo. Mixed Aggregated Finite Element Methods for the Unfitted Discretization of the Stokes Problem. *SIAM Journal on Scientific Computing*, 40(6):B1541–B1576, 2018. \doi{10.1137/18M1185624}.
+<!-- NO REFERENCIADO
+
+
+
 
 \biblabel{Baker2011}{Baker2011}
 A. H. Baker, M. Schulz, U.M. Yang. On the performance of an algebraic multigrid solver on multicore clusters. *Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics*, 6449 LNCS:102-115, 2011. \doi{10.1007/978-3-642-19328-6_12}.
