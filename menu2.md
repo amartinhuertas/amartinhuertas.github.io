@@ -11,7 +11,7 @@
 ## Framing my research career \label{career}
 
 In this introductory section I pinpoint the field of application of my research, and some general features of the problems within this field that my research targets.  This will help the reader understand my trajectory and the main {{rls}} I have carried out, which are covered in Section 
-[Research trajectory and main research lines](#sec_rt_rl).
+[Past research, trajectory, and main research lines](#sec_rt_rl).
 
 As a researcher working in the {{cse}} field, I contribute to the development of computational models, algorithms, and software for several application problems. All of these share three common general features (not restricted to, though):
 
