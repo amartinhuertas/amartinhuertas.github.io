@@ -41,10 +41,27 @@ I am an essential contributor to the project since early 2020 (e.g., 3rd in numb
 
 #### FEMPAR 
 
-I am co-founder of FEMPAR (available at [https://github.com/fempar/fempar](https://github.com/fempar/fempar)), an open-source, scientific software package for the numerical modelling of problems governed by {{pde}} on {{hpc}} platforms. It provides a set of state-of-the-art numerical discretizations, including finite element methods, discontinuous Galerkin methods, XFEM, and spline-based functional spaces. The library was originally designed to efficiently exploit distributed-memory supercomputers and easily handle multiphysics problems. It also provides a set of highly scalable numerical linear algebra solvers based on multilevel domain decomposition for the systems of equations that arise from PDE discretizations. The first public release of `FEMPAR` was almost 300K lines of code written in (mostly) {{oo}} Fortran and it make intensive use of the features defined in the 2003/2008 standards of the language. **`FEMPAR` has been successfully used in 40x JCR Q1-ranked research papers on different topics and application areas**: simulation of turbulent flows and stabilized {{fe}} methods, MHD, monotonic {{fes}}, unfitted {{fes}} and embedded boundary methods, {{amr}}, {{am}} and {{hts}} simulations, and scientific software engineering. It has also been used for the highly efficient implementation of DD solvers  and block preconditioning techniques. Its users/developers span different research groups on national and international-level institutions, including UPC, CIMNE, ICMAB-CSIC, CIEMAT, ICTJA-CSIC, Czech Academy of Sciences (Czech Republic), Sandia National Labs (EEUU), North Carolina State University (USA), Duy Tan University (Vietnam),  Monash University (Australia), and l’Ecole Politechnique (Paris). Besides, it was a crucial tool for the successful execution of several high-quality EU-funded projects, namely, 1x ERC starting grant, 2x ERC PoC projects, 1x EU-FP7 project, and 3x H2020 projects.
+@@im-100
+![](/assets/gridap-banner.png)
+
+![](/assets/fig_gridap_intro.png)
+@@
+
+I am co-founder and main developer of FEMPAR (available at [https://github.com/fempar/fempar](https://github.com/fempar/fempar)), an open-source, mathematical software package for the numerical modelling of problems governed by {{pde}} on {{hpc}} platforms. It provides a set of state-of-the-art numerical discretizations, including finite element methods, discontinuous Galerkin methods, XFEM, and spline-based functional spaces. The library was originally designed to efficiently exploit distributed-memory supercomputers and easily handle multiphysics problems. It also provides a set of highly scalable numerical linear algebra solvers based on multilevel domain decomposition for the systems of equations that arise from PDE discretizations. In particular, it contains a novel bulk-asynchronous, fully-distributed, communicator-aware, inter-level overlapped, and recursive algorithmic adaptation of multilevel domain decomposition preconditioners towards extreme-scale computations which was shown to efficiently scale up to the 458K cores of the IBM BG/Q supercomputer installed in JSC, Germany. Thanks to these outstanding results, FEMPAR was qualified for High-Q club status, a distinction that JSC (Germany) awards to the most scalable EU codes.
+
+The first public release of FEMPAR was almost 300K lines of code written in (mostly) {{oo}} Fortran and it made intensive use of the features defined in the 2003/2008 standards of the language. **`FEMPAR` was successfully used in 40x JCR Q1-ranked research papers on different topics and application areas**: simulation of turbulent flows and stabilized {{fe}} methods, MHD, monotonic {{fes}}, unfitted {{fes}} and embedded boundary methods, {{amr}}, {{am}} and {{hts}} simulations, and scientific software engineering. It has also been used for the highly efficient implementation of DD solvers  and block preconditioning techniques. Its users/developers span different research groups on national and international-level institutions, including UPC, CIMNE, ICMAB-CSIC, CIEMAT, ICTJA-CSIC, Czech Academy of Sciences (Czech Republic), Sandia National Labs (EEUU), North Carolina State University (USA), Duy Tan University (Vietnam),  Monash University (Australia), and l’Ecole Politechnique (Paris). Besides, it was a crucial tool for the successful execution of several high-quality EU-funded projects, namely, 1x ERC starting grant, 2x ERC PoC projects, 1x EU-FP7 project, and 3x H2020 projects.
+
+For those who are interested on the design and rationale behind the mathematically-supported software abstractions in FEMPAR, a very through presentation is available at the following reference:
+
+Santiago Badia, Alberto F. Martín and Javier Principe. \
+FEMPAR: An object-oriented parallel finite element framework. \
+*Archives of Computational Methods in Engineering* 25, 2 (2018), 195–271. \
+[[ArXiv link]](https://arxiv.org/abs/1708.01773) [[DOI]](https://link.springer.com/article/10.1007%2Fs11831-017-9244-1)
 
 
+A very nice tutorial-driven introduction to the software library (v1.0.0) can be found at the following reference:
 
-
-
-
+Santiago Badia, and Alberto F. Martín. \
+A tutorial-driven introduction to the parallel finite element library FEMPAR v1.0.0 \
+*Computer Physics Communications* Volume 248, March 2020, 107059. \
+[[ArXiv link]](https://arxiv.org/abs/1908.00891) [[DOI]](https://www.sciencedirect.com/science/article/pii/S0010465519303832)
