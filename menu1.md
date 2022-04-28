@@ -8,7 +8,6 @@ rss = "Curriculum vitae by A.F. Martin"
 
 
 # Curriculum vitae
-*Last update: 2022-04-11*
 
 \toc
 
