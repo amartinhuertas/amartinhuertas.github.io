@@ -72,7 +72,7 @@ The research work I developed within RL1 has resulted in 8x research manuscripts
 
 \label{sec_scalable_amr}
 ##### Scalable Adaptive Mesh Refinement and coarsening with dynamic load balancing via forests-of-trees 
-{{amr}} is a highly appealing technique for the computationally efficient solution of {{pdes}} problems exhibiting highly localized features, such as moving fronts, or internal boundary layers. The basic idea is simple, to adapt the mesh, possibly dynamically, i.e., in the course of the simulation, with a higher mesh resolution wherever it is needed. However, the materialization of this idea on petascale parallel distributed-memory computers is a daunting challenge in itself.  Among others, mesh densification in localized areas can cause severe load unbalance. *The approach that I have pursued to tackle this challenge grounds on a new generation of petascale-capable algorithms and software for fast {{amr}} using adaptive tree-based meshes endowed with {{sfcs}}\citep{Holke2018}.
+{{amr}} is a highly appealing technique for the computationally efficient solution of {{pdes}} problems exhibiting highly localized features, such as moving fronts, or internal boundary layers. The basic idea is simple, to adapt the mesh, possibly dynamically, i.e., in the course of the simulation, with a higher mesh resolution wherever it is needed. However, the materialization of this idea on petascale parallel distributed-memory computers is a daunting challenge in itself.  Among others, mesh densification in localized areas can cause severe load unbalance. *The approach that I have pursued to tackle this challenge grounds on a new generation of petascale-capable algorithms and software for fast {{amr}} using adaptive tree-based meshes endowed with {{sfcs}}\citep{Holke2018}.*
 {{sfcs}} are exploited for efficient data storage and traversal of the adaptive mesh, fast computation of hierarchy and neighborship relations among the mesh cells, and scalable partitioning and dynamic load balancing. In particular, {{sfcs}} remarkably offer a linear run-time solution to the problem of (re)partitioning a tree-based mesh into processors. For hexahedral meshes, the state-of-the-art in tree-based *amr* with {{sfcs}}  is available at the `p4est` software \citep{burstedde_p4est_2011,Isaac2014}, which has been proven to scale up to hundreds of thousands of cores. This approach can be generalized to other cell topologies as well \citep{Holke2018}.
 
 Forest-of-trees meshes provide multi-resolution capability by local adaptation. In the most general case, these meshes are *non-conforming*, i.e., they contain the so-called *hanging {{vefs}}*.  These occur at the interface of neighboring cells with different refinement levels.
@@ -99,12 +99,13 @@ it is time consuming and often requires skilled human intervention (mesh generat
 
 **An appealing alternative to circumvent this issue are the so-called embedded {{fe}} methods \citep{Badia2018,burman_cutfem_2015,Schillinger2015} (a.k.a. unfitted or immersed boundary methods).** The usage of embedded discretisation schemes drastically reduces the geometrical constraints imposed on the meshes to be used for discretization. Meshes do not require to be body-fitted, allowing one to simulate problems in complex domains using structured meshes (see Fig.[3c](#fig_fitted-vs-unfitted)). **This salient property is indeed essential for large-scale computations, since the generation of unstructured meshes in parallel and their partition using graph-partitioning techniques scale poorly \citep{chevalier_pt-scotch_2008} and in many cases require human intervention.** Embedded discretisation methods are thus highly appealing, among others, for problems posed on complex geometries, and/or for which tracking evolving interfaces or growing domains in time is impractical using body-fitted meshes; see Fig.[1](#fig_am_macro).
 
+\label{fig_fitted-vs-unfitted}
 @@im-100
 ![](/assets/figures/figure3_unified.png)
 *Figure 3: Body-fitted vs. unfitted meshes. (a) Computational domain. (b) Body-fitted mesh. (c) Unfitted Cartesian mesh.*
 @@
 
-In an embedded formulation, the geometry is still provided explicitly in terms of a boundary representation  (e.g., a STL mesh) or implicitly via a level-set function. It requires mesh cutting techniques that perform the intersection between the background mesh and the surface description (implicit or explicit). **However, the complexity of this process is significantly lower than the one underlying an unstructured mesh generator.** It is a cell-wise task, and the cell partitions are not used for discretisation but only integration purposes. At the end of the process, we have interior, exterior, and $*$cut cells$*$.
+In an embedded formulation, the geometry is still provided explicitly in terms of a boundary representation  (e.g., a STL mesh) or implicitly via a level-set function. It requires mesh cutting techniques that perform the intersection between the background mesh and the surface description (implicit or explicit). **However, the complexity of this process is significantly lower than the one underlying an unstructured mesh generator.** It is a cell-wise task, and the cell partitions are not used for discretisation but only integration purposes. At the end of the process, we have interior, exterior, and cut cells.
 
 
 ##### The aggregated unfitted finite element method (AgFEM)
@@ -135,7 +136,7 @@ However, embedded methods have known drawbacks. The most salient one, **still an
 
 **The small cut cell problem of embedded methods is a major issue when dealing with large-scale simulations.** In large-scale scenarios, one has to invariably rely on (preconditioned) iterative linear solvers based on the generation of Krylov subspaces \citep{saad_iterative_2003}. Krylov methods are well-known to be very sensitive to the conditioning and spectral properties of the linear system coefficient matrix. Most of the works enabling the usage of iterative linear solvers in combination with embedded {{fe}} methods consider tailored preconditioners for the matrices affected by the small cut cell problem. The main drawback of this approach is that one relies on highly customized solvers, and therefore, it is not possible to take advantage of well-known and established linear solvers for {{fe}} analysis available in renowned scientific computing packages as TRILINOS \citep{Heroux2005} or PETSc \citep{petsc-user-ref}. **The {{agg}} method solves this issue at the discretization level, and thus opens the door for the efficient exploitation of state-of-the art petascale-capable iterative solvers.**
 
-Taking this as a motivation, **I have recently developed the message-passing variants of the algorithms involved in all stages of the {{agg}} method (e.g., construction of cell aggregates, set up and resolution during {{fe}} assembly of ill-posed {{dof}} constraints, etc.).** Up to the fact that the processors might require to retrieve from remote processors the roots of those cell aggregates which are split among processors, this work has proven the {{agg}} method to be a method very amenable to distributed-memory parallelization. In particular, it can be implemented using standard tools in parallel {{fe}} libraries, such as ghost cells nearest neighbour exchanges.  I have implemented these algorithms in `FEMPAR` using MPI for inter-processor communications. **Their high appeal at large scales has been demonstrated with a comprehensive weak scaling test up to 16K cores and up to nearly 300M DOFs and a billion cells in the Marenostrum-IV supercomputer* using the Poisson equation on complex 3D domains as model problem. See Fig.[7](#fig_fig_scalability-agfem).
+Taking this as a motivation, **I have recently developed the message-passing variants of the algorithms involved in all stages of the {{agg}} method (e.g., construction of cell aggregates, set up and resolution during {{fe}} assembly of ill-posed {{dof}} constraints, etc.).** Up to the fact that the processors might require to retrieve from remote processors the roots of those cell aggregates which are split among processors, this work has proven the {{agg}} method to be a method very amenable to distributed-memory parallelization. In particular, it can be implemented using standard tools in parallel {{fe}} libraries, such as ghost cells nearest neighbour exchanges.  I have implemented these algorithms in `FEMPAR` using MPI for inter-processor communications. **Their high appeal at large scales has been demonstrated with a comprehensive weak scaling test up to 16K cores and up to nearly 300M DOFs and a billion cells in the Marenostrum-IV supercomputer** using the Poisson equation on complex 3D domains as model problem. See Fig.[7](#fig_fig_scalability-agfem).
 The obtained results confirm the expectations: when using {{agg}}, the resulting systems of linear algebraic equations can be effectively solved using standard {{amg}} preconditioners. Remarkably,  I did not have to customize the default parameters of the preconditioner, demonstrating that users can take what is already available out there ''out of the box''. To my best knowledge, this is the first time that embedded methods are successfully applied to such large scales. **This work has been recently published at a JCR Q1-ranked journal in the field (see reference \citep{Verdugo2019} for more details).**
 
 \label{fig_fig_scalability-agfem}
@@ -145,7 +146,7 @@ The obtained results confirm the expectations: when using {{agg}}, the resulting
 
 ##### $h$-AgFEM: extension of AgFEM to support AMR
 Embedded methods can be used with a variety of background mesh types.
-**The approach that I have pursued particularly leverages octree-based background meshes using the tools covered in Sec. [Scalable {{amr}} with dynamic load balancing via forests-of-trees](#sec_scalable_amr}).** This is achieved by means of a recursive approach in which a mesh with a very coarse resolution, in the limit a single cube that embeds the entire domain, is recursively refined step by step, until all mesh cells fulfill suitably-defined (geometrical and/or numerical) error criteria. See Fig.[8](#fig_embedded_amr).
+**The approach that I have pursued particularly leverages octree-based background meshes using the tools covered in Sec. [Scalable {{amr}} with dynamic load balancing via forests-of-trees](#sec_scalable_amr).** This is achieved by means of a recursive approach in which a mesh with a very coarse resolution, in the limit a single cube that embeds the entire domain, is recursively refined step by step, until all mesh cells fulfill suitably-defined (geometrical and/or numerical) error criteria. See Fig.[8](#fig_embedded_amr).
 
 \label{fig_embedded_amr}
 @@im-100
@@ -163,12 +164,13 @@ two-step algorithm to construct the {{fe}} space at hand that carefully mixes ag
 
 \label{fig_hagfem_convergence}
 @@im-100
-![](/assets/figures/figure10_unified.png)
+![](/assets/figures/hAgFEM/convergence_unfitted.png)
 *Figure 10: For all cases in Fig.[9](#fig:hagfem_solution), $h$-{{agg}} converges optimally. Moreover, in contrast to standard (std.) FEM, it does not suffer from severe ill-conditioning, that precludes generating solutions where $h$-{{agg}} can.*
 @@
 
 \label{fig_hagfem_condition}
 @@im-100
+![](/assets/figures//hAgFEM/condition_numbers_unfitted.png)
 *Figure 11: For all cases in Fig.[9](#fig_hagfem_solution), $h$-{{agg}} condition number estimates are consistently well-below those of std. FEM.*
 @@
 
@@ -531,7 +533,7 @@ Fig.[](#fig_par_ilupack_perf) shows the performance and scalability of the code 
 \biblabel{badia_scalability_2015}{54}
 54. S. Badia, **A. F. Martín**, and J. Principe. On the scalability of inexact balancing domain decomposition by constraints with overlapped coarse/fine corrections. *Parallel Computing*, 50:1–24, 2015. \doi{10.1016/j.parco.2015.09.004}.
 \biblabel{badia_balancing_2016}{55}
-55. S. Badia and H. Nguyen. Balancing Domain Decomposition by Constraints and Perturbation.* SIAM Journal on Numerical Analysis*, 54(6):3436–3464, 2016. \doi{10.1137/15M1045648}.
+55. S. Badia and H. Nguyen. Balancing Domain Decomposition by Constraints and Perturbation.*SIAM Journal on Numerical Analysis*, 54(6):3436–3464, 2016. \doi{10.1137/15M1045648}.
 \biblabel{badia_space-time_2017}{56}
 56. S. Badia and M. Olm. Space-Time Balancing Domain Decomposition. SIAM Journal on Scientific Computing, 39(2):C194–C213, 2017. \doi{10.1137/16M1074266}.
 \biblabel{Badia2018pb}{57}
@@ -549,22 +551,23 @@ Fig.[](#fig_par_ilupack_perf) shows the performance and scalability of the code 
 \biblabel{aliaga_assessing_2014}{63}
 63. J. I. Aliaga, M. Barreda, M. F. Dolz, **A. F. Martín**, R. Mayo, and E. S. Quintana-Ortí. Assessing the impact of the CPU power-saving modes on the task-parallel solution of sparse linear systems. *Cluster Computing*, 17(4):1335–1348, 2014. \doi{10.1007/s10586-014-0402-z}.
 \biblabel{AliBMQ10c}{64}
-64. XXXX
+64.  M. Bollhoefer, J. I. Aliaga, A. F. Martin, and E. S. Quintana-Orti. ILUPACK. In D. A. Padua, editor, Encyclopedia of Parallel Computing,
+pages 917–926. Springer, 2011.
 \biblabel{AliBMQ10}{65}
 65. J. I. Aliaga, M. Bollhoefer, **A. F. Martín**, and E. S. Quintana-Ortí. Parallelization of Multilevel ILU Preconditioners on Distributed-Memory Multiprocessors. *Lecture Notes in Computer Science*, 7133:162–172, 2012. \doi{10.1007/978-3-642-28151-8_16}.
-\biblabel{AliBMQ10}{65}
-65. M. Bollhoefer, J. I. Aliaga, **A. F. Martín**, and E. S. Quintana-Ortí. ILUPACK. In D. A. Padua, editor, Encyclopedia of Parallel Computing, pages 917–926. Springer, 2011.
-\biblabel{AliBMQ08a}{66}
-66. J. I. Aliaga, M. Bollhoefer, **A. F. Martín**, and E. S. Quintana-Ortí. Design, Tuning and Evaluation of Parallel Multilevel ILU Preconditioners. *Lecture Notes in Computer Science*, 5336:314-327, 2008. \doi{10.1007/978-3-540-92859-1_28}
-\biblabel{AliDMMQ12}{67}
-67. J. I. Aliaga, M. F. Dolz, **A. F. Martín**, R. Mayo, and E. S. Quintana-Ortí. Leveraring Task-Parallelism in Energy-Efficient ILU Preconditioners. *Lecture Notes in Computer Science*, 7453:55–63, 2012. \doi{10.1007/978-3-642-32606-6_5}
-\biblabel{AliBMQ07}{68}
-68. J. I. Aliaga, M. Bollhoefer, **A. F. Martín**, and E. S. Quintana-Ortí. Parallelization of Multilevel Preconditioners Constructed from Inverse-Based ILUs on Shared-Memory Multiprocessors. *Advances in Parallel Computing*, 15:287–294, 2008. \doi{10.1007/978-3-642-28151-8}.
-\biblabel{AliBMQ09}{69}
-69. J. I. Aliaga, M. Bollhoefer, **A. F. Martín**, and E. S. Quintana-Ortí. Evaluation of Parallel Sparse Matrix Partitioning Software for Parallel Multilevel ILU Preconditioning on Shared-Memory Multiprocessors. *Advances in Parallel Computing*, 19:125–132, 2009. \doi{10.3233/978-1-60750-530-3-125}.
+\biblabel{AliBMQ10}{66}
+66. M. Bollhoefer, J. I. Aliaga, **A. F. Martín**, and E. S. Quintana-Ortí. ILUPACK. In D. A. Padua, editor, Encyclopedia of Parallel Computing, pages 917–926. Springer, 2011.
+\biblabel{AliBMQ08a}{67}
+67. J. I. Aliaga, M. Bollhoefer, **A. F. Martín**, and E. S. Quintana-Ortí. Design, Tuning and Evaluation of Parallel Multilevel ILU Preconditioners. *Lecture Notes in Computer Science*, 5336:314-327, 2008. \doi{10.1007/978-3-540-92859-1_28}
+\biblabel{AliDMMQ12}{68}
+68. J. I. Aliaga, M. F. Dolz, **A. F. Martín**, R. Mayo, and E. S. Quintana-Ortí. Leveraring Task-Parallelism in Energy-Efficient ILU Preconditioners. *Lecture Notes in Computer Science*, 7453:55–63, 2012. \doi{10.1007/978-3-642-32606-6_5}
+\biblabel{AliBMQ07}{69}
+69. J. I. Aliaga, M. Bollhoefer, **A. F. Martín**, and E. S. Quintana-Ortí. Parallelization of Multilevel Preconditioners Constructed from Inverse-Based ILUs on Shared-Memory Multiprocessors. *Advances in Parallel Computing*, 15:287–294, 2008. \doi{10.1007/978-3-642-28151-8}.
+\biblabel{AliBMQ09}{70}
+70. J. I. Aliaga, M. Bollhoefer, **A. F. Martín**, and E. S. Quintana-Ortí. Evaluation of Parallel Sparse Matrix Partitioning Software for Parallel Multilevel ILU Preconditioning on Shared-Memory Multiprocessors. *Advances in Parallel Computing*, 19:125–132, 2009. \doi{10.3233/978-1-60750-530-3-125}.
+\biblabel{badia_block_2014}{71}
+71. S. Badia, **A. F. Martín**, and R. Planas. Block recursive LU preconditioners for the thermally coupled incompressible inductionless MHD problem. *Journal of Computational Physics*, 274:562-591, 2014. \doi{10.1016/j.jcp.2014.06.028}.
 
-70. S. Badia, **A. F. Martín**, and R. Planas. Block recursive LU preconditioners for the thermally coupled incompressible inductionless MHD problem. *Journal of Computational Physics*, 274:562-591, 2014. \doi{10.1016/j.jcp.2014.06.028}.
-\biblabel{badia_block_2014}{70}
 
 <!-- NO REFERENCIADO
 
