@@ -162,7 +162,7 @@ h6 {
 td {
   font-size: var(--small);
   padding: 10px;
-  border: 1px solid black;
+  border: 0px solid black;
 }
 
 .franklin-content blockquote {
@@ -245,13 +245,13 @@ td {
   text-align: center;
   padding-left: 10%;
 }
-
+/*
 .franklin-content img25 {
   width: 25%;
   text-align: center;
   padding-left: 10%;
 }
-
+*/
 .franklin-content .img-small img {
   width: 50%;
   text-align: center;
@@ -344,4 +344,37 @@ code {
   margin-bottom: 5px;
   border-radius: 0 10px 10px 0;
   border-left: 5px solid #4c9cf1;
+}
+
+/* ==================================================================
+    CUSTOM
+================================================================== */
+
+.im-25 {
+  line-height: 130%;
+  font-size: 80%;
+  text-align: center;
+  margin-bottom: 2em;
+}
+.im-25 img {
+    padding: 0;
+    width: 25%;
+}
+
+.im-100 {
+ line-height: 130%;
+ font-size: 80%;
+ text-align: center;
+ margin-bottom: 2em;
+ }
+.im-100 img {
+    padding: 0;
+    width: 100%;
+    
+}
+
+
+.bibrefs {
+ font-size: 80%;
+ line-height: 120%;
 }
