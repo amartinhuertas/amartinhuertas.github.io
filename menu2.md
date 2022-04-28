@@ -8,10 +8,10 @@
 <!--\toc-->
 \tableofcontents
 
-## Framing my research career \label{career}
+\label{career}
+## Framing my research career 
 
-In this introductory section I pinpoint the field of application of my research, and some general features of the problems within this field that my research targets.  This will help the reader understand my trajectory and the main {{rls}} I have carried out, which are covered in Section 
-[Past research, trajectory, and main research lines](#sec_rt_rl).
+In this introductory section I pinpoint the field of application of my research, and some general features of the problems within this field that my research targets. This will help the reader understand my trajectory and the main {{rls}} I have carried out, which are covered in Section [Past research, trajectory, and main research lines](#sec_rt_rl).
 
 As a researcher working in the {{cse}} field, I contribute to the development of computational models, algorithms, and software for several application problems. All of these share three common general features (not restricted to, though):
 
@@ -72,7 +72,7 @@ The research work I developed within RL1 has resulted in 8x research manuscripts
 
 \label{sec_scalable_amr}
 ##### Scalable Adaptive Mesh Refinement and coarsening with dynamic load balancing via forests-of-trees 
-{{amr}} is a highly appealing technique for the computationally efficient solution of {{pdes}} problems exhibiting highly localized features, such as moving fronts, or internal boundary layers. The basic idea is simple, to adapt the mesh, possibly dynamically, i.e., in the course of the simulation, with a higher mesh resolution wherever it is needed. However, the materialization of this idea on petascale parallel distributed-memory computers is a daunting challenge in itself.  Among others, mesh densification in localized areas can cause severe load unbalance. *The approach that I have pursued to tackle this challenge grounds on a new generation of petascale-capable algorithms and software for fast {{amr}} using adaptive tree-based meshes endowed with {{sfcs}}\citep{Holke2018}.
+{{amr}} is a highly appealing technique for the computationally efficient solution of {{pdes}} problems exhibiting highly localized features, such as moving fronts, or internal boundary layers. The basic idea is simple, to adapt the mesh, possibly dynamically, i.e., in the course of the simulation, with a higher mesh resolution wherever it is needed. However, the materialization of this idea on petascale parallel distributed-memory computers is a daunting challenge in itself.  Among others, mesh densification in localized areas can cause severe load unbalance. *The approach that I have pursued to tackle this challenge grounds on a new generation of petascale-capable algorithms and software for fast {{amr}} using adaptive tree-based meshes endowed with {{sfcs}}\citep{Holke2018}.*
 {{sfcs}} are exploited for efficient data storage and traversal of the adaptive mesh, fast computation of hierarchy and neighborship relations among the mesh cells, and scalable partitioning and dynamic load balancing. In particular, {{sfcs}} remarkably offer a linear run-time solution to the problem of (re)partitioning a tree-based mesh into processors. For hexahedral meshes, the state-of-the-art in tree-based *amr* with {{sfcs}}  is available at the `p4est` software \citep{burstedde_p4est_2011,Isaac2014}, which has been proven to scale up to hundreds of thousands of cores. This approach can be generalized to other cell topologies as well \citep{Holke2018}.
 
 Forest-of-trees meshes provide multi-resolution capability by local adaptation. In the most general case, these meshes are *non-conforming*, i.e., they contain the so-called *hanging {{vefs}}*.  These occur at the interface of neighboring cells with different refinement levels.
@@ -100,27 +100,12 @@ it is time consuming and often requires skilled human intervention (mesh generat
 **An appealing alternative to circumvent this issue are the so-called embedded {{fe}} methods \citep{Badia2018,burman_cutfem_2015,Schillinger2015} (a.k.a. unfitted or immersed boundary methods).** The usage of embedded discretisation schemes drastically reduces the geometrical constraints imposed on the meshes to be used for discretization. Meshes do not require to be body-fitted, allowing one to simulate problems in complex domains using structured meshes (see Fig.[3c](#fig_fitted-vs-unfitted)). **This salient property is indeed essential for large-scale computations, since the generation of unstructured meshes in parallel and their partition using graph-partitioning techniques scale poorly \citep{chevalier_pt-scotch_2008} and in many cases require human intervention.** Embedded discretisation methods are thus highly appealing, among others, for problems posed on complex geometries, and/or for which tracking evolving interfaces or growing domains in time is impractical using body-fitted meshes; see Fig.[1](#fig_am_macro).
 
 \label{fig_fitted-vs-unfitted}
-~~~
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/fig_intro_imb_1.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/fig_intro_imb_3.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/fig_intro_imb_2.png" alt="" </img></td>
-    </tr>
-    <tr>
-        <th>(a)</th>
-        <th>(b)</th>
-        <th>(c)</th>
-    </tr>
-</table>
-~~~
-
 @@im-100
+![](/assets/figures/figure3_unified.png)
 *Figure 3: Body-fitted vs. unfitted meshes. (a) Computational domain. (b) Body-fitted mesh. (c) Unfitted Cartesian mesh.*
 @@
 
-In an embedded formulation, the geometry is still provided explicitly in terms of a boundary representation  (e.g., a STL mesh) or implicitly via a level-set function. It requires mesh cutting techniques that perform the intersection between the background mesh and the surface description (implicit or explicit). **However, the complexity of this process is significantly lower than the one underlying an unstructured mesh generator.** It is a cell-wise task, and the cell partitions are not used for discretisation but only integration purposes. At the end of the process, we have interior, exterior, and $*$cut cells$*$.
+In an embedded formulation, the geometry is still provided explicitly in terms of a boundary representation  (e.g., a STL mesh) or implicitly via a level-set function. It requires mesh cutting techniques that perform the intersection between the background mesh and the surface description (implicit or explicit). **However, the complexity of this process is significantly lower than the one underlying an unstructured mesh generator.** It is a cell-wise task, and the cell partitions are not used for discretisation but only integration purposes. At the end of the process, we have interior, exterior, and cut cells.
 
 
 ##### The aggregated unfitted finite element method (AgFEM)
@@ -130,64 +115,20 @@ However, embedded methods have known drawbacks. The most salient one, **still an
   In order to avoid, among others, the introduction of artificial viscosity terms into the discrete variational problem (thus sticking into a Galerkin problem), **I have recently developed  in \citep{badia_aggregated_2017} a novel discretization method for elliptic problems, the so-called {{agg}}**; see Fig.[4](#fig_agfem). **In \citep{badia_stokes_2018}, I have also extended these techniques to indefinite problems in incompressible flow discretisations**. Besides, I have been able to mathematically prove for both the elliptic and indefinite cases that the {{agg}} formulation shares the salient properties of body-fitted {{fe}} methods such as stability, condition number bounds, optimal convergence, and continuity with respect data. See Figs.[5](#fig_agfem_poisson) and [6](#fig_agfem_stokes) for selected numerical results. 
 
 \label{fig_agfem}
-~~~
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/fig_spaces_2_z_pdf-1_resized.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/fig_dof_to_cell_map_3.pdf-1_resized.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/fig_test_popcorn_3d_aggr_light.png" alt="" </img></td>
-    </tr>
-    <tr>
-        <th>(a)</th>
-        <th>(b)</th>
-        <th>(c)</th>
-    </tr> 
-</table>
-~~~
 @@im-100
+![](/assets/figures/figure4_unified.png)
 *Figure 4: (a) The shape functions associated to {{dofs}} in the exterior of the domain (marked with a red cross in the figure) may have an arbitrarily small support in the interior of the domain. Thus, there is no guarantee that the condition number of the linear system arising from discretization is bounded. (b) {{agg}} formulations extrapolate these ill-posed {{dofs}} as a linear combination of selected interior {{dofs}} (via suitably-defined algebraic constraints imposed into the space of {{fe}} functions). These constraints are defined by building the so-called cell aggregates (in blue), that give the name to the formulation. A cell aggregation is an agglomeration of cells composed by a single interior cell, and a set of face-connected neighbouring cut cells connected to it. (c) Visualization of the cell aggregates built by the method for a 3D pop-corn like domain embedded in a uniform Cartesian mesh.*
 @@
+
 \label{fig_agfem_poisson}
-~~~
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/fig_test_sphere_2d_var_setup.pdf-1_resized.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/fig_test_sphere_2d_var_condest_diri.pdf-1.png" alt="" </img></td>
-    </tr>
-    <tr>
-        <th>(a) Moving computational domain</th>
-        <th>(b) Condition number vs. domain position</th>
-    </tr> 
-</table>
-~~~
 @@im-100
+![](/assets/figures/figure5_unified.png)
 *Figure 5: Poisson problem defined on a moving domain. Note that the standard embedded formulation leads to very high condition numbers, which are very sensitive to the relative position between the computational domain and the background mesh, specially for second order interpolations ($p=2$). In contrast, the condition number is much lower for the enhanced formulation (the {{agg}} method) and it is nearly independent of the position of the domain.*
 @@
-\label{fig_agfem_stokes}
-~~~
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/fig_colorbar_h.pdf-1.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/fig_colorbar_h.pdf-1.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/fig_colorbar_h.pdf-1.png" alt="" </img></td>
-    </tr>
-    <tr>
-        <td><img width="100" src="/assets/figures/fig_bullets_3d_geo_resized.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/fig_bullets_3d_sol_u.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/fig_bullets_3d_sol_P.png" alt="" </img></td>
-    </tr>
-    <tr>
-        <th>(a) Problem geometry.</th>
-        <th>(b) Velocity (magnitude).</th>
-        <th>(c) Pressure.</th>
-    </tr> 
-</table>
-~~~
 
+\label{fig_agfem_stokes}
 @@im-100
+![](/assets/figures/figure6_unified.png)
 *Figure 6: Numerical solution of a (dimensionless) Stokes problem using the {{agg}} method (streamlines colored by velocity magnitude and pressure). This computation is carried out without constructing an unstructured body fitted mesh thanks to the application of the {{agg}} method.*
 @@
 
@@ -195,108 +136,41 @@ However, embedded methods have known drawbacks. The most salient one, **still an
 
 **The small cut cell problem of embedded methods is a major issue when dealing with large-scale simulations.** In large-scale scenarios, one has to invariably rely on (preconditioned) iterative linear solvers based on the generation of Krylov subspaces \citep{saad_iterative_2003}. Krylov methods are well-known to be very sensitive to the conditioning and spectral properties of the linear system coefficient matrix. Most of the works enabling the usage of iterative linear solvers in combination with embedded {{fe}} methods consider tailored preconditioners for the matrices affected by the small cut cell problem. The main drawback of this approach is that one relies on highly customized solvers, and therefore, it is not possible to take advantage of well-known and established linear solvers for {{fe}} analysis available in renowned scientific computing packages as TRILINOS \citep{Heroux2005} or PETSc \citep{petsc-user-ref}. **The {{agg}} method solves this issue at the discretization level, and thus opens the door for the efficient exploitation of state-of-the art petascale-capable iterative solvers.**
 
-Taking this as a motivation, **I have recently developed the message-passing variants of the algorithms involved in all stages of the {{agg}} method (e.g., construction of cell aggregates, set up and resolution during {{fe}} assembly of ill-posed {{dof}} constraints, etc.).** Up to the fact that the processors might require to retrieve from remote processors the roots of those cell aggregates which are split among processors, this work has proven the {{agg}} method to be a method very amenable to distributed-memory parallelization. In particular, it can be implemented using standard tools in parallel {{fe}} libraries, such as ghost cells nearest neighbour exchanges.  I have implemented these algorithms in `FEMPAR` using MPI for inter-processor communications. **Their high appeal at large scales has been demonstrated with a comprehensive weak scaling test up to 16K cores and up to nearly 300M DOFs and a billion cells in the Marenostrum-IV supercomputer* using the Poisson equation on complex 3D domains as model problem. See Fig.[7](#fig_fig_scalability-agfem).
+Taking this as a motivation, **I have recently developed the message-passing variants of the algorithms involved in all stages of the {{agg}} method (e.g., construction of cell aggregates, set up and resolution during {{fe}} assembly of ill-posed {{dof}} constraints, etc.).** Up to the fact that the processors might require to retrieve from remote processors the roots of those cell aggregates which are split among processors, this work has proven the {{agg}} method to be a method very amenable to distributed-memory parallelization. In particular, it can be implemented using standard tools in parallel {{fe}} libraries, such as ghost cells nearest neighbour exchanges.  I have implemented these algorithms in `FEMPAR` using MPI for inter-processor communications. **Their high appeal at large scales has been demonstrated with a comprehensive weak scaling test up to 16K cores and up to nearly 300M DOFs and a billion cells in the Marenostrum-IV supercomputer** using the Poisson equation on complex 3D domains as model problem. See Fig.[7](#fig_fig_scalability-agfem).
 The obtained results confirm the expectations: when using {{agg}}, the resulting systems of linear algebraic equations can be effectively solved using standard {{amg}} preconditioners. Remarkably,  I did not have to customize the default parameters of the preconditioner, demonstrating that users can take what is already available out there ''out of the box''. To my best knowledge, this is the first time that embedded methods are successfully applied to such large scales. **This work has been recently published at a JCR Q1-ranked journal in the field (see reference \citep{Verdugo2019} for more details).**
 
 \label{fig_fig_scalability-agfem}
-~~~
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/fig_array_geom.pdf-1.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/scalability/fig_paper_phases_time_vs_num_dofs_a0b0c0d1e0f0g0h0i0_l3.pdf-1.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/scalability/fig_solver_phases_time_vs_num_dofs_a0b0c0d1e0f0g0h0i0_l3.pdf-1.png" alt="" </img></td>
-    </tr>
-    <tr>
-        <th>(a)</th>
-        <th>(b)</th>
-        <th>(c)</th>
-    </tr> 
-</table>
-~~~
-@@im-100
+@@im-100 ![](/assets/figures/figure7_unified.png)
 *Figure 7: (a) Geometry. (b) Wall clock time in seconds in Marenostrum-IV for the major phases (except linear solver) versus scaled problem size in proportion to the number of CPU cores. (c) Linear solver wall clock times.*
 @@
 
 ##### $h$-AgFEM: extension of AgFEM to support AMR
 Embedded methods can be used with a variety of background mesh types.
-**The approach that I have pursued particularly leverages octree-based background meshes using the tools covered in Sec. [Scalable {{amr}} with dynamic load balancing via forests-of-trees](#sec_scalable_amr}).** This is achieved by means of a recursive approach in which a mesh with a very coarse resolution, in the limit a single cube that embeds the entire domain, is recursively refined step by step, until all mesh cells fulfill suitably-defined (geometrical and/or numerical) error criteria. See Fig.[8](#fig_embedded_amr).
+**The approach that I have pursued particularly leverages octree-based background meshes using the tools covered in Sec. [Scalable {{amr}} with dynamic load balancing via forests-of-trees](#sec_scalable_amr).** This is achieved by means of a recursive approach in which a mesh with a very coarse resolution, in the limit a single cube that embeds the entire domain, is recursively refined step by step, until all mesh cells fulfill suitably-defined (geometrical and/or numerical) error criteria. See Fig.[8](#fig_embedded_amr).
 
 \label{fig_embedded_amr}
-~~~
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/fig_filling_curve_a.pdf-1_resized.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/BSACB_initial_mesh.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/BSACB_final_mesh_clamped_side_resized.png" alt="" </img></td>
-    </tr>
-    <tr>
-        <th>(a)</th>
-        <th>(b)</th>
-        <th>(c)</th>
-    </tr> 
-</table>
-~~~
-
 @@im-100
+![](/assets/figures/figure8_unified.png)
 *Figure 8: (a) A circle domain with some circular holes inside embedded in a locally-refined quadtree-like background mesh. The colors represent the partition into 6 subdomains induced by a Z-shaped (a.k.a. as Morton) SFC. (b) Mesh used for integration purposes resulting from the intersection of the surface description of a cantilever beam with a set of spherical holes and a uniform Cartesian background mesh. (c) Mesh used for integration purposes resulting from the intersection of the surface above and a locally-adapted octree-like background mesh.*@@
 
 In a recent work~\citep{Badia2020}, **I have addressed the challenge of developing an adaptive unfitted finite element scheme that combines {{agg}} with parallel {{amr}}.** At the core of this development lies a  
 two-step algorithm to construct the {{fe}} space at hand that carefully mixes aggregation constraints of ill-posed {{dofs}} (to get rid of the small cut cell problem), and standard hanging {{dofs}} constraints (to ensure trace continuity on non-conforming meshes). Following this approach, I have derived a {{fe}} space that can be expressed as the original one plus well-defined linear constraints. Mathematical analysis and numerical experiments demonstrate its optimal mesh adaptation capability, robustness to cut location and parallel efficiency, on classical Poisson $hp$-adaptivity benchmarks. See Figs. [9](#fig_hagfem_solution)- [10](#fig_hagfem_condition). **This work opens the path to functional and geometrical error-driven dynamic mesh adaptation with {{agg}} in large-scale realistic scenarios. Likewise, it can offer guidance for bridging other scalable unfitted methods and parallel {{amr}}.**
 
 \label{fig_hagfem_solution}
-~~~
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/hAgFEM/pacman.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/hAgFEM/popcorn.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/hAgFEM/cheese.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/hAgFEM/array.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/hAgFEM/spiral.png" alt="" </img></td>
-    </tr>
-    <tr>
-        <th>(a)</th>
-        <th>(b)</th>
-        <th>(c)</th>
-        <th>(d)</th>
-        <th>(e)</th>
-    </tr> 
-</table>
-~~~
-
 @@im-100
+![](/assets/figures/figure9_unified.png)
 *Figure 9: Geometries and numerical solution to the problems studied with tree-based $h$-adaptive {{agg}} (from here on, referred to as $h$-AgFEM). (a)-(b) consider a variant of the Fichera corner problem, whereas (c)-(e) a Poisson problem with multiple shocks.*
 @@
 
 \label{fig_hagfem_convergence}
-~~~
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/hAgFEM/convergence_unfitted.png" alt="" </img></td>
-    </tr>
-</table>
-~~~
-
 @@im-100
+![](/assets/figures/hAgFEM/convergence_unfitted.png)
 *Figure 10: For all cases in Fig.[9](#fig:hagfem_solution), $h$-{{agg}} converges optimally. Moreover, in contrast to standard (std.) FEM, it does not suffer from severe ill-conditioning, that precludes generating solutions where $h$-{{agg}} can.*
 @@
 
-
-
 \label{fig_hagfem_condition}
-~~~
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/hAgFEM/condition_numbers_unfitted.png" alt="" </img></td>
-    </tr>
-</table>
-~~~
-
 @@im-100
+![](/assets/figures//hAgFEM/condition_numbers_unfitted.png)
 *Figure 11: For all cases in Fig.[9](#fig_hagfem_solution), $h$-{{agg}} condition number estimates are consistently well-below those of std. FEM.*
 @@
 
@@ -308,33 +182,8 @@ For such a purpose, we have devised a novel strategy that uses $h$-adaptive dyna
 As an illustration, **Fig.[12](ig_hagfem_plasticity) reports the results obtained from a nonlinear J2-plasticity production simulation for analyzing the strain-stress response of a  Cantilever beam with spherical holes made of a relevant ductile steel alloy on the Australian Gadi supercomputer.** In this experiment, as usual in nonlinear solid mechanics, a final load is imposed on the beam in load increments (pseudo time-steps), and the objective is to observe the permanent plastic deformation that the beam undergoes. Given that the problem is characterized by strain localization, the $h$-{{agg}}  method is used in order to appropriately capture the geometry of the beam, in combination with {{amr}} in order to produce a locally refined mesh while deformation is localizing in order to achieve an error tolerance while keeping computational resources low. This experiment includes all the steps in a $h$-{{agg}} simulation, namely skin mesh and background mesh intersection for each mesh adaptation cycle, setup of $h$-{{agg}} and hanging node constraints, transfer of historical variables among meshes, dynamic load-balancing at each step, Newton-Raphson linearization with line search accelerated with {{amg}} preconditioning, etc. with localization given by a posteriori error estimators. In Fig. [12](#fig_hagfem_plasticity), we report the raw wall clock times of these simulations with increasing number of cores as reported by the job queuing system in Gadi for a problem with 11.687 MDOFs at the last load step. Thus, this is the true time that the user experiences when using the software. The value given in the "Serial run" row does not actually correspond to a real measurement, but to a linear extrapolation from the time measured with 192 cores. Memory consumption for $P=192$ was around 86\% of the total amount of memory available in 4 nodes. **Clearly, the most salient observation from Fig. [12c](#fig_hagfem_plasticity) is the considerably reduction in execution times. By exploiting parallel resources, the execution time can be reduced from months to less than a couple of hours.**
 
 \label{fig_hagfem_plasticity}
-~~~
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/beam_lateral_view_mesh_final_load_resized.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/BSPH_final_mesh_deformed_shape_displ_X_resized.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/strong_scaling_beam.png" alt="" </img></td>
-    </tr>
-    <tr>
-        <th>(a)</th>
-        <th>(b)</th>
-        <th>(c)</th>
-    </tr> 
-</table>
-~~~
-<!--
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/strong_scaling_beam.png" alt="" </img></td>
-    </tr>
-    <tr>
-        <th>(c)</th>
-    </tr> 
-</table>
--->
 @@im-100
+![](/assets/figures/figure12_unified.png)
 *Figure 12: (a) Lateral view of the adapted mesh at the last load step. (b) A section of the plastic deformation of the beam.  (c) Raw wall clock times with increasing number of Gadi cores. Simulation ends after 41 load steps.*
 @@
 
@@ -376,25 +225,8 @@ methods, that require a mesh to conform to this interface at all times to provid
 The specific goal is the high-fidelity thermal simulation of the printing process of parts with non-trivial geometries. **Given a set of material and printing process parameters, the outcome with relevant industrial interest is the capability to predict potential printing defects, such as excess or lack of powder fusion.** This sort of insightful information is crucial for application problem experimentalists, as, e.g., those at the Monash Centre for AM, with whom I collaborate. **To this end, I have developed a 3D transient thermal solver that can work on CAD geometries using  the $h$-{{agg}} method on background octree-based meshes, reads the scanning sequence of the laser (using the same files as the AM machine), includes an activation procedure to determine the domain at all times, locally adapts in the melt pool via {{amr}} and exploits distributed-memory parallelism at all stages.** See Fig.[13](#fig_AM-AggFEM). These features, which are cornerstone for increasing modeling accuracy, and applicability to complex, industrially-relevant bodies, are not present in other AM modelling {{fe}} tools available at the literature. Indeed, the results obtained with this tool on an multi-core-based {{hpc}} cluster equipped with thousands of cores confirm that it is able to simulate AM processes with very thin layers, longer processes, higher deposition volumes, more complex geometries, significantly less time-to-solution etc., compared to the ones reached by a state-of-the-art (non-{{hpc}}, non-h-adaptive, body-fitted) software tool. 
 
 \label{fig_AM-AggFEM}
-~~~
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/popcornFlake-0425.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/popcornFlake-0427.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/popcornFlake-0429.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/popcornFlake-0431.png" alt="" </img></td>
-    </tr>
-    <tr>
-        <th>(a)</th>
-        <th>(b)</th>
-        <th>(c)</th>
-        <th>(d)</th>
-    </tr> 
-</table>
-~~~
-
 @@im-100
+![](/assets/figures/figure13_unified.png)
 *Figure 13: Snapshots of a thermal 3D printing simulation using the $h$-{{agg}} method in order to effectively represent the geometry of the growing piece.*
 @@
 
@@ -414,16 +246,8 @@ Computational tools are a powerful technique to simulate the behavior of {{hts}}
 % 
 
 \label{fig_hts_current_density}
-~~~
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/image21.png" alt="" </img></td>
-    </tr>
-</table>
-~~~
-
 @@im-100
+![](/assets/figures/image21_resized.png)
 *Figure 14: Current density profile (color map) computed by the {{hts}} modeling tool for a toy 3D problem at a given fixed time.*
 @@
 
@@ -434,21 +258,8 @@ On the other hand, **parallel {{amr}} by means of non-conforming, octree-based m
 This numerical algorithm is essential in order to accelerate the convergence of the underlying iterative solver at each Newton-Raphson non-linear step, while keeping bounded the number of iterations for both higher mesh resolution, and number of computational cores. See Fig.[15](fig_hts_tfs).
 
 \label{fig_hts_tfs}
-~~~
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/iters_hts_first_step.pdf-1.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/times_hts_first_step.pdf-1.png" alt="" </img></td>
-    </tr>
-    <tr>
-        <th>(a) Number of PCG iterations.</th>
-        <th>(b) Wall clock time.</th>
-    </tr> 
-</table>
-~~~
-
 @@im-100
+![](/assets/figures/figure15_unified.png)
 *Figure 15: Weak scalability on the MN-IV supercomputer, for different local problem sizes (i.e., $(\frac{H}{h})^3$ {{fes}}/core), of the novel 2-level BDDC preconditioner for the discrete Maxwell equations when applied to the first linearization of the non-linear problem corresponding to the first time step in a {{hts}} simulation.*
 @@
 
@@ -459,21 +270,8 @@ Third, **the numerical tool has been validated experimentally against the so-cal
 Fourth, although it is still a prototype, **this tool is already providing insightful understanding of the electromagnetic behavior, under different design parameters (e.g., size and shape), of the {{hts}} tapes manufactured by OXOLUTIA S.L.** On-going work within RL2 is being focused on the improvement of this tool. In particular, it is being extended to thermo-mechanical coupling. 
 
 \label{fig_hts-validation}
-~~~
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/experimental-rig-hts.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/B_400up_resized.png" alt="" </img></td>
-    </tr>
-    <tr>
-        <th>(a)</th>
-        <th>(b)</th>
-    </tr> 
-</table>
-~~~
-
 @@im-100
+![](/assets/figures/figure16_unified.png)
 *Figure 16: (a)Experimental rig designed by ICMAB-CSIC in order to measure the external magnetic field produced by a transport current in a 2G HTS tape. (b)Vertical component of the magnetic field at different tape regions for a snapshot at a particular time in which the external applied current is of 400 Amperes.*
 @@
 
@@ -499,19 +297,10 @@ A part of  my research career has been focused on developing advanced mathematic
 `FEMPAR` has a mature software architecture equipped with robust software abstractions for all the basic building blocks typically involved in a {{fe}} simulation; see Fig.[](#fig_main-structure) for an sketch of the ones involved in the discretization of the {{pde}} problem at hand. This software architecture has been judiciously engineered using advanced {{oo}} mechanisms (inheritance, dynamic run-time polymorphism, data hiding and encapsulation), design patterns and principles, in order to break {{fe}}-based simulation pipelines into smaller blocks that can be arranged to fit user’s application requirements. Through this approach, **`FEMPAR` supports a large number of different applications covering a wide range of scientific areas, programming methodologies, and application-tailored algorithms, without imposing a rigid framework into which they have to fit**; see e.g., the ones covered in RL1, RL2, and RL4. In seek, among others, of `FEMPAR` to become a community code, it is released for free for non-commercial purpose under the terms of the open source GNU GPLv3 license.
 
 \label{fig_main-structures}
-<!--
-~~~
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/fempar-abstractions.png" alt="" </img></td>
-    </tr>
-</table>
-~~~
--->
-@@im-100 ![](/assets/figures/fempar-abstractions.png)
+@@im-100 ![](/assets/figures/fempar-abstractions_resized.png)
 *Figure 17: Main software abstractions in `FEMPAR` and some of their relationships.*
 @@
+
 There is a number of, high-quality, open source OO {{fe}} libraries available in the community, e.g., deal.II, FEniCS, GRINS, Nektar++, MOOSE, MFEM, FreeFem++, DUNE, OpenFOAM. In general, these libraries aim to provide all the machinery required to simulate complex problems governed by {{pdes}} using {{fe}} techniques. However, **in all of these libraries, the solution of the linear system is clearly segregated from the discretization step.** The linear system is transferred to a general-purpose sparse linear algebra library, mainly PETSc, Hypre, and/or TRILINOS. This might limit numerical robustness and efficiency for specific applications. It in particular eludes to fully exploit the underlying properties of the PDE operator and the numerical discretization at hand to build an optimal solver. In contrast to this approach. **`FEMPAR`’s hallmark is that it has been developed with the aim to provide a framework that will allow researchers to investigate on novel complex computational algorithms that are not well-suited in the traditional segregated workflow commented above, among other advantages**. Even though every block within the library preserves modularity, the interface between discretization and numerical linear algebra modules within `FEMPAR` is very rich and focused on PDE-tailored linear systems.
 
 **`FEMPAR` has been successfully used in 40x JCR Q1-ranked research papers on different topics and application areas**: simulation of turbulent flows and stabilized {{fe}} methods \citep{colomes_assessment_2015,colomes_segregated_2016,colomes_mixed_2016,colomes_segregated_2017}, MHD \citep{badia_analysis_2015, badia_unconditionally_2013, badia_unconditionally_2013-1, planas_approximation_2011, smolentsev_approach_2015}, monotonic {{fes}} \citep{badia_monotonicity-preserving_2017, badia_differentiable_2017, badia_discrete_2015, badia_monotonicity-preserving_2014, hierro_shock_2016,Badia2020euler,Bonilla2019b,Bonilla2020}, unfitted {{fes}} and embedded boundary methods \citep{badia_robust_2017,badia_stokes_2018,badia_aggregated_2017,Verdugo2019b}, {{amr}} \citep{Badia2019a}, AM \citep{Neiva2020,Neiva2019a,chiumenti_numerical_2017} and {{hts}} \citep{Olm2019} simulations, and scientific software engineering \citep{Badia2020fempar,Olm2019b,badia_fempar_2017}. It has also been used for the highly efficient implementation of DD solvers \citep{badia_highly_2014,badia_enhanced_2013,badia_implementation_2013,badia_multilevel_2016,badia_scalability_2015,badia_balancing_2016,badia_space-time_2017,Badia2018pb,Badia2019,Badia2019maxwell} and block preconditioning techniques \citep{badia_block_2014}. Its users/developers span different research groups on national and international-level institutions, including UPC, CIMNE, ICMAB-CSIC, CIEMAT, ICTJA-CSIC, Czech Academy of Sciences (Czech Republic), Sandia National Labs (EEUU), North Carolina State University (USA), Duy Tan University (Vietnam),  Monash University (Australia), and l’Ecole Politechnique (Paris). Besides, it has been/is being a crucial tool for the successful execution of several high-quality EU-funded projects, namely, 1x ERC starting grant, 2x ERC PoC projects, 1x EU-FP7 project, and 3x H2020 projects.
@@ -542,7 +331,7 @@ The ultimate goal of RL4 is the realistic simulation of liquid metals in {{bbs}}
 The block recursive LU preconditioners discussed below, at the preconditioner level, the computation of every physical variable in a multi-physics problem. Thus, even though the starting point is a complex multi-physics problem to be solved, the application of the block LU preconditioner only involves the solution of one-physics problems, usually Poisson or CDR-type problems (diagonal blocks). Next, these one-physics problem are replaced, e.g., by a highly scalable parallel solver, in order to end up with a truly scalable {{mhd}} solver. In this context, a remarkable contribution within RL4 is as follows: **I have been able to demonstrate the high-suitability of Multilevel BDDC preconditioners for the efficient/scalable solution of huge sparse linear systems arising from the {{fe}} discretization of linear elliptic {{pdes}} (e.g., Poisson, Elasticity) on current state-of-the-art petascale world-class massively parallel processors.** In order to achieve this goal, **I have proposed a novel bulk-asynchronous, fully-distributed, communicator-aware, inter-level overlapped, and recursive algorithmic adaptation of MultiLevel BDDC preconditioners towards extreme-scale computations** which has been shown to efficiently scale up to the 458K cores of the IBM BG/Q supercomputer installed in JSC, Germany, in the solution of linear elliptic {{pde}} problems with dozens of billions of unknowns; see Fig.[18](#fig_weak_mlbddc). **This work was published in a series of two papers at the SIAM Journal of Scientific Computing~ \citep{badia_highly_2014,badia_multilevel_2016}**. This sort of solvers are not only of paramount importance for large-scale {{mhd}} simulations, but are at the core of many large-scale scientific codes grounded on the {{fe}} solution of {{pde}} problems. Indeed, extreme-scale solvers for sparse linear algebra is a broad and timely subject of strategic importance, as evidenced by the significant increase in investment during the past few years. **Thanks to these outstanding results, `FEMPAR` has been qualified for High-Q club status \citep{brommel_juqueen_2015}, a distinction that JSC (Germany) awards to the most scalable EU codes.**
 
 \label{fig_weak_mlbddc}
-@@im-100 ![](/assets/figures/weak_3D_H_div_h_4_3_bddc_ce_tot.pdf-1.png)
+@@im-100 ![](/assets/figures/weak_3D_H_div_h_4_3_bddc_ce_tot.pdf-1_resized.png)
 *Figure 18: Weak scalability (computation time in seconds) for a 4-level MLBDDC preconditioner in the solution of a Poisson problem up to 20 billion {{dofs}} on 1.8M MPI tasks at the IBM BG/Q supercomputer.*
 @@
 
@@ -564,21 +353,8 @@ The Galerkin {{fe}} approximation of this problem by means of grad-conforming La
 **The combination of all the novel algorithms developed within this RL has enabled large-scale realistic {{bb}} simulations up to scales and (high) Hartmann numbers unprecedented in the computational fusion community.** In particular, the {{hpc}} software tool developed (grounded on `FEMPAR`, see Sec.[](#sec_rl3)), was applied to the {{mhd}} simulation of a dual-coolant liquid metal blanket designed by the Spanish {{bb}} Technology Programme TECNOFUS (details available at [http://fusionwiki.ciemat.es/wiki/TECNO_FUS](http://fusionwiki.ciemat.es/wiki/TECNO_FUS)). The simulation of the TECNOFUS {{tbm}} is a very challenging task due to its extreme physical conditions. As an illustration, the dimensionless numbers corresponding to the physical properties of the fluid (a liquid metal, the alloy Pb-15.7Li) are as high as Reynolds number of and a Hartmann number of. Fig.[20](#fig_tecnofus) shows the fluid velocity streamlines computed by the {{hpc}} simulation tool (at a fixed snapshot in time) for the whole {{tbm}}, and a zoom of those around the turn. This simulation was performed on a 100 million unstructured tetrahedral mesh on 4096 CPU cores of the MN-III supercomputer (at BSC-CNS), with a time step size as large as 0.025 secs.
 
 \label{fig_tecnofus}
-~~~
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/stream1.pdf-1.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/stream2.pdf-1.png" alt="" </img></td>
-    </tr>
-        <tr>
-        <th>(a) Velocity streamlines.</th>
-        <th>(b) Zoom of velocity streamlines around the turn.</th>
-    </tr> 
-</table>
-~~~
-
 @@im-100 
+![](/assets/figures/figure20_unified.png)
 *Figure 20: Simulation results for the Tecnofus {{tbm}}*
 @@
 
@@ -640,17 +416,8 @@ Apart from the novel algorithm design, **I also developed a parallel multi-threa
 Fig.[](#fig_par_ilupack_perf) shows the performance and scalability of the code developed when applied to the P1 {{fe}} discretization of $-\nabla \cdot (A \nabla u) = f$ in a 3-D domain, where then second-order tensor $A(x,y,z)$ is chosen with positive random coefficients. The domain is a cube with some cylindrical holes inside discretized with tetrahedral meshes of increasingly larger resolution. The size of the systems ranges from n=1.7K to 5.5M of equations/unknowns. Fig.[](#fig_par_ilupack_perf), Left shows its parallel speed-up for 2, 4, 8 and 16 processors on a SGI Altix 350 shared-memory machine. **The speed-up always increases with the number of processors for a fixed problem size, and the parallel efficiency rapidly grows with problem size for a given number of processors.** For the largest problem size, sequential ILUPACK required 736 secs. to solve the linear system, while the parallel variant 44.4 secs on 16 processors. Fig.[](#fig_par_ilupack_perf), Right illustrates the number of PCG iterations required to converge for each linear system considered, as a function of a parameter  which controls the degree of concurrence, i.e., the number of parallel tasks in the task tree. **The number of iterations required to converge is largely independent on the degree of concurrence exposed.**
 
 \label{fig_par_ilupack_perf}
-~~~
-<table>
-    <div style="clear: both"></div>
-    <tr>
-        <td><img width="100" src="/assets/figures/mic_scal_nd_hamd_b.pdf-1_resized.png" alt="" </img></td>
-        <td><img width="100" src="/assets/figures/par_ilupack_iterations.png" alt="" </img></td>
-    </tr>
-</table>
-~~~
-
 @@im-100 
+![](/assets/figures/figure24_unified.png)
 *Figure 24: Left: Parallel speed-up. Right: Number of PCG iterations versus degree of concurrence.*
 @@
 
@@ -766,7 +533,7 @@ Fig.[](#fig_par_ilupack_perf) shows the performance and scalability of the code 
 \biblabel{badia_scalability_2015}{54}
 54. S. Badia, **A. F. Martín**, and J. Principe. On the scalability of inexact balancing domain decomposition by constraints with overlapped coarse/fine corrections. *Parallel Computing*, 50:1–24, 2015. \doi{10.1016/j.parco.2015.09.004}.
 \biblabel{badia_balancing_2016}{55}
-55. S. Badia and H. Nguyen. Balancing Domain Decomposition by Constraints and Perturbation.* SIAM Journal on Numerical Analysis*, 54(6):3436–3464, 2016. \doi{10.1137/15M1045648}.
+55. S. Badia and H. Nguyen. Balancing Domain Decomposition by Constraints and Perturbation.*SIAM Journal on Numerical Analysis*, 54(6):3436–3464, 2016. \doi{10.1137/15M1045648}.
 \biblabel{badia_space-time_2017}{56}
 56. S. Badia and M. Olm. Space-Time Balancing Domain Decomposition. SIAM Journal on Scientific Computing, 39(2):C194–C213, 2017. \doi{10.1137/16M1074266}.
 \biblabel{Badia2018pb}{57}
@@ -784,22 +551,23 @@ Fig.[](#fig_par_ilupack_perf) shows the performance and scalability of the code 
 \biblabel{aliaga_assessing_2014}{63}
 63. J. I. Aliaga, M. Barreda, M. F. Dolz, **A. F. Martín**, R. Mayo, and E. S. Quintana-Ortí. Assessing the impact of the CPU power-saving modes on the task-parallel solution of sparse linear systems. *Cluster Computing*, 17(4):1335–1348, 2014. \doi{10.1007/s10586-014-0402-z}.
 \biblabel{AliBMQ10c}{64}
-64. XXXX
+64.  M. Bollhoefer, J. I. Aliaga, A. F. Martin, and E. S. Quintana-Orti. ILUPACK. In D. A. Padua, editor, Encyclopedia of Parallel Computing,
+pages 917–926. Springer, 2011.
 \biblabel{AliBMQ10}{65}
 65. J. I. Aliaga, M. Bollhoefer, **A. F. Martín**, and E. S. Quintana-Ortí. Parallelization of Multilevel ILU Preconditioners on Distributed-Memory Multiprocessors. *Lecture Notes in Computer Science*, 7133:162–172, 2012. \doi{10.1007/978-3-642-28151-8_16}.
-\biblabel{AliBMQ10}{65}
-65. M. Bollhoefer, J. I. Aliaga, **A. F. Martín**, and E. S. Quintana-Ortí. ILUPACK. In D. A. Padua, editor, Encyclopedia of Parallel Computing, pages 917–926. Springer, 2011.
-\biblabel{AliBMQ08a}{66}
-66. J. I. Aliaga, M. Bollhoefer, **A. F. Martín**, and E. S. Quintana-Ortí. Design, Tuning and Evaluation of Parallel Multilevel ILU Preconditioners. *Lecture Notes in Computer Science*, 5336:314-327, 2008. \doi{10.1007/978-3-540-92859-1_28}
-\biblabel{AliDMMQ12}{67}
-67. J. I. Aliaga, M. F. Dolz, **A. F. Martín**, R. Mayo, and E. S. Quintana-Ortí. Leveraring Task-Parallelism in Energy-Efficient ILU Preconditioners. *Lecture Notes in Computer Science*, 7453:55–63, 2012. \doi{10.1007/978-3-642-32606-6_5}
-\biblabel{AliBMQ07}{68}
-68. J. I. Aliaga, M. Bollhoefer, **A. F. Martín**, and E. S. Quintana-Ortí. Parallelization of Multilevel Preconditioners Constructed from Inverse-Based ILUs on Shared-Memory Multiprocessors. *Advances in Parallel Computing*, 15:287–294, 2008. \doi{10.1007/978-3-642-28151-8}.
-\biblabel{AliBMQ09}{69}
-69. J. I. Aliaga, M. Bollhoefer, **A. F. Martín**, and E. S. Quintana-Ortí. Evaluation of Parallel Sparse Matrix Partitioning Software for Parallel Multilevel ILU Preconditioning on Shared-Memory Multiprocessors. *Advances in Parallel Computing*, 19:125–132, 2009. \doi{10.3233/978-1-60750-530-3-125}.
+\biblabel{AliBMQ10}{66}
+66. M. Bollhoefer, J. I. Aliaga, **A. F. Martín**, and E. S. Quintana-Ortí. ILUPACK. In D. A. Padua, editor, Encyclopedia of Parallel Computing, pages 917–926. Springer, 2011.
+\biblabel{AliBMQ08a}{67}
+67. J. I. Aliaga, M. Bollhoefer, **A. F. Martín**, and E. S. Quintana-Ortí. Design, Tuning and Evaluation of Parallel Multilevel ILU Preconditioners. *Lecture Notes in Computer Science*, 5336:314-327, 2008. \doi{10.1007/978-3-540-92859-1_28}
+\biblabel{AliDMMQ12}{68}
+68. J. I. Aliaga, M. F. Dolz, **A. F. Martín**, R. Mayo, and E. S. Quintana-Ortí. Leveraring Task-Parallelism in Energy-Efficient ILU Preconditioners. *Lecture Notes in Computer Science*, 7453:55–63, 2012. \doi{10.1007/978-3-642-32606-6_5}
+\biblabel{AliBMQ07}{69}
+69. J. I. Aliaga, M. Bollhoefer, **A. F. Martín**, and E. S. Quintana-Ortí. Parallelization of Multilevel Preconditioners Constructed from Inverse-Based ILUs on Shared-Memory Multiprocessors. *Advances in Parallel Computing*, 15:287–294, 2008. \doi{10.1007/978-3-642-28151-8}.
+\biblabel{AliBMQ09}{70}
+70. J. I. Aliaga, M. Bollhoefer, **A. F. Martín**, and E. S. Quintana-Ortí. Evaluation of Parallel Sparse Matrix Partitioning Software for Parallel Multilevel ILU Preconditioning on Shared-Memory Multiprocessors. *Advances in Parallel Computing*, 19:125–132, 2009. \doi{10.3233/978-1-60750-530-3-125}.
+\biblabel{badia_block_2014}{71}
+71. S. Badia, **A. F. Martín**, and R. Planas. Block recursive LU preconditioners for the thermally coupled incompressible inductionless MHD problem. *Journal of Computational Physics*, 274:562-591, 2014. \doi{10.1016/j.jcp.2014.06.028}.
 
-70. S. Badia, **A. F. Martín**, and R. Planas. Block recursive LU preconditioners for the thermally coupled incompressible inductionless MHD problem. *Journal of Computational Physics*, 274:562-591, 2014. \doi{10.1016/j.jcp.2014.06.028}.
-\biblabel{badia_block_2014}{70}
 
 <!-- NO REFERENCIADO
 
