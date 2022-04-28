@@ -61,7 +61,7 @@ My field of expertise is in **high performance computational mathematics**, unde
 \biblabel{badia_enhanced_2013}{5}
 5. S. Badia, **A. F. Martín**, and J. Principe. Enhanced balancing Neumann-Neumann preconditioning in computational fluid and solid mechanics. *International Journal for Numerical Methods in Engineering*, 96(4):203–230, 2013. \doi{10.1002/nme.4541}.
 
-\biblabel{Badia2018pb}{6}
+\biblabel{pb}{6}
 6. S. Badia, **A. F. Martín**, and H. Nguyen. Physics-Based Balancing Domain Decomposition by Constraints for Multi-Material Problems. *Journal of Scientific Computing*, 79(2):718–747, 2019. \doi{10.1007/s10915-018-0870-z}.
 
 \biblabel{badia_scalability_2015}{7}
