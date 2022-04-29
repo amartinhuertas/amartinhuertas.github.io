@@ -31,6 +31,10 @@
 1. S. Badia, **A. F. Martín**, and J. Principe. Implementation and Scalability Analysis of Balancing Domain Decomposition Methods. *Archives of Computational Methods in Engineering*, 20(3):239–262, 2013. \doi{10.1007/s11831-013-9086-4}
 1. J. I. Aliaga, M. Bollhoefer, **A. F. Martín**, and E. S. Quintana-Ortí. Exploiting thread-level parallelism in the iterative solution of sparse linear systems. *Parallel Computing*, 37(3):183–202, 2011. \doi{10.1016/j.parco.2010.11.002}
 
+## Preprints
+1. D. R. Lee, **A. F. Martín**, C. Badwell, and S. Badia. A comparison of variational upwinding schemes for geophysical fluids, and their application to potential enstrophy conserving discretisations in space and time, 2022. Submitted. Available as ArXiv pre-print at: [https://arxiv.org/abs/2203.04629](https://arxiv.org/abs/2203.04629)
+1. S. Badia, **A. F. Martín**, and F. Verdugo. GridapDistributed: a massively parallel finite element toolbox in Julia, 2022. Submitted to Journal of Open Source Software. Draft available at: [https://github.com/openjournals/joss-papers/blob/joss.04157/joss.04157/10.21105.joss.04157.pdf](https://github.com/openjournals/joss-papers/blob/joss.04157/joss.04157/10.21105.joss.04157.pdf)
+
 ## Publications in Refereed Collections
 1. M. Bollhoefer, J. I. Aliaga, **A. F. Martín**, and E. S. Quintana-Ortí. ILUPACK. In D. A. Padua, editor, *Encyclopedia of Parallel Computing*, pages 917–926. Springer, 2011. \doi{10.1007/978-0-387-09766-4_513}
 
