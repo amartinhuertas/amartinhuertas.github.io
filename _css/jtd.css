@@ -27,6 +27,7 @@ body {
   line-height: 1.5;
   color: #5c5962;
   background-color: #fff;
+  /*background-image: url("/assets/background.png");*/
 }
 
 @media (min-width: 50rem) {
@@ -166,6 +167,7 @@ SIDE BAR
   display: flex;
   flex-wrap: wrap;
   background-color: #f5f6fa;
+  background-image: url("/assets/background.png");
 }
 
 .side-bar .header {
