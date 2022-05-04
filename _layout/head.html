@@ -7,6 +7,15 @@
   {{if hascode}} {{insert head_highlight.html }}   {{end}}
   {{insert style.html}}
   {{isdef title}} <title>{{fill title}}</title>  {{end}}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WPLMCS5HK"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0WPLMCS5HK');
+  </script>
 </head>
 <body>                      <!-- closed in foot.html -->
 {{insert pgwrap.html}}
