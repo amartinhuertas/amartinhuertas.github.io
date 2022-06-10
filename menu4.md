@@ -6,6 +6,7 @@
 
 ## Publications in International Refereed Journals
 
+1. S. Badia, **A. F. Martín**, and F. Verdugo. GridapDistributed: a massively parallel finite element toolbox in Julia. Journal of Open Source Software, 7(74), 4157, 2022. \doi{10.21105/joss.04157} 
 1. S. Badia, M. Caicedo, **A. F. Martín**, and J. Principe. A robust and scalable unfitted adaptive finite element framework for nonlinear solid mechanics. *Computer Methods in Applied Mechanics and Engineering*, 386, 2021. \doi{10.1016/j.cma.2021.114093}
 1. S. Badia, **A. F. Martín**, E. Neiva, and F. Verdugo. The aggregated unfitted finite element method on parallel tree-based adaptive meshes. *SIAM Journal on Scientific Computing*, 43(3):C203–C234, 2021. \doi{10.1137/20M1344512}
 1. E. Neiva, M. Chiumenti, M. Cervera, E. Salsi, G. Piscopo, S. Badia, **A. F. Martín**, Z. Chen, C. Lee, and C. Davies. Numerical modelling of heat transfer and experimental validation in powder-bed fusion with the virtual domain approximation. *Finite Elements in Analysis and Design,* 168, 2020. \doi{10.1016/j.finel.2019.103343}
@@ -33,7 +34,6 @@
 
 ## Preprints
 1. D. R. Lee, **A. F. Martín**, C. Badwell, and S. Badia. A comparison of variational upwinding schemes for geophysical fluids, and their application to potential enstrophy conserving discretisations in space and time, 2022. Submitted. Available as ArXiv pre-print at: [https://arxiv.org/abs/2203.04629](https://arxiv.org/abs/2203.04629)
-1. S. Badia, **A. F. Martín**, and F. Verdugo. GridapDistributed: a massively parallel finite element toolbox in Julia, 2022. Submitted to Journal of Open Source Software. Draft available at: [https://github.com/openjournals/joss-papers/blob/joss.04157/joss.04157/10.21105.joss.04157.pdf](https://github.com/openjournals/joss-papers/blob/joss.04157/joss.04157/10.21105.joss.04157.pdf)
 
 ## Publications in Refereed Collections
 1. M. Bollhoefer, J. I. Aliaga, **A. F. Martín**, and E. S. Quintana-Ortí. ILUPACK. In D. A. Padua, editor, *Encyclopedia of Parallel Computing*, pages 917–926. Springer, 2011. \doi{10.1007/978-0-387-09766-4_513}

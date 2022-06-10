@@ -14,7 +14,6 @@ rss = "Curriculum vitae by A.F. Martin"
 ## Personal/Contact information
 
 - **Surnames**, **Name**: Martín Huertas, Alberto Francisco
-- **Birth date**: November, 1982
 - **Birth place**: Cartagena (Murcia)
 - **Citizenship**: Spaniard
 - **Job Address**: 325, Level 3, 9 Rainforest walk, Clayton campus, Monash University

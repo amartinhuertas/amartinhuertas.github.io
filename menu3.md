@@ -19,7 +19,12 @@ As a matter of fact, an efficient primal HHO program for the Poisson problem can
 [GridapDistributed.jl](https://github.com/gridap/GridapDistributed.jl) is a registered Julia software package which provides 
 fully-parallel distributed memory data structures and associated methods
 for the {{fe}} numerical solution of {{pdes}} on parallel computers. Thus, it can be run on multi-core CPU desktop computers at small scales, as well as on HPC clusters and supercomputers at medium/large scales. The data structures in GridapDistributed.jl are designed to mirror as far as possible their counterparts in the Gridap (see below) Julia software package, while implementing/leveraging most of their abstract interfaces. As a result, sequential Julia scripts written in the high-level Application Programming Interface (API) of Gridap can be used verbatim up to minor adjustments in a parallel distributed memory context using GridapDistributed.jl.
-This equips end-users with a tool for the development of simulation codes able to solve real-world application problems on massively parallel supercomputers while using a highly expressive, compact syntax, that resembles mathematical notation. This is indeed one of the main advantages of GridapDistributed.jl and a major design goal that we pursue. For more details, go to [GridapDistributed.jl](https://github.com/gridap/GridapDistributed.jl) github repo page.
+This equips end-users with a tool for the development of simulation codes able to solve real-world application problems on massively parallel supercomputers while using a highly expressive, compact syntax, that resembles mathematical notation. This is indeed one of the main advantages of GridapDistributed.jl and a major design goal that we pursue. For more details, go to [GridapDistributed.jl](https://github.com/gridap/GridapDistributed.jl) github repo page. For a recent overview of the project, please see the following reference:
+
+Santiago Badia, Alberto F. Martín and Francesc Verdugo. \
+GridapDistributed: a massively parallel finite element toolbox in Julia. \
+Journal of Open Source Software, 7(74), 4157, 2022. \
+\doi{10.21105/joss.04157}
 
 ## GridapGeosciences.jl (Role: Project leader)
 
