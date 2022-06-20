@@ -17,7 +17,7 @@ My field of expertise is in **high performance computational mathematics**, unde
 
 \challenge{The data explosion challenge}{The steep improvements in data acquisition systems and storage capacity has resulted in an explosion of data from (possibly indirect) experimental observations, which have to be assimilated (under real-time constraints in some cases) for enhanced model predictions and reliability, using, e.g., {{anns_extended}}, {{pde}}-constrained inverse problem solvers, {{ml_extended}} and optimization techniques. A prototypical mission-critical application problem in which this is needed is in the data assimilation of meteorology station measurements for {{nwp_extended}} models, but there are many more, such as, e.g., bushfire transport and dynamics prediction from satellite infrared data, or the analysis of cardiac electrophysiology from MRI images. 
 
->I currently find myself immersed in a process towards developing expertise in this direction.}
+>To this end, I have started several research endeavours on exploring the synergy of {{anns}} and the numerical discretization of forward and inverse {{pde}} problems using {{fe}} techniques with application to the problems enumerated above.}
 
 <!--
 ## My 10 selected research achievements
