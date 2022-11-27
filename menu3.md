@@ -4,6 +4,24 @@
 
 \tableofcontents
 
+## Gridap.jl (Role: Project leader)
+
+@@im-100
+![](/assets/gridap-banner.png)
+
+![](/assets/fig_gridap_intro.png)
+@@
+
+[Gridap.jl](https://github.com/gridap/Gridap.jl) is a free and open source {{fe}} library exclusively written in [Julia](https://julialang.org/). It is a general-purpose library which, rather than providing pre-bluid solvers for particular equations and methods, it makes available a feature-rich set of tools that allows users to build advanced solvers for their particular needs. With Gridap.jl, one can easily prototype FE methods in a laptop and eventually deploy them in large HPC clusters, with virtually no modifications of the high-level user code, and without departing from Julia code (i.e., no knowledge of C/C++ or fortran required at any point of the workflow).
+
+The library currently supports linear and nonlinear PDE systems for scalar and vector fields, single and multi-field problems, conforming and nonconforming {{fe}} discretizations, on structured and unstructured meshes of simplices and n-cubes. Gridap.jl is extensible and modular. One can implement new {{fe}} spaces, new reference elements, use external mesh generators, linear solvers, post-processing tools, etc. See, e.g., the list of available [Gridap.jl plugins](https://github.com/gridap/Gridap.jl#plugins).
+
+> **More info:**
+> - Visit the official Gridap.jl [Github repository](https://github.com/gridap/Gridap.jl).
+> - To get started, take a look at the [Gridap.jl Tutorials](https://gridap.github.io/Tutorials/stable/).
+> - Ask us anything in our [Gitter chat](https://gitter.im/Gridap-jl/community).
+
+I am an essential contributor to the project since early 2020 (e.g., 3rd in number of commits). I have acquired a deep understanding of its internals, and developed/improved some major components of it, mainly those related to extending it towards distributed memory parallelism and hybridizable finite element discretization schemes. I have also written several tutorials, including a [major one for developers](https://gridap.github.io/Tutorials/dev/pages/t013_poisson_dev_fe/), which goes over its internals, and it is an essential resource to computational math researchers that want to leverage the package for their own research. 
 
 ## GridapHybrid.jl (Role: Project leader)
 
@@ -36,24 +54,7 @@ Journal of Open Source Software, 7(74), 4157, 2022. \
 such as the non-linear rotating shallow-water equations and the 3D Euler compressible equations. I am developing this package in the framework of a collaboration with Dr. Justin Freeman (manager of the Model Systems team) and Dr. David R. Lee (staff scientist) from the Australian [Bureau of Meteorology](http://www.bom.gov.au/). The animation above was computed with GridapGeosciences.jl in the [Australian Gadi supercomputer](https://nci.org.au/our-systems/hpc-systems), and shows the magnitude of the vorticity field (curl of the velocity field) associated with the solution of a turbulent benchmark 
 for the nonlinear shallow water equations (the so-called Galewsky benchmark). Here we are solving a surface Partial Differential  Equation on the Earth surface (a 2D manifold) embedded in 3D. 
 
-## Gridap.jl (Role: Essential contributor)
 
-@@im-100
-![](/assets/gridap-banner.png)
-
-![](/assets/fig_gridap_intro.png)
-@@
-
-[Gridap.jl](https://github.com/gridap/Gridap.jl) is a free and open source {{fe}} library exclusively written in [Julia](https://julialang.org/). It is a general-purpose library which, rather than providing pre-bluid solvers for particular equations and methods, it makes available a feature-rich set of tools that allows users to build advanced solvers for their particular needs. With Gridap.jl, one can easily prototype FE methods in a laptop and eventually deploy them in large HPC clusters, with virtually no modifications of the high-level user code, and without departing from Julia code (i.e., no knowledge of C/C++ or fortran required at any point of the workflow).
-
-The library currently supports linear and nonlinear PDE systems for scalar and vector fields, single and multi-field problems, conforming and nonconforming {{fe}} discretizations, on structured and unstructured meshes of simplices and n-cubes. Gridap.jl is extensible and modular. One can implement new {{fe}} spaces, new reference elements, use external mesh generators, linear solvers, post-processing tools, etc. See, e.g., the list of available [Gridap.jl plugins](https://github.com/gridap/Gridap.jl#plugins).
-
-> **More info:**
-> - Visit the official Gridap.jl [Github repository](https://github.com/gridap/Gridap.jl).
-> - To get started, take a look at the [Gridap.jl Tutorials](https://gridap.github.io/Tutorials/stable/).
-> - Ask us anything in our [Gitter chat](https://gitter.im/Gridap-jl/community).
-
-I am an essential contributor to the project since early 2020 (e.g., 3rd in number of commits). I have acquired a deep understanding of its internals, and developed/improved some major components of it, mainly those related to extending it towards distributed memory parallelism and hybridizable finite element discretization schemes. I have also written several tutorials, including a [major one for developers](https://gridap.github.io/Tutorials/dev/pages/t013_poisson_dev_fe/), which goes over its internals, and it is an essential resource to computational math researchers that want to leverage the package for their own research. 
 
 ## FEMPAR (Role: Project leader)
 
