@@ -17,7 +17,7 @@ rss = "Curriculum vitae by A.F. Martin"
 - **Birth place**: Cartagena (Murcia)
 - **Citizenship**: Spaniard
 - **Job Address**: 325, Level 3, 9 Rainforest walk, Clayton campus, Monash University
-- **Institutional Webpage**: [https://research.monash.edu/en/persons/alberto-f-martin](https://research.monash.edu/en/persons/alberto-f-martin)
+- **Institutional Webpage**: TBA 
 
 ## Researcher Identification
 
@@ -47,16 +47,20 @@ rss = "Curriculum vitae by A.F. Martin"
 
 ## Experience
 
-After completing my PhD studies at Universitat Jaume I, and a short 6-month post-doc at that university (EU-FP7 TEXT project), I moved to Barcelona (Spain) in Mar, 2011, where I did post-doctoral research until Dec, 2015. I worked for CIMNE/UPC funded by two competitive post-doctoral research grants (awarded by UPC and the Catalan gov, resp.) Besides, I participated in two strategic EU projects for CIMNE, the ERC Starting Grant COMFUS, to support basic research in scalable numerical algorithms for the HPC simulation of realistic fusion technology problems, and the EU-FP7 NUMEXAS project, towards the next generation of advanced numerical methods for future exascale computing infrastructures. In Jan, 2016 I was promoted as senior researcher at CIMNE, position which I held until Nov, 2019. Then, early 2020, I moved to Monash University, Australia, where was appointed as senior research fellow for a 3-year period after winning an international call for candidates.  My research on these positions is focused on points 1., 2. and 3. above with application to computational magnetohydrodynamics, electromagnetics, thermo-mechanics, and geophysical flows. 
+After completing my PhD studies at Universitat Jaume I, and a short 6-month post-doc at that university (EU-FP7 TEXT project), I moved to Barcelona (Spain) in Mar, 2011, where I did post-doctoral research until Dec, 2015. I worked for CIMNE/UPC funded by two competitive post-doctoral research grants (awarded by UPC and the Catalan gov, resp.) Besides, I participated in two strategic EU projects for CIMNE, the ERC Starting Grant COMFUS, to support basic research in scalable numerical algorithms for the HPC simulation of realistic fusion technology problems, and the EU-FP7 NUMEXAS project, towards the next generation of advanced numerical methods for future exascale computing infrastructures. In Jan, 2016 I was promoted as senior researcher at CIMNE, position which I held until Nov, 2019. Then, early 2020, I moved to Monash University, Australia, where was appointed as senior research fellow for a 3-year period after winning an international call for candidates. Since Dec, 2022, I am working at the Australian National University (ANU).  My research on these positions is focused on points 1., 2. and 3. above with application to computational magnetohydrodynamics, electromagnetics, thermo-mechanics, and geophysical flows. 
 
 ### Current position
 
-- January, 2020 -- today: *Research fellow* at [Monash University](https://www.monash.edu/), Melbourne, Australia. 
+- December, 2022 -- today: *Senior research fellow* at [ANU](https://www.anu.edu.au/), Canberra, Australia. 
+
+
+### Previous positions
+
+- January, 2020 -- November, 2022: *Research fellow* at [Monash University](https://www.monash.edu/), Melbourne, Australia.
 
     Includes research on new algorithms and software design of large scale scientific applications. **Research topics**: parallel numerical methods for geophysical flows, hybridizable finite element schemes, scientific machine learning for PDEs. Design and implementation of GridapDistributed and GridapHybrid and GridapDistributed, a Julia framework for the FE simulation of problems governed by PDEs. ([See research](/menu2/#career))
 
 
-### Previous positions
 
 - December, 2015 -- November, 2019: *Senior researcher* [International Center for Numerical Methods in Engineering (CIMNE)](https://www.cimne.com/), Barcelona, Spain.
 
