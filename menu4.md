@@ -34,9 +34,9 @@
 
 ## Preprints
 1. D. R. Lee, **A. F. Martín**, C. Badwell, and S. Badia. A comparison of variational upwinding schemes for geophysical fluids, and their application to potential enstrophy conserving discretisations in space and time, 2022. Submitted. Available as ArXiv pre-print at: [https://arxiv.org/abs/2203.04629](https://arxiv.org/abs/2203.04629)
-2. S. Badia, M. Hornkjøl, A. Khan, K.-A. Mardal, **A. F. Martín**, R. Ruiz-Baier. Efficient and reliable divergence-conforming methods for an elasticity-poroelasticity interface problem, 2023. Submitted. Available as ArXiv pre-print at: [https://arxiv.org/abs/2306.11213](https://arxiv.org/abs/2306.11213) \[[CODE](https://github.com/amartinhuertas/HdivBiotElasticityPaper.jl/)\]
+2. S. Badia, M. Hornkjøl, A. Khan, K.-A. Mardal, **A. F. Martín**, R. Ruiz-Baier. Efficient and reliable divergence-conforming methods for an elasticity-poroelasticity interface problem, 2023. Submitted. Available as ArXiv pre-print at: [https://arxiv.org/abs/2306.11213](https://arxiv.org/abs/2306.11213) --[CODE](https://github.com/amartinhuertas/HdivBiotElasticityPaper.jl/)--
 3. S. Badia, W. Li, **A. F. Martín**. Finite element interpolated neural networks for solving forward and inverse problems, 2023. Submitted. Available as ArXiv pre-print at: [https://arxiv.org/abs/2306.06304](https://arxiv.org/abs/2306.06304)
-4. R. Caraballo, C. W. In, **A. F. Martín**, R. Ruiz-Baier. Robust finite element methods and solvers for the Biot--Brinkman equations in vorticity form, 2023. Submitted. Available as ArXiv pre-print at: [https://arxiv.org/abs/2307.01484](https://arxiv.org/abs/2307.01484) \[[CODE](https://github.com/amartinhuertas/BiotBrinkmanWithVorticityPaper.jl/)\]
+4. R. Caraballo, C. W. In, **A. F. Martín**, R. Ruiz-Baier. Robust finite element methods and solvers for the Biot--Brinkman equations in vorticity form, 2023. Submitted. Available as ArXiv pre-print at: [https://arxiv.org/abs/2307.01484](https://arxiv.org/abs/2307.01484) --[CODE](https://github.com/amartinhuertas/BiotBrinkmanWithVorticityPaper.jl/)--
 
 ## Publications in Refereed Collections
 1. M. Bollhoefer, J. I. Aliaga, **A. F. Martín**, and E. S. Quintana-Ortí. ILUPACK. In D. A. Padua, editor, *Encyclopedia of Parallel Computing*, pages 917–926. Springer, 2011. \doi{10.1007/978-0-387-09766-4_513}
