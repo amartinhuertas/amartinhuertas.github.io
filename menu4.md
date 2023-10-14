@@ -6,7 +6,8 @@
 
 ## Publications in International Refereed Journals
 
-1. S. Badia, W. Li, **A. F. Martín**. Finite element interpolated neural networks for solving forward and inverse problems, 2023. Accepted for publication in *Computer Methods in Applied Mechanics and Engineering*, 2023. Available as ArXiv pre-print at: [https://arxiv.org/abs/2306.06304](https://arxiv.org/abs/2306.06304)
+1. S. Badia, W. Li, **A. F. Martín**. Finite element interpolated neural networks for solving forward and inverse problems. *Computer Methods in Applied Mechanics and Engineering*, 418(A), 116505, 2023. 
+\doi{10.1016/j.cma.2023.116505}
 1. S. Badia, **A. F. Martín**, and F. Verdugo. GridapDistributed: a massively parallel finite element toolbox in Julia. Journal of Open Source Software, 7(74), 4157, 2022. \doi{10.21105/joss.04157} 
 1. S. Badia, M. Caicedo, **A. F. Martín**, and J. Principe. A robust and scalable unfitted adaptive finite element framework for nonlinear solid mechanics. *Computer Methods in Applied Mechanics and Engineering*, 386, 2021. \doi{10.1016/j.cma.2021.114093}
 1. S. Badia, **A. F. Martín**, E. Neiva, and F. Verdugo. The aggregated unfitted finite element method on parallel tree-based adaptive meshes. *SIAM Journal on Scientific Computing*, 43(3):C203–C234, 2021. \doi{10.1137/20M1344512}
