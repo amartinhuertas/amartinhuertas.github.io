@@ -6,7 +6,7 @@
 
 ## Publications in International Refereed Journals
 
-1. R. Caraballo, C. W. In, **A. F. Martín**, R. Ruiz-Baier. Robust finite element methods and solvers for the Biot--Brinkman equations in vorticity form, 2023. Accepted for publication in *Numerical Methods for Partial Differential Equations*, in press. Available as ArXiv pre-print at: [https://arxiv.org/abs/2307.01484](https://arxiv.org/abs/2307.01484) --[CODE](https://github.com/amartinhuertas/BiotBrinkmanWithVorticityPaper.jl/)--
+1. R. Caraballo, C. W. In, **A. F. Martín**, R. Ruiz-Baier. Robust finite element methods and solvers for the Biot--Brinkman equations in vorticity form, 2023. *Numerical Methods for Partial Differential Equations*. In press, 2023. \doi{doi/10.1002/num.230835} --[CODE](https://github.com/amartinhuertas/BiotBrinkmanWithVorticityPaper.jl/)--
 1. S. Badia, W. Li, **A. F. Martín**. Finite element interpolated neural networks for solving forward and inverse problems. *Computer Methods in Applied Mechanics and Engineering*, 418(A), 116505, 2023. \doi{10.1016/j.cma.2023.116505}
 1. S. Badia, **A. F. Martín**, and F. Verdugo. GridapDistributed: a massively parallel finite element toolbox in Julia. Journal of Open Source Software, 7(74), 4157, 2022. \doi{10.21105/joss.04157} 
 1. S. Badia, M. Caicedo, **A. F. Martín**, and J. Principe. A robust and scalable unfitted adaptive finite element framework for nonlinear solid mechanics. *Computer Methods in Applied Mechanics and Engineering*, 386, 2021. \doi{10.1016/j.cma.2021.114093}
