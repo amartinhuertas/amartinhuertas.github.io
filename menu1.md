@@ -51,7 +51,7 @@ After completing my PhD studies at Universitat Jaume I, and a short 6-month post
 
 ### Current position
 
-- December, 2022 -- today: *Senior research fellow* at [ANU](https://www.anu.edu.au/), Canberra, Australia. 
+- December, 2022 -- today: *Senior lecturer* at [ANU](https://www.anu.edu.au/), Canberra, Australia. 
 
 
 ### Previous positions
