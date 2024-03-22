@@ -36,6 +36,7 @@
 1. J. I. Aliaga, M. Bollhoefer, **A. F. Martín**, and E. S. Quintana-Ortí. Exploiting thread-level parallelism in the iterative solution of sparse linear systems. *Parallel Computing*, 37(3):183–202, 2011. \doi{10.1016/j.parco.2010.11.002}
 
 ## Preprints
+1. S. Badia, W. Li, **A. F. Martín**. Adaptive Finite Element Interpolated Neural Networks, 2024. Submitted. Available as ArXiv pre-print at: [https://arxiv.org/abs/2403.14054](https://arxiv.org/abs/2403.14054)
 1. D. R. Lee, **A. F. Martín**, K. Ricardo. Helmholtz preconditioning for the compressible Euler equations using mixed finite elements with Lorenz staggering, 2024. Submitted. Available as ArXiv pre-print at: [https://arxiv.org/abs/2403.04095](https://arxiv.org/abs/2403.04095)
 1. D. R. Lee, **A. F. Martín**, C. Badwell, and S. Badia. A comparison of variational upwinding schemes for geophysical fluids, and their application to potential enstrophy conserving discretisations in space and time, 2022. Submitted. Available as ArXiv pre-print at: [https://arxiv.org/abs/2203.04629](https://arxiv.org/abs/2203.04629)
 
