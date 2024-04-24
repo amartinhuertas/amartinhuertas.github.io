@@ -6,10 +6,6 @@
 
 ## Publications in International Refereed Journals
 
-Computers & Mathematics with Applications
-Volume 165, 1 July 2024, Pages 150-162
-
-
 1. D. R. Lee, **A. F. Martín**, C. Badwell, and S. Badia. A comparison of variational upwinding schemes for geophysical fluids, and their application to potential enstrophy conserving discretisations in space and time. *Computers & Mathematics with Applications*. 165, 2024. \doi{10.1016/j.camwa.2024.04.016}
 1. S. Badia, W. Li, **A. F. Martín**. Finite element interpolated neural networks for solving forward and inverse problems. *Computer Methods in Applied Mechanics and Engineering*, 418(A), 116505, 2023. \doi{10.1016/j.cma.2023.116505}
 1. S. Badia, M. Hornkjøl, A. Khan, K.-A. Mardal, **A. F. Martín**, R. Ruiz-Baier. Efficient and reliable divergence-conforming methods for an elasticity-poroelasticity interface problem. *Computers & Mathematics with Applications.* 157, 2024.  \doi{10.1016/j.camwa.2023.12.038} --[CODE](https://github.com/amartinhuertas/HdivBiotElasticityPaper.jl/)--
