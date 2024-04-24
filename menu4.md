@@ -6,10 +6,14 @@
 
 ## Publications in International Refereed Journals
 
-1. D. R. Lee, **A. F. Martín**, C. Badwell, and S. Badia. A comparison of variational upwinding schemes for geophysical fluids, and their application to potential enstrophy conserving discretisations in space and time. *Computers & Mathematics with Applications*. To appear, 2024. Available as ArXiv pre-print at: [https://arxiv.org/abs/2203.04629](https://arxiv.org/abs/2203.04629)
+Computers & Mathematics with Applications
+Volume 165, 1 July 2024, Pages 150-162
+
+
+1. D. R. Lee, **A. F. Martín**, C. Badwell, and S. Badia. A comparison of variational upwinding schemes for geophysical fluids, and their application to potential enstrophy conserving discretisations in space and time. *Computers & Mathematics with Applications*. 165, 2024. \doi{10.1016/j.camwa.2024.04.016}
+1. S. Badia, W. Li, **A. F. Martín**. Finite element interpolated neural networks for solving forward and inverse problems. *Computer Methods in Applied Mechanics and Engineering*, 418(A), 116505, 2023. \doi{10.1016/j.cma.2023.116505}
 1. S. Badia, M. Hornkjøl, A. Khan, K.-A. Mardal, **A. F. Martín**, R. Ruiz-Baier. Efficient and reliable divergence-conforming methods for an elasticity-poroelasticity interface problem. *Computers & Mathematics with Applications.* 157, 2024.  \doi{10.1016/j.camwa.2023.12.038} --[CODE](https://github.com/amartinhuertas/HdivBiotElasticityPaper.jl/)--
 1. R. Caraballo, C. W. In, **A. F. Martín**, R. Ruiz-Baier. Robust finite element methods and solvers for the Biot--Brinkman equations in vorticity form, 2023. *Numerical Methods for Partial Differential Equations*. November, 2023. \doi{10.1002/num.23083} --[CODE](https://github.com/amartinhuertas/BiotBrinkmanWithVorticityPaper.jl/)--
-1. S. Badia, W. Li, **A. F. Martín**. Finite element interpolated neural networks for solving forward and inverse problems. *Computer Methods in Applied Mechanics and Engineering*, 418(A), 116505, 2023. \doi{10.1016/j.cma.2023.116505}
 1. S. Badia, **A. F. Martín**, and F. Verdugo. GridapDistributed: a massively parallel finite element toolbox in Julia. Journal of Open Source Software, 7(74), 4157, 2022. \doi{10.21105/joss.04157} 
 1. S. Badia, M. Caicedo, **A. F. Martín**, and J. Principe. A robust and scalable unfitted adaptive finite element framework for nonlinear solid mechanics. *Computer Methods in Applied Mechanics and Engineering*, 386, 2021. \doi{10.1016/j.cma.2021.114093}
 1. S. Badia, **A. F. Martín**, E. Neiva, and F. Verdugo. The aggregated unfitted finite element method on parallel tree-based adaptive meshes. *SIAM Journal on Scientific Computing*, 43(3):C203–C234, 2021. \doi{10.1137/20M1344512}
