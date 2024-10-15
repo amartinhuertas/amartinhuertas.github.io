@@ -6,6 +6,8 @@
 
 ## Publications in International Refereed Journals
 
+1. D. R. Lee, **A. F. Martín**, K. Ricardo. Helmholtz preconditioning for the compressible Euler equations using mixed finite elements with Lorenz staggering, 2024. Accepted for publication in *Quarterly Journal of the Royal Meteorological Society*. Available as ArXiv pre-print at: [https://arxiv.org/abs/2403.04095](https://arxiv.org/abs/2403.04095)
+1. J. Manyer, **A. F. Martín**, S.Badia. GridapSolvers.jl: Scalable multiphysics finite element solvers in Julia. Journal of Open Source Software, 9(102), 7162, 2024. \doi{10.21105/joss.07162}
 1. D. R. Lee, **A. F. Martín**, C. Badwell, and S. Badia. A comparison of variational upwinding schemes for geophysical fluids, and their application to potential enstrophy conserving discretisations in space and time. *Computers & Mathematics with Applications*. 165, 2024. \doi{10.1016/j.camwa.2024.04.016}
 1. S. Badia, W. Li, **A. F. Martín**. Finite element interpolated neural networks for solving forward and inverse problems. *Computer Methods in Applied Mechanics and Engineering*, 418(A), 116505, 2023. \doi{10.1016/j.cma.2023.116505}
 1. S. Badia, M. Hornkjøl, A. Khan, K.-A. Mardal, **A. F. Martín**, R. Ruiz-Baier. Efficient and reliable divergence-conforming methods for an elasticity-poroelasticity interface problem. *Computers & Mathematics with Applications.* 157, 2024.  \doi{10.1016/j.camwa.2023.12.038} --[CODE](https://github.com/amartinhuertas/HdivBiotElasticityPaper.jl/)--
@@ -38,7 +40,7 @@
 
 ## Preprints
 1. S. Badia, W. Li, **A. F. Martín**. Adaptive Finite Element Interpolated Neural Networks, 2024. Submitted. Available as ArXiv pre-print at: [https://arxiv.org/abs/2403.14054](https://arxiv.org/abs/2403.14054)
-1. D. R. Lee, **A. F. Martín**, K. Ricardo. Helmholtz preconditioning for the compressible Euler equations using mixed finite elements with Lorenz staggering, 2024. Submitted. Available as ArXiv pre-print at: [https://arxiv.org/abs/2403.04095](https://arxiv.org/abs/2403.04095)
+
 
 ## Publications in Refereed Collections
 1. M. Bollhoefer, J. I. Aliaga, **A. F. Martín**, and E. S. Quintana-Ortí. ILUPACK. In D. A. Padua, editor, *Encyclopedia of Parallel Computing*, pages 917–926. Springer, 2011. \doi{10.1007/978-0-387-09766-4_513}
