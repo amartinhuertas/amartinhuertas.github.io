@@ -40,6 +40,7 @@
 
 ## Preprints
 1. S. Badia, W. Li, **A. F. Martín**. Adaptive Finite Element Interpolated Neural Networks, 2024. Submitted. Available as ArXiv pre-print at: [https://arxiv.org/abs/2403.14054](https://arxiv.org/abs/2403.14054)
+1. S. Badia, W. Li, **A. F. Martín**. Compatible finite element interpolated neural networks, 2024. Submitted. Available as ArXiv pre-print at: [https://www.arxiv.org/abs/2411.04591](https://www.arxiv.org/abs/2411.04591)
 
 
 ## Publications in Refereed Collections
