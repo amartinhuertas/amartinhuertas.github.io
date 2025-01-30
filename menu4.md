@@ -40,7 +40,7 @@
 
 ## Preprints
 
-1. W. Li, **A. F. Martín**, S. Badia. Unfitted finite element interpolated neural networks, 2025. Submitted. Available as ArXiv pre-print at: [TBA](XXX)
+1. W. Li, **A. F. Martín**, S. Badia. Unfitted finite element interpolated neural networks, 2025. Submitted. Available as ArXiv pre-print at: [http://arxiv.org/abs/2501.17438](http://arxiv.org/abs/2501.17438)
 1. S. Badia, W. Li, **A. F. Martín**. Compatible finite element interpolated neural networks, 2024. Submitted. Available as ArXiv pre-print at: [https://www.arxiv.org/abs/2411.04591](https://www.arxiv.org/abs/2411.04591)
 
 
