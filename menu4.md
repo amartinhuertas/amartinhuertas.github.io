@@ -5,7 +5,7 @@
 \toc
 
 ## Publications in International Refereed Journals
-1. S. Badia, W. Li, **A. F. Martín**. Adaptive Finite Element Interpolated Neural Networks. *Computer Methods in Applied Mechanics and Engineering*. Accepted for publication. In press, 2025. Available as ArXiv pre-print at: [https://arxiv.org/abs/2403.14054](https://arxiv.org/abs/2403.14054)
+1. S. Badia, W. Li, **A. F. Martín**. Adaptive Finite Element Interpolated Neural Networks. *Computer Methods in Applied Mechanics and Engineering*, 437, 117806, 2025. \doi{10.1016/j.cma.2025.117806}
 1. D. R. Lee, **A. F. Martín**, K. Ricardo. Helmholtz preconditioning for the compressible Euler equations using mixed finite elements with Lorenz staggering. *Quarterly Journal of the Royal Meteorological Society*, 151(766), 2025. \doi{10.1002/qj.4887}
 1. J. Manyer, **A. F. Martín**, S.Badia. GridapSolvers.jl: Scalable multiphysics finite element solvers in Julia. *Journal of Open Source Software*, 9(102), 7162, 2024. \doi{10.21105/joss.07162}
 1. D. R. Lee, **A. F. Martín**, C. Badwell, and S. Badia. A comparison of variational upwinding schemes for geophysical fluids, and their application to potential enstrophy conserving discretisations in space and time. *Computers & Mathematics with Applications*. 165, 2024. \doi{10.1016/j.camwa.2024.04.016}
