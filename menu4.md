@@ -42,7 +42,7 @@
 ## Preprints
 
 1. W. Li, **A. F. Martín**, S. Badia. Unfitted finite element interpolated neural networks, 2025. Submitted. Available as ArXiv pre-print at: [http://arxiv.org/abs/2501.17438](http://arxiv.org/abs/2501.17438)
-
+2. S. Badia, C. Carstensen, **A. F. Martin**, R. Ruiz-Baier, S. Villa-Fuentes. Non-augmented velocity-vorticity-pressure formulation for the Navier--Stokes--Brinkman--Forchheimer problem, 2025. Submitted. vailable as ArXiv pre-print at: [https://arxiv.org/abs/2506.10533](https://arxiv.org/abs/2506.10533)
 
 
 ## Publications in Refereed Collections
