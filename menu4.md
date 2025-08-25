@@ -5,6 +5,7 @@
 \toc
 
 ## Publications in International Refereed Journals
+1. S. Badia, C. Carstensen, **A. F. Martín**, R. Ruiz-Baier, S. Villa-Fuentes. Non-augmented velocity-vorticity-pressure formulation for the Navier--Stokes--Brinkman--Forchheimer problem. Accepted for publication in *Computer Methods in Applied Mechanics and Engineering*. In press, 2025. Available as ArXiv pre-print at: [https://arxiv.org/abs/2506.10533](https://arxiv.org/abs/2506.10533)
 1. S. Badia, W. Li, **A. F. Martín**. Compatible finite element interpolated neural networks. *Computer Methods in Applied Mechanics and Engineering*,  439, 17889, 2025. \doi{10.1016/j.cma.2025.117889} 
 1. S. Badia, W. Li, **A. F. Martín**. Adaptive Finite Element Interpolated Neural Networks. *Computer Methods in Applied Mechanics and Engineering*, 437, 117806, 2025. \doi{10.1016/j.cma.2025.117806}
 1. D. R. Lee, **A. F. Martín**, K. Ricardo. Helmholtz preconditioning for the compressible Euler equations using mixed finite elements with Lorenz staggering. *Quarterly Journal of the Royal Meteorological Society*, 151(766), 2025. \doi{10.1002/qj.4887}
@@ -42,8 +43,7 @@
 ## Preprints
 
 1. W. Li, **A. F. Martín**, S. Badia. Unfitted finite element interpolated neural networks, 2025. Submitted. Available as ArXiv pre-print at: [http://arxiv.org/abs/2501.17438](http://arxiv.org/abs/2501.17438)
-2. S. Badia, C. Carstensen, **A. F. Martin**, R. Ruiz-Baier, S. Villa-Fuentes. Non-augmented velocity-vorticity-pressure formulation for the Navier--Stokes--Brinkman--Forchheimer problem, 2025. Submitted. Available as ArXiv pre-print at: [https://arxiv.org/abs/2506.10533](https://arxiv.org/abs/2506.10533)
-3. N. A. Barnafi, **A.F. Martin**, R Ruiz-Baier. Tree-based adaptive finite element methods for deformable image registration, Available as ArXiv pre-print at: [https://www.arxiv.org/abs/2506.15876](https://www.arxiv.org/abs/2506.15876)
+2. N. A. Barnafi, **A.F. Martin**, R Ruiz-Baier. Tree-based adaptive finite element methods for deformable image registration, Available as ArXiv pre-print at: [https://www.arxiv.org/abs/2506.15876](https://www.arxiv.org/abs/2506.15876)
 
 
 
