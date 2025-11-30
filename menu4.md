@@ -9,7 +9,7 @@
 
 
 ## Publications in International Refereed Journals
-1. N. A. Barnafi, **A.F. Martin**, R Ruiz-Baier. Tree-based adaptive finite element methods for deformable image registration, Advances in Applied Mechanics, In press, 2025. \doi{10.1016/bs.aams.2025.09.002}
+1. W. Li, **A. F. Martín**, S. Badia. Unfitted finite element interpolated neural networks. *Journal of Computational Physics*, In press, 2025.  \doi{https://doi.org/10.1016/j.jcp.2025.114547}
 1. S. Badia, C. Carstensen, **A. F. Martín**, R. Ruiz-Baier, S. Villa-Fuentes. A velocity-vorticity-pressure formulation for the steady Navier–Stokes–Brinkman–Forchheimer problem. *Computer Methods in Applied Mechanics and Engineering*. 447, 118343, 2025. \doi{10.1016/j.cma.2025.118343} 
 1. S. Badia, W. Li, **A. F. Martín**. Compatible finite element interpolated neural networks. *Computer Methods in Applied Mechanics and Engineering*,  439, 17889, 2025. \doi{10.1016/j.cma.2025.117889} 
 1. S. Badia, W. Li, **A. F. Martín**. Adaptive Finite Element Interpolated Neural Networks. *Computer Methods in Applied Mechanics and Engineering*, 437, 117806, 2025. \doi{10.1016/j.cma.2025.117806}
@@ -47,12 +47,12 @@
 
 ## Preprints
 
-1. W. Li, **A. F. Martín**, S. Badia. Unfitted finite element interpolated neural networks, 2025. Submitted. Available as ArXiv pre-print at: [http://arxiv.org/abs/2501.17438](http://arxiv.org/abs/2501.17438)
 
 
 
 
 ## Publications in Refereed Collections
+1. N. A. Barnafi, **A.F. Martin**, R Ruiz-Baier. Tree-based adaptive finite element methods for deformable image registration, Advances in Applied Mechanics, 61, 2025, 175-206, 2025. \doi{10.1016/bs.aams.2025.09.002}
 1. M. Bollhoefer, J. I. Aliaga, **A. F. Martín**, and E. S. Quintana-Ortí. ILUPACK. In D. A. Padua, editor, *Encyclopedia of Parallel Computing*, pages 917–926. Springer, 2011. \doi{10.1007/978-0-387-09766-4_513}
 
 ## Publications in Refereed Book Chapters
