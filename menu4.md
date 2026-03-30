@@ -47,7 +47,8 @@
 
 ## Preprints
 
-
+1. S. Badia, A. Boschman, **A. F. Martín**, E. Nilsson, R. Ruiz-Baier, S. Zahedi. Divergence-free unfitted finite element discretisations for the Darcy problem, 2026. Submitted. 
+Available as ArXiv pre-print at: [https://arxiv.org/abs/2603.26212](https://arxiv.org/abs/2603.26212).
 
 
 
