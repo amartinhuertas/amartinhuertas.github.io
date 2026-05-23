@@ -47,6 +47,7 @@
 
 ## Preprints
 
+1. S. Carrasco, F. Chouly , **Alberto F Martín**, R. Ruiz Baier. Fully mixed finite element methods for thermoelastic contact, 2026. Submitted. Available as HAL pre-print at: [https://hal.science/hal-05625864](https://hal.science/hal-05625864)  
 1. S. Badia, A. Boschman, **A. F. Martín**, E. Nilsson, R. Ruiz-Baier, S. Zahedi. Divergence-free unfitted finite element discretisations for the Darcy problem, 2026. Submitted. Available as ArXiv pre-print at: [https://arxiv.org/abs/2603.26212](https://arxiv.org/abs/2603.26212).
 
 
